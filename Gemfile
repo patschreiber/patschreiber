@@ -27,6 +27,19 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'haml'
+gem 'mysql2'
+gem 'jquery-turbolinks'
+
+# Will generate a schema of the model on the top of the model.
+gem 'annotate'
+
+group :flay do
+  # Flay analyzes code for structural similarities. Differences in literal values, variable, class, method names, whitespace, programming style, braces vs do/end, etc are all ignored.
+  gem 'flay'
+  gem 'flay-haml'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

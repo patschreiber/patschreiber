@@ -1,0 +1,119 @@
+@import "fonts";
+@import "colors";
+
+
+* {
+  
+}
+
+
+/*
+##################################################################
+#                     Universal Attributes                       #
+##################################################################
+*/
+
+$nav_width: 300px;
+
+
+
+
+
+/*
+##################################################################
+#                     Universal Styling                          #
+##################################################################
+*/
+
+
+html {
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif; 
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+p {
+  font-family: Cantarell, arial, sans-serif;
+  letter-spacing: 0.09em;
+  font-size: 16px;
+}
+
+
+/*
+##################################################################
+#                     Utilities Styling                          #
+##################################################################
+*/
+
+
+.hr {
+  border-top: 1px solid #FFF;
+  margin: 0 30px 0 30px;
+  opacity: 0.3;
+} 
+
+
+
+
+
+
+.nav-menu {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: $nav_width;
+  background-color: $red;
+  color: #FFF;
+  float: left;
+
+  h2 {
+    font-family: 'DancingScript';
+    margin: 30px 0 0 0;
+      font-size: 3em;
+  }
+}
+
+.content {
+  margin: 0 0 0 $nav_width;
+  height:100%;
+  overflow: scroll;
+}
+
+.content-row {
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  clear: both;
+}
