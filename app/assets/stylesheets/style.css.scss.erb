@@ -55,8 +55,7 @@ h2 {
 }
 
 p {
-  font-family: Cantarell, arial, sans-serif;
-  letter-spacing: 0.09em;
+  font-family: 'Open Sans' arial, sans-serif;
   font-size: 16px;
 }
 
@@ -74,6 +73,22 @@ p {
   opacity: 0.3;
 } 
 
+.h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
+  font-family: 'ProximaNova-Light';
+  margin: 30px 0 0 0;
+}
+
+.h2like {
+  font-size: 45px;
+}
+
+.h3like {
+  font-size: 35px
+}
+
+.h4like {
+  font-size: 25px;
+}
 
 
 
@@ -85,15 +100,30 @@ p {
   left: 0;
   height: 100%;
   width: $nav_width;
-  background-color: $red;
+  background-color: $green;
+
   color: #FFF;
   float: left;
 
-  h2 {
-    font-family: 'DancingScript';
-    margin: 30px 0 0 0;
-      font-size: 3em;
+  background-image: -webkit-gradient(radial,center top,0,center top,559,color-stop(0,$orange),color-stop(1,$light_red));
+  background-image: -ms-radial-gradient(center top,ellipse cover,$orange 0,$light_red 100%);
+  background-image: -moz-radial-gradient(center top,ellipse farthest-corner,$light_red 0,$orange 100%);
+  background-image: -o-radial-gradient(center top,ellipse cover,$light_red 0,$orange 100%);
+
+  .about {
+    font-size: 16px;
+    margin: 15px 30px 15px 30px;
   }
+
+  .content-row {
+
+  }
+
+  .hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
 }
 
 .content {
