@@ -45,13 +45,30 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Lato', 'Helvetica', 'Arial', sans-serif; 
   font-weight: normal;
-  font-size: 1.5em;
 }
 
 h1 {
+  font-size: 52px;
 }
 
 h2 {
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 12px;
 }
 
 p {
@@ -74,7 +91,7 @@ p {
 } 
 
 .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
-  font-family: 'ProximaNova-Light';
+  font-family: 'ProximaNova-Regular';
   margin: 30px 0 0 0;
 }
 
@@ -90,6 +107,35 @@ p {
   font-size: 25px;
 }
 
+.no-audio .nav-menu {
+  display: none;
+}
+
+.content {
+  margin: 0 0 0 $nav_width;
+  height:100%;
+  overflow: scroll;
+}
+
+.content-row {
+  width: 100%;
+}
+
+.content-container {
+  margin: 0 30px 0 30px;
+}
+
+.clear {
+  clear: both;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  clear: both;
+}
 
 
 
@@ -128,26 +174,4 @@ p {
     margin-bottom: 30px;
   }
 
-}
-
-.content {
-  margin: 0 0 0 $nav_width;
-  height:100%;
-  overflow: scroll;
-}
-
-.content-row {
-  width: 100%;
-}
-
-.clear {
-  clear: both;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.row {
-  clear: both;
 }
