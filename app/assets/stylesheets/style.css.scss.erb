@@ -100,7 +100,7 @@ p {
   left: 0;
   height: 100%;
   width: $nav_width;
-  background-color: $green;
+  background-color: $orange;
 
   color: #FFF;
   float: left;
@@ -109,6 +109,10 @@ p {
   background-image: -ms-radial-gradient(center top,ellipse cover,$orange 0,$light_red 100%);
   background-image: -moz-radial-gradient(center top,ellipse farthest-corner,$light_red 0,$orange 100%);
   background-image: -o-radial-gradient(center top,ellipse cover,$light_red 0,$orange 100%);
+
+  /* MSIE */
+  filter: progid:DXImageTransform.Microsoft.Gradient(
+          startColorstr=#FF7E40, endColorstr=#ff5144);
 
   .about {
     font-size: 16px;
