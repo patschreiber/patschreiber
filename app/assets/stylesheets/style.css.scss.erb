@@ -38,12 +38,13 @@ body {
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif; 
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif; 
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif; 
   font-weight: normal;
 }
 
@@ -119,14 +120,9 @@ p {
   font-size: 12px;
 }
 
-.no-audio .nav-menu {
-  display: none;
-}
 
 .content {
   margin: 0 0 0 $nav_width;
-  height:100%;
-  overflow: scroll;
 }
 
 .content-row {
@@ -150,39 +146,41 @@ p {
 }
 
 
+.nav-menu-content {
+  height: auto;
+}
 
 
 .nav-menu {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: $nav_width;
   background-color: $orange;
+  overflow: hidden;
 
   color: #FFF;
   float: left;
 
   background-image: -webkit-gradient(radial,center top,0,center top,559,color-stop(0,$orange),color-stop(1,$light_red));
   background-image: -ms-radial-gradient(center top,ellipse cover,$orange 0,$light_red 100%);
-  background-image: -moz-radial-gradient(center top,ellipse farthest-corner,$light_red 0,$orange 100%);
-  background-image: -o-radial-gradient(center top,ellipse cover,$light_red 0,$orange 100%);
+  background-image: -moz-radial-gradient(center top,ellipse farthest-corner,$orange 0,$light_red 100%);
+  background-image: -o-radial-gradient(center top,ellipse cover,$orange 0,$light_red 100%);
 
   /* MSIE */
   filter: progid:DXImageTransform.Microsoft.Gradient(
           startColorstr=#FF7E40, endColorstr=#E53C2F);
+}
+
+.nav-menu-content {
+  height:100%;
+  overflow-y: scroll;
+  width: 317px;
 
   .about {
     font-size: 16px;
     margin: 15px 30px 15px 30px;
-  }
-
-  .content-row {
-
-  }
-
-  h1 {
-
   }
 
   .hr {
