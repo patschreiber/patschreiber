@@ -21,6 +21,7 @@ lambda {
   incense.repo_url = 'https://github.com/patschreiber/incense'
   incense.start_date = '2014-01-20'
   incense.end_date = nil
+  incense.save!
 }.call
 
 lambda {
@@ -31,16 +32,18 @@ lambda {
   nori.repo_url = 'https://github.com/patschreiber/nori.nu'
   nori.start_date = '2013-07-30'
   nori.end_date = nil
+  nori.save!
 }.call
 
 lambda {
   oilman = Project.new
-  title = 'Oilman'
-  slug = 'Compulsive clicking game. The project stipulations were to make a game over a long holiday weekend. Constraints included feature management due to time as well as quick prototyping and execution'
-  url = nil
-  repo_url = 'https://github.com/patschreiber/oilman/'
-  start_date = '2013-12-01'
-  end_date = '2013-12-02'
+  oilman.title = 'Oilman'
+  oilman.slug = 'Compulsive clicking game. The project stipulations were to make a game over a long holiday weekend. Constraints included feature management due to time as well as quick prototyping and execution'
+  oilman.url = nil
+  oilman.repo_url = 'https://github.com/patschreiber/oilman/'
+  oilman.start_date = '2013-12-01'
+  oilman.end_date = '2013-12-02'
+  oilman.save!  
 }.call
 
 
