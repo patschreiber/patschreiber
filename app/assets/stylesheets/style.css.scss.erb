@@ -85,6 +85,20 @@ p {
   letter-spacing: 3px;
 }
 
+a {
+  color: #FFF;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #FFF;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darken(#FFF, 15%);
+  border-color: darken(#FFF, 15%);
+  text-decoration: none;
+}
+
 
 /*
 ##################################################################
@@ -172,9 +186,9 @@ p {
   float: left;
 
   background-image: -webkit-gradient(radial,center top,0,center top,559,color-stop(0,$orange),color-stop(1,$light_red));
-  background-image: -ms-radial-gradient(center top,ellipse cover,$orange 0,$light_red 100%);
-  background-image: -moz-radial-gradient(center top,ellipse farthest-corner,$orange 0,$light_red 100%);
-  background-image: -o-radial-gradient(center top,ellipse cover,$orange 0,$light_red 100%);
+  background-image: -ms-radial-gradient(radial,center top,ellipse cover,$orange 0,$light_red 100%);
+  background-image: -moz-radial-gradient(radial,center top,ellipse farthest-corner,$orange 0,$light_red 100%);
+  background-image: -o-radial-gradient(radial,center top,ellipse cover,$orange 0,$light_red 100%);
 
   /* MSIE */
   filter: progid:DXImageTransform.Microsoft.Gradient(
@@ -199,5 +213,8 @@ p {
   p, .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
     margin: 15px 30px 15px 30px;
   }
+}
 
+
+body.projects_index {
 }
