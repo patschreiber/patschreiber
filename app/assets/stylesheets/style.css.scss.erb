@@ -86,16 +86,30 @@ p {
 }
 
 a {
-  color: #FFF;
+  color: darken(#FFF, 50%);
+  text-decoration: none;
+
+  transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  -webkit-transition: color .25s ease-in-out;
+}
+
+a:hover { 
+  color: $green;
+  text-decoration: underline;
+}
+
+a.c2a {
+  color: darken(#FFF, 30%);
   padding: 5px 10px 5px 10px;
-  border: 1px solid #FFF;
+  border: 1px solid darken(#FFF, 30%);
   border-radius: 25px;
   text-decoration: none;
 }
 
-a:hover {
-  color: darken(#FFF, 15%);
-  border-color: darken(#FFF, 15%);
+a.c2a:hover {
+  color: $green;
+  border-color: $green;
   text-decoration: none;
 }
 
@@ -213,8 +227,29 @@ a:hover {
   p, .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
     margin: 15px 30px 15px 30px;
   }
+
+  a.c2a {
+    color: #FFF;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #FFF;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: color .25s ease-in-out, border .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out, border .25s ease-in-out;
+    -webkit-transition: color .25s ease-in-out, border .25s ease-in-out;
+  }
+
+  a.c2a:hover {
+    color: lighten($green, 15%);
+    border-color: $green; 
+  }
 }
 
 
-body.projects_index {
+.content {
+  .hr {
+    border-top: 1px solid #333;
+    margin: 0 30px 0 30px;
+    opacity: 0.3;
+  }
 }
