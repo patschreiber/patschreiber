@@ -8,9 +8,9 @@
 
 
 
-    - @projects.each do |p|
+    - current_projects.each do |p|
       .text-center
-        %h2
+        .h2like
           = link_to "#{p.title.capitalize}", "#"
         %p.date
           = p.start_date.strftime("%B %d, %Y").upcase

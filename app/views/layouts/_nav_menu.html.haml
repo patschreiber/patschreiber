@@ -9,16 +9,13 @@
     .hr
     .content-row
       .h4like.text-center
-        = link_to "My Projects", projects_path, :class => "c2a"
+        = link_to "My Projects", projects_path, :class => "nav-header-c2a"
+      %ul
+        - current_projects.each do |p|
+          %li
+            = link_to "#" do
+              .justified.c2a.text-center
+                #{p.title.capitalize}
     .hr
     .content-row
-      .h4like.text-center
-        Shameless Promotion
-      %ul
-        %li
-          About
-        %li
-          Resume
-        %li
-          A brief history of Pat
     .hr

@@ -75,6 +75,10 @@ p {
   font-size: 16px;
 }
 
+  p, .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
+    margin: 15px 30px 15px 30px;
+  }
+
 .button {
   padding: 5px 10px 5px 10px;
   border: 1px solid #000;
@@ -181,11 +185,18 @@ a.c2a:hover {
   clear: both;
 }
 
+.justified {
+  width: 100px;
+}
+
+
+
+
+
 
 .nav-menu-content {
   height: auto;
 }
-
 
 .nav-menu {
   position: fixed;
@@ -198,6 +209,14 @@ a.c2a:hover {
 
   color: #FFF;
   float: left;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin: 15px 0 0 0;
+  }
 
   background-image: -webkit-gradient(radial,center top,0,center top,559,color-stop(0,$orange),color-stop(1,$light_red));
   background-image: -ms-radial-gradient(radial,center top,ellipse cover,$orange 0,$light_red 100%);
@@ -214,6 +233,10 @@ a.c2a:hover {
   overflow-y: scroll;
   width: 317px;
 
+  a {
+    color: $orange;
+  }
+
   .about {
     font-size: 16px;
     margin: 15px 30px 15px 30px;
@@ -224,13 +247,14 @@ a.c2a:hover {
     margin-bottom: 30px;
   }
 
-  p, .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
-    margin: 15px 30px 15px 30px;
+  .nav-header-c2a {
+    color: lighten($orange, 15%);
   }
 
-  a.c2a {
-    color: #FFF;
-    padding: 5px 10px 5px 10px;
+  .c2a {
+    color: $orange;
+    background-color: #FFF;
+    padding: 3px 0px 3px 0px;
     border: 1px solid #FFF;
     border-radius: 25px;
     text-decoration: none;
@@ -239,17 +263,21 @@ a.c2a:hover {
     -webkit-transition: color .25s ease-in-out, border .25s ease-in-out;
   }
 
-  a.c2a:hover {
-    color: lighten($green, 15%);
+  .c2a:hover {
+    color: lighten($orange, 15%);
     border-color: $green; 
   }
 }
 
 
-.content {
-  .hr {
-    border-top: 1px solid #333;
-    margin: 0 30px 0 30px;
-    opacity: 0.3;
+body.projects_index {
+  .content {
+    .hr {
+      border-top: 1px solid #333;
+      margin: 0 30px 0 30px;
+      opacity: 0.3;
+    }
   }
+
+
 }
