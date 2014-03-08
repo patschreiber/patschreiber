@@ -4,20 +4,38 @@
       .h3like
         Pat Schreiber
 
-      .about.text-center
-        I like creating things and solving problems. I always enjoy discovering new things.
+      .nav-slug.text-center
+        I like building things and solving problems. I always enjoy discovering new things.
     .hr
     .content-row
       .h4like.text-center
-        = link_to "My Projects", projects_path, :class => "nav-header-c2a"
+        = link_to "Open Source", projects_path
+      .nav-slug.text-center
+        Ideas that were produced for fun and knowledge. 
       %ul
         - current_projects.each do |p|
           %li
-            = link_to "#" do
+            = link_to specific_project_path(p.title.downcase) do
               .justified.c2a.text-center
                 #{p.title.capitalize}
     .hr
     .content-row
+      .h4like.text-center
+        = link_to "Hire Me", contact_info_path
+      .nav-slug.text-center
+        Let's create something awesome together.
+      %ul
+        %li
+          = link_to "#" do
+            .justified.c2a.text-center
+              Resume
+          %span
+            = link_to ".pdf", "#", :class => "resume-version"
+          %span
+            = link_to ".doc", "#", :class => "resume-version"
+          %span
+            = link_to "plain text", "#", :class => "resume-version"
+
     .hr
     .content-row
       .text-center

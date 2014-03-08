@@ -75,7 +75,7 @@ p {
   font-size: 16px;
 }
 
-  p, .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
+  .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
     margin: 15px 30px 15px 30px;
   }
 
@@ -89,6 +89,7 @@ p {
   letter-spacing: 3px;
 }
 
+
 a {
   color: darken(#FFF, 50%);
   text-decoration: none;
@@ -100,8 +101,9 @@ a {
 
 a:hover { 
   color: $green;
-  text-decoration: underline;
+  border-bottom: 1px solid $green;
 }
+
 
 a.c2a {
   color: darken(#FFF, 30%);
@@ -118,6 +120,8 @@ a.c2a:hover {
 }
 
 
+
+
 /*
 ##################################################################
 #                     Utilities Styling                          #
@@ -127,7 +131,6 @@ a.c2a:hover {
 
 .hr {
   border-top: 1px solid #FFF;
-  margin: 0 30px 0 30px;
   opacity: 0.3;
 } 
 
@@ -170,7 +173,7 @@ a.c2a:hover {
 }
 
 .content-container {
-  margin: 0 30px 0 30px;
+  margin: 0 30px 0 60px;
 }
 
 .clear {
@@ -185,8 +188,12 @@ a.c2a:hover {
   clear: both;
 }
 
-.justified {
-  width: 100px;
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
 }
 
 
@@ -206,10 +213,6 @@ a.c2a:hover {
 }
 
 
-.nav-menu-content {
-  height: auto;
-}
-
 .nav-menu {
   position: fixed;
   top: 0;
@@ -218,7 +221,6 @@ a.c2a:hover {
   width: $nav_width;
   background-color: $orange;
   overflow: hidden;
-
   color: #FFF;
   float: left;
 
@@ -246,21 +248,16 @@ a.c2a:hover {
   width: 317px;
 
   a {
-    color: $orange;
+    color: lighten($orange, 15%);
   }
 
-  .about {
+  a:hover {
+    border-bottom: 2px solid lighten($orange, 15%);;
+  }
+
+  .nav-slug {
     font-size: 16px;
     margin: 15px 30px 15px 30px;
-  }
-
-  .hr {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .nav-header-c2a {
-    color: lighten($orange, 15%);
   }
 
   .c2a {
@@ -277,7 +274,25 @@ a.c2a:hover {
 
   .c2a:hover {
     color: lighten($orange, 15%);
-    border-color: $green; 
+    border-color: $orange;
+  }
+
+  .hr {
+    margin: 30px;
+  }
+
+  .justified {
+    width: 100px;
+  }
+
+  a.resume-version {
+    font-size: 12px;
+    color: lighten($orange, 15%);
+    margin: 0 0 0 15px;
+  }
+
+  a.resume-version:hover {
+    border-bottom: 1px solid lighten($orange, 15%);
   }
 }
 
@@ -286,10 +301,18 @@ body.projects_index {
   .content {
     .hr {
       border-top: 1px solid #333;
-      margin: 0 30px 0 30px;
       opacity: 0.3;
     }
   }
+}
 
 
+body.project {
+  .content-margin-top {
+    margin: 100px 0 0 0;
+  }
+
+  .h2like {
+    margin-right: 30px;
+  }
 }
