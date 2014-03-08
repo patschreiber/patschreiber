@@ -8,6 +8,9 @@ PatschreiberCom::Application.routes.draw do
   root 'landing_page#index'
 
   get '/projects' => 'projects#index', :as => :projects
+  get '/projects/:title' => 'projects#show', :as => :specific_project
+
+  get '/contact' => 'personal_information#index', :as => :contact_info
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,19 @@
+- content_for :body_class, "project"
+
+.content
+  .content-container
+    .content-margin-top
+    .content-row
+      -# if @project.logo.present?
+      -#  %span.logo
+      %span.h2like
+        = @project.title
+      %span.date
+        = @project.start_date.strftime("%B %d, %Y").upcase
+        \-
+        - if @project.end_date.present?
+          = @project.end_date.strftime("%B %d, %Y").upcase
+        - else 
+          PRESENT
+          
+    .content-row

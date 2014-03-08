@@ -5,13 +5,10 @@
     %h1
       Projects
 
-
-
-
     - current_projects.each do |p|
       .text-center
         .h2like
-          = link_to "#{p.title.capitalize}", "#"
+          = link_to "#{p.title.capitalize}", specific_project_path(p.title.downcase)
         %p.date
           = p.start_date.strftime("%B %d, %Y").upcase
           \-
@@ -19,8 +16,9 @@
             = p.end_date.strftime("%B %d, %Y").upcase
           - else 
             PRESENT
+        - if p.url.present?
+          = link_to "#{p.url}", "#{p.url}", :class => "c2a", :target => "_blank"
 
       %p
         = p.slug
-        = p.url
       .hr
