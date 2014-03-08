@@ -219,7 +219,7 @@ a.c2a:hover {
   left: 0;
   height: 100%;
   width: $nav_width;
-  background-color: $orange;
+  background-color: $light_red;
   overflow: hidden;
   color: #FFF;
   float: left;
@@ -233,8 +233,8 @@ a.c2a:hover {
   }
 
   background-image: -webkit-gradient(radial,center top,0,center top,559,color-stop(0,$orange),color-stop(1,$light_red));
-  background-image: -ms-radial-gradient(radial,center top,ellipse cover,$orange 0,$light_red 100%);
-  background-image: -moz-radial-gradient(radial,center top,ellipse farthest-corner,$orange 0,$light_red 100%);
+  background-image: -ms-linear-gradient(top, $orange 0%,$light_red 100%);
+  background-image: -moz-linear-gradient(center top, $orange 0,$light_red 100%);
   background-image: -o-radial-gradient(radial,center top,ellipse cover,$orange 0,$light_red 100%);
 
   /* MSIE */
