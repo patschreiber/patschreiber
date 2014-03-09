@@ -1,5 +1,7 @@
 .nav-menu
   .nav-menu-content
+    .profile-margin
+    .profile-img
     .text-center
       .h3like
         Pat Schreiber
@@ -7,6 +9,7 @@
       .nav-slug.text-center
         I like building things and solving problems. I always enjoy discovering new things.
     .hr
+
     .content-row
       .h4like.text-center
         = link_to "Open Source", projects_path
@@ -19,6 +22,7 @@
               .justified.c2a.text-center
                 #{p.title.capitalize}
     .hr
+
     .content-row
       .h4like.text-center
         = link_to "Hire Me", contact_info_path
@@ -35,6 +39,14 @@
             = link_to ".doc", "#", :class => "resume-version"
           %span
             = link_to "plain text", "#", :class => "resume-version"
+        %li
+          = link_to "#{github_url}", :target => "_blank" do
+            .justified.c2a.text-center
+              Github    
+        %li
+          = link_to "#{linkedin_url}", :target => "_blank" do
+            .justified.c2a.text-center
+              Linkedin  
 
     .hr
     .content-row
