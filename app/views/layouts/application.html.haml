@@ -7,6 +7,7 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
     %meta{'http-equiv' => 'Content-Language', :content => 'en'}
+    %meta{:content => "width=device-width", :name => "viewport", "initial-scale" => 1.0, "maximum-scale" => 1.0, "user-scalable" => "no"}
 
     %body{ :class => "#{yield :body_class}" }
       = render "layouts/nav_menu"

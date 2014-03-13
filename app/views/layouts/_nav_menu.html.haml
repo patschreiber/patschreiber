@@ -1,7 +1,8 @@
 .nav-menu
   .nav-menu-content
     .profile-margin
-    .profile-img
+    = link_to root_path do
+      .profile-img
     .text-center
       .h3like
         Pat Schreiber
@@ -14,7 +15,7 @@
       .h4like.text-center
         = link_to "Open Source", projects_path
       .nav-slug.text-center
-        Ideas that were produced for fun and knowledge. 
+        Cool things that I have made for fun, a learning exercise, or otherwise. 
       %ul
         - current_projects.each do |p|
           %li
