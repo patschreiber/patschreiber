@@ -30,9 +30,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'haml'
 gem 'mysql2'
 gem 'jquery-turbolinks'
+gem 'redcarpet'
 
-# Will generate a schema of the model on the top of the model.
-gem 'annotate'
 
 group :flay do
   # Flay analyzes code for structural similarities. Differences in literal values, variable, class, method names, whitespace, programming style, braces vs do/end, etc are all ignored.
@@ -44,6 +43,14 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'debugger'
+  gem 'annotate'
+end
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
