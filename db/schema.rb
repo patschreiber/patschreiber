@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303225519) do
+ActiveRecord::Schema.define(version: 20140313022922) do
 
   create_table "projects", force: true do |t|
     t.string   "title"
     t.string   "slug"
+    t.text     "expanded_info"
     t.string   "url"
     t.string   "repo_url"
     t.string   "img_url"

@@ -15,5 +15,8 @@
           = @project.end_date.strftime("%B %d, %Y").upcase
         - else 
           PRESENT
+      %p.reading-area
+        - if @project.expanded_info.present?
+          #{ raw($redcarpet_markdown.render( @project.expanded_info)) }
           
     .content-row
