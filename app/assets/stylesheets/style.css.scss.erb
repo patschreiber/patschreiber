@@ -232,7 +232,8 @@ a.c2a:hover {
   width: 50px;
   height: 50px;
   padding: 5px 10px 5px 10px;
-  background-color: $orange;
+  background-color: darken($orange, 3%);
+  z-index: 5;
 
   .collapsed-nav {
     display: none;
@@ -241,7 +242,15 @@ a.c2a:hover {
 
   ul li {
     display: inline;
-    padding-right: 15px;
+    padding-right: 30px;
+  }
+
+  a {
+    color: lighten($orange, 15%);
+  }
+
+  a:hover {
+    border-bottom: 1px solid lighten($orange, 15%);
   }
 }
 
@@ -272,7 +281,6 @@ a.c2a:hover {
   background-image: -ms-linear-gradient(top, $orange 0%,$light_red 100%);
   background-image: -moz-linear-gradient(center top, $orange 0,$light_red 100%);
   background-image: -o-radial-gradient(radial,center top,ellipse cover,$orange 0,$light_red 100%);
-
   /* MSIE */
   filter: progid:DXImageTransform.Microsoft.Gradient(
           startColorstr=#FF7E40, endColorstr=#E53C2F);
@@ -288,7 +296,7 @@ a.c2a:hover {
   }
 
   a:hover {
-    border-bottom: 2px solid lighten($orange, 15%);
+    border-bottom: 1px solid lighten($orange, 15%);
   }
 
   .nav-slug {
