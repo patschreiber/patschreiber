@@ -9,6 +9,6 @@
     %meta{'http-equiv' => 'Content-Language', :content => 'en'}
     %meta{:content => "width=device-width", :name => "viewport", "initial-scale" => 1.0, "maximum-scale" => 1.0, "user-scalable" => "no"}
 
-    %body{ :class => "#{yield :body_class}" }
+    %body{ :class => "#{yield :body_class}", :data => { "no-turbolink" => true } }
       = render "layouts/nav_menu"
       = yield
