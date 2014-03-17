@@ -215,6 +215,7 @@ a.c2a:hover {
 
 .footer {
   font-size: 12px;
+  margin-bottom: 30px;
 
   .divider {
     font-size: 16px;
@@ -222,6 +223,31 @@ a.c2a:hover {
   }
 }
 
+.nav-expand {
+  color: #FFF;
+  vertical-align: middle;
+  position: fixed;
+  top: 0;
+  left: 315px;
+  width: 50px;
+  height: 50px;
+  padding: 5px 10px 5px 10px;
+  background-color: $orange;
+
+  .collapsed-nav {
+    display: none;
+    list-style-type: none;
+  }
+
+  ul li {
+    display: inline;
+    padding-right: 15px;
+  }
+}
+
+.nav-expand:hover {
+  cursor: pointer;
+}
 
 .nav-menu {
   position: fixed;

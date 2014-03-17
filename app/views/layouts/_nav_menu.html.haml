@@ -1,3 +1,19 @@
+.nav-expand.text-center
+  %ul.collapsed-nav
+    %li
+      Pat Schreiber
+    %li
+      = link_to "Open Source", projects_path
+    %li
+      = link_to "Hire Me", contact_info_path
+    %li
+      = link_to "#{github_url}", :target => "_blank" do
+        Github
+    %li
+      = link_to "#{linkedin_url}", :target => "_blank" do
+        Linkedin
+    %li
+      = link_to "@patschreiber", "#{twitter_url}", :target => "_blank"
 .nav-menu
   .nav-menu-content
     .profile-margin
