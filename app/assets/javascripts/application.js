@@ -16,3 +16,4 @@
 //= require_tree .
 
 //= require modernizr
+//= require jquery-ui-1.10.4.min

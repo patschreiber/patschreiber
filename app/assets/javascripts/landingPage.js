@@ -4,18 +4,27 @@ $(document).ready(function() {
       $(window).scrollTop(scrollTop - Math.round(delta * 20));
   });
 
-
+  var animationDone = true;
+  
   $(".clicktest").click(function() {
 
     if( $(".nav-menu").css("display") != 'none' ) {
-      $(".nav-menu").toggle("slide", function() {
-        $(".content").css({"margin": "0 auto"});
-      });
+      if(animationDone) {
+        animationDone = false;
+        $(".nav-menu").stop(true, true).toggle('slide', 400);
+        $(".content").stop(true, true).animate({"margin-left": "0"}, function() {
+          animationDone = true;
+        });
+      }
     }
     else {
-      $(".nav-menu").toggle("slide", function() {
-        $(".content").css({"margin": "0 0 0 300px"});
-      });      
+      if(animationDone) {
+        animationDone = false;
+        $(".content").stop(true, true).animate({"margin": "0 0 0 300px"});
+        $(".nav-menu").stop(true, true).toggle('slide', 400, function() {
+          animationDone = true;
+        });
+      }
     }
   });
 });
