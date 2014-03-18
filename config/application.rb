@@ -26,5 +26,7 @@ module PatschreiberCom
     config.filter_parameters += [:password]
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    
+    config.secret_key_base = 'bssecretkeybase'
   end
 end

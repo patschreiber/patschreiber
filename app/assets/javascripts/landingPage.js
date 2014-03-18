@@ -10,6 +10,7 @@ $(document).ready(function() {
     if( $(".nav-menu").css("display") != 'none' ) {
       if(animationDone) {
         animationDone = false;
+        $(".nav-arrow").fadeOut("fast");
         $(".nav-menu").stop(true, true).toggle('slide', 400);
         $(".collapsed-nav").fadeIn("fast");
         $(".nav-expand").stop(true, true).animate({
@@ -41,6 +42,7 @@ $(document).ready(function() {
         });
         $(".nav-menu").stop(true, true).toggle('slide', 400, function() {
           $(".collapsed-nav").hide();
+          $(".nav-arrow").fadeIn("fast");
           animationDone = true;
         });
       }
