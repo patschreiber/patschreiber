@@ -10,6 +10,7 @@ console.log(document.cookie);
   if( getCookie("collapsed_nav") ) {
     $(".nav-menu").hide();
     $(".nav-arrow").hide();
+    $(".content").css({"margin" : "0 0 0 300px"});
     $(".nav-expand").addClass("collapsed").css({
       "left" : "0", 
       "width" : "100%",

@@ -10,7 +10,8 @@ PatschreiberCom::Application.routes.draw do
   get '/projects' => 'projects#index', :as => :projects
   get '/projects/:title' => 'projects#show', :as => :specific_project
 
-  get '/contact' => 'personal_information#index', :as => :contact_info
+  get '/contact' => 'hire_me#index', :as => :contact_info
+  get '/resume' => 'hire_me#resume', :as => :resume_root
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
