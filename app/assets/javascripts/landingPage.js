@@ -37,6 +37,7 @@ console.log(document.cookie);
           "width" : "100%",
         }, function() {
           $(this).animate({"height" : "10px"}, function() {
+            $(this).addClass("collapsed");
             $(".collapsed-nav").fadeOut();
             $(this).stop().animate({"height" : "10px"});
           });
