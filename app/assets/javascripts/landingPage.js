@@ -12,7 +12,7 @@ console.log(document.cookie);
   if( getCookie("collapsed_nav") ) {
     $(".nav-menu").hide();
     $(".nav-arrow").hide();
-    $(".content").css({"margin" : "0 0 0 300px"});
+    $(".content").css({"margin-left" : "0"});
     $(".nav-expand").addClass("collapsed").css({
       "left" : "0", 
       "width" : "100%",
@@ -85,7 +85,7 @@ function collapseHeader( ) {
     if(animationDone) {
       animationDone = false;
       $(".collapsed-nav").hide();
-      $(".content").stop(true, true).animate({"margin": "0 0 0 300px"});
+      $(".content").stop(true, true).animate({"margin" : "0 0 0 300px"});
       $(".nav-expand").stop(true, true).animate({
         "left" : "315px",
         "width" : "50px",
