@@ -6,9 +6,6 @@ $(document).ready(function() {
       $(window).scrollTop(scrollTop - Math.round(delta * 20));
   });
 
-console.log(document.cookie);
-
-
   if( getCookie("collapsed_nav") ) {
     $(".nav-menu").hide();
     $(".nav-arrow").hide();
@@ -18,12 +15,7 @@ console.log(document.cookie);
       "width" : "100%",
       "height" : "10px"
     });
-    console.log( "collapsed nav is active" + getCookie("collapsed_nav") );
   }
-  else {
-    console.log("collapsed nav is NOT active");
-  }
-
 
   
   $(".nav-expand").click(function() {
@@ -33,6 +25,16 @@ console.log(document.cookie);
   // Stops the click event bubbling to the nav-expand click handler, which deletes the collapsed_nav cookie.
   $(".nav-expand a").click(function(e) {
     e.stopPropagation();
+  });
+
+
+  $('.nav-menu').on("mouseenter", function() {
+    $('.nav-menu-arrow').stop(true, false).fadeIn();
+    console.log("Mouse entered");
+  });
+
+  $('.nav-menu').on("mouseleave", function() {
+    $('.nav-menu-arrow').stop(true, false).fadeOut();
   });
 
 
