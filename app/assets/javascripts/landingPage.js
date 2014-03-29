@@ -1,4 +1,5 @@
 var animationDone = true;
+var timeout;
 
 $(document).ready(function() {
   $(".nav-menu").bind("mousewheel", function (ev, delta) {
@@ -29,12 +30,25 @@ $(document).ready(function() {
 
 
   $('.nav-menu').on("mouseenter", function() {
-    $('.nav-menu-arrow').stop(true, false).fadeIn();
-    console.log("Mouse entered");
+    $('.nav-menu-arrow').stop(true, false).fadeIn("fast");
+  }).on("mouseleave", function() {
+    $('.nav-menu-arrow').stop(true, false).fadeOut("fast");
   });
 
-  $('.nav-menu').on("mouseleave", function() {
-    $('.nav-menu-arrow').stop(true, false).fadeOut();
+
+  $('#nav-menu-arrow-top').on("mousedown", function() {
+    var scroll = $('.nav-menu-content').scrollTop();
+    console.log(scroll);
+    timeout = setInterval(function() {
+      scroll = scroll + 100;
+      console.log(scroll);
+      $('.nav-menu-content').animate({
+        scrollTop: scroll
+      });
+    }, 250);
+  }).on("mouseup mouseleave", function() {
+    console.log("Mouse up or leave");
+    clearInterval(timeout);
   });
 
 
@@ -44,9 +58,7 @@ $(document).ready(function() {
         $(".collapsed-nav").fadeIn("fast");
       });
     }
-  });
-
-  $(".nav-expand").on("mouseleave", function() {
+  }).on("mouseleave", function() {
     if( $(this).hasClass("collapsed") ) {
       if(animationDone) {
         $(".collapsed-nav").fadeOut();
