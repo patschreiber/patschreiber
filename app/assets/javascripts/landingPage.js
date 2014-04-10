@@ -115,8 +115,8 @@ function collapseHeader( ) {
       $(".collapsed-nav").hide();
       $(".content").stop(true, true).animate({"margin" : "0 0 0 300px"});
       $(".nav-expand").stop(true, true).animate({
-        "left" : "315px",
-        "width" : "50px",
+        "left" : "310px",
+        "width" : "20px",
         "height" : "50px"
       }, function() {
         $(this).removeClass("collapsed");
