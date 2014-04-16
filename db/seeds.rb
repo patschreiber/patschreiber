@@ -57,13 +57,14 @@ lambda {
 
 lambda {
   cta = Project.new
-  cta.title = 'CTA Stop Tracker and Recorder'
+  cta.title = 'CTA Tracker'
   cta.slug = 'A little project I whipped up to work with graph APIs as well as searching through lists to access specific information. A user clicks all of the stops on the Chicago train line system they have been to and the program tells them information about their time riding the rails.'
   cta.technologies = 'HTML, CSS, jQuery, Chart.js'
   cta.url = nil
   cta.repo_url = 'https://github.com/patschreiber/cta'
   cta.start_date = Date.new( 2014, 3, 4 )
   cta.end_date = Date.new( 2014, 4, 16 )
+  cta.save!
 }.call
 
 
