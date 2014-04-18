@@ -48,7 +48,7 @@ lambda {
   >
   > Yes sir thats the desc
   END
-  oilman.url = nil
+  oilman.url = 'http://oilman.labs.nori.nu/'
   oilman.repo_url = 'https://github.com/patschreiber/oilman/'
   oilman.start_date = '2013-12-01'
   oilman.end_date = '2013-12-02'
@@ -60,11 +60,16 @@ lambda {
   cta.title = 'CTA Tracker'
   cta.slug = 'A little project I whipped up to work with graph APIs as well as searching through lists to access specific information. A user clicks all of the stops on the Chicago train line system they have been to and the program tells them information about their time riding the rails.'
   cta.technologies = 'HTML, CSS, jQuery, Chart.js'
-  cta.url = nil
+  cta.url = 'http://cta.labs.nori.nu/'
   cta.repo_url = 'https://github.com/patschreiber/cta'
   cta.start_date = Date.new( 2014, 3, 4 )
   cta.end_date = Date.new( 2014, 4, 16 )
   cta.save!
+}.call
+
+
+lambda {
+  blog = Blog.new
 }.call
 
 
