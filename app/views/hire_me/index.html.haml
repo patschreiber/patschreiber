@@ -1,0 +1,23 @@
+- content_for :body_class, "contact_me"
+
+.content  
+  .content-row
+    .content-container
+      %h1.page-title
+        Contact Me
+      %h4
+        I'm always open to chatting about pretty much anything. If you'd like to collaborate on an open or closed source project, I'm always open to the idea. I'd like to start another game project at some point as well as create anything cool that's web related. Hope to hear from you soon.
+
+      %section
+        %p
+          You can reach me through a number of avenues. Although this list is in order of how often I check, I check email many magnitudes more often than the other avenues.
+        %ul
+          %li
+            Email:
+            = mail_to "patrick@nori.nu"
+          %li
+            Twitter:
+            = link_to "#{twitter_url}", twitter_url, :target => "_blank"
+          %li
+            Linked In:
+            = link_to "#{linkedin_url}", linkedin_url, :target => "_blank"
