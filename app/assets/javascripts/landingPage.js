@@ -8,8 +8,7 @@ $(document).ready(function() {
   });
 
   if( getCookie("collapsed_nav") ) {
-    $(".nav-menu").hide();
-    $(".nav-arrow").hide();
+    $(".nav-menu, .nav-arrow, #navigation-icon").hide();
     $(".content").css({"margin-left" : "0"});
     $(".nav-expand").addClass("collapsed").css({
       "left" : "0", 
@@ -69,13 +68,13 @@ $(document).ready(function() {
   $(".nav-expand").on("mouseenter", function() {
     if( $(this).hasClass("collapsed") ) {
       $(this).stop().animate({"height" : "50px"}, function() {
-        $(".collapsed-nav").fadeIn("fast");
+        $(".collapsed-nav, #navigation-icon-collapsed").fadeIn("fast");
       });
     }
   }).on("mouseleave", function() {
     if( $(this).hasClass("collapsed") ) {
       if(animationDone) {
-        $(".collapsed-nav").fadeOut();
+        $(".collapsed-nav, #navigation-icon-collapsed").fadeOut();
         $(this).stop().animate({"height" : "10px"});
       }
     }
@@ -87,7 +86,7 @@ function collapseHeader( ) {
   if( $(".nav-menu").css("display") != 'none' ) {
     if(animationDone) {
       animationDone = false;
-      $(".nav-arrow").fadeOut("fast");
+      $(".nav-arrow, #navigation-icon").fadeOut("fast");
       $(".nav-menu").stop(true, true).toggle('slide', 400);
       $(".collapsed-nav").fadeIn("fast");
       $(".nav-expand").stop(true, true).animate({
@@ -122,8 +121,8 @@ function collapseHeader( ) {
         $(this).removeClass("collapsed");
       });
       $(".nav-menu").stop(true, true).toggle('slide', 400, function() {
-        $(".collapsed-nav").hide();
-        $(".nav-arrow").fadeIn("fast");
+        $(".collapsed-nav, #navigation-icon-collapsed").hide();
+        $(".nav-arrow, #navigation-icon").fadeIn("fast");
         animationDone = true;
       });
 
