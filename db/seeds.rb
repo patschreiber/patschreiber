@@ -11,6 +11,7 @@ puts "Seeding the database..."
 # Resets the seeds for static tables
 
 Project.delete_all
+Blog.delete_all
 
 
 lambda {
@@ -70,6 +71,12 @@ lambda {
 
 lambda {
   blog = Blog.new
+  blog.title = 'The call of a new venture'
+  blog.post = <<-END 
+  > First Blog
+  > Content Please
+  END
+  blog.save!
 }.call
 
 

@@ -99,13 +99,16 @@ a {
   transition: color .25s ease-in-out;
   -moz-transition: color .25s ease-in-out;
   -webkit-transition: color .25s ease-in-out;
-}
 
-a:hover { 
-  color: $green;
-  border-bottom: 1px solid $green;
-}
+  &:hover {
+    color: $green;
+    border-bottom: 1px solid $green;
 
+    .nav-circle {
+      border: 1px solid $green;
+    }
+  }
+}
 
 a.c2a {
   color: darken(#FFF, 30%);
@@ -113,12 +116,12 @@ a.c2a {
   border: 1px solid darken(#FFF, 30%);
   border-radius: 25px;
   text-decoration: none;
-}
 
-a.c2a:hover {
-  color: $green;
-  border-color: $green;
-  text-decoration: none;
+  &:hover {
+    color: $green;
+    border-color: $green;
+    text-decoration: none;
+  }
 }
 
 .technologies-used {
@@ -127,10 +130,19 @@ a.c2a:hover {
 }
 
 .nav-circle {
-  width: 100px;
-  height: 50px;
+  font-size: 40px;
+  border: 1px solid darken(#FFF, 50%);
+  border-radius: 25px;
+  padding: 0 10px 0 14px;
+
+  transition: border .25s ease-in-out;
+  -moz-transition: border .25s ease-in-out;
+  -webkit-transition: border .25s ease-in-out;
 }
 
+#disqus_thread {
+  margin: 30px 0 0 0;
+}
 
 /*
 ##################################################################
