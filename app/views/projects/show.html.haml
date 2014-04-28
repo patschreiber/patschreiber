@@ -15,6 +15,11 @@
           = @project.end_date.strftime("%B %d, %Y").upcase
         - else 
           PRESENT
-      
+    
+    .content-row
+      %p
+      - if @project.url.present?
+        = link_to "#{@project.url}", @project.url, :class => "c2a"
+
       - if @project.expanded_info.present?
         #{ raw($redcarpet_markdown.render( @project.expanded_info )) }
