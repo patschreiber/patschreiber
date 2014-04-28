@@ -79,6 +79,7 @@ lambda {
   > 
   > On the left , you'll be able to browse the various sections of my site, see what I'm currently tinering on, and contact me if you're feeling chatty. For now, just poke around the site and see if anything strikes your fancy. If you're on mobile, or just want distraction-free reading, tap or click the mobile icon that's just to the right of the header column, near the top of your screen.
   > 
+  >
   > Thanks for visiting,
   > 
   > -Pat
