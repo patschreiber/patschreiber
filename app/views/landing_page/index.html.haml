@@ -5,7 +5,7 @@
         %h3
           = p.title
         %p
-          = p.post
+          #{ raw($redcarpet_markdown.render( p.post )) }
         %p
           = p.created_at.strftime( "%B %d, %Y" )
         #disqus_thread
