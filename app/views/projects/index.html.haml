@@ -2,9 +2,9 @@
 
 .content
   .content-container
-    %h1.page-title
+    .h3like.page-title
       Open Source
-    %h4
+    .h5like
       These are some of the open source projects I'm currently working on or have worked on in the past. You should be able to find all of these on my 
       = link_to "Github", "#{github_url}"
       \. 
@@ -13,10 +13,8 @@
       .project
         .project-header.text-center
           .h2like
-            = link_to  specific_project_path(p.title.downcase) do
-              #{p.title.capitalize}
-              %span.nav-circle
-                >
+            #{p.title.capitalize}
+
           %p.date
             = p.start_date.strftime("%B %d, %Y").upcase
             \-
@@ -24,12 +22,20 @@
               = p.end_date.strftime("%B %d, %Y").upcase
             - else 
               PRESENT
-          - if p.url.present?
-            = link_to "#{p.url}", "#{p.url}", :class => "c2a", :target => "_blank"
+          .h5like
+            = link_to specific_project_path(p.title.downcase), :class => "c2a" do
+              Read more about #{p.title.capitalize} 
+              %span
+                %small
+                  >
 
         .project-desc
           %p
             = p.slug
+          %p
+            - if p.url.present?
+              %span
+                = link_to "#{p.url}", "#{p.url}", :class => "c2a", :target => "_blank"
           %p.technologies-used
             = p.technologies
       .hr

@@ -23,25 +23,26 @@ html {
 
 body, html {
   height: 100%;
+  font-family: 'Lucida', 'Helvetica', 'Arial', sans-serif;
 }
 
 body {
+  color: rgba(0,0,0,0.8);
   margin: 0;
-  color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
   height: 100%;
+
+  font-size: 16px;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif; 
   font-weight: normal;
 }
 
 h1 {
-  font-family: "Quicksand-Light";
   font-size: 52px;
 }
 
@@ -50,7 +51,6 @@ h2 {
 }
 
 h3 {
-  font-family: "Quicksand-Light";
   font-size: 36px;
 }
 
@@ -67,8 +67,7 @@ h6 {
 }
 
 p {
-  font-family: 'Open Sans' arial, sans-serif;
-  font-size: 18px;
+  line-height: 1.8em;
 }
 
   .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
@@ -90,16 +89,12 @@ a {
   color: darken(#FFF, 50%);
   text-decoration: none;
 
-  transition: color .25s ease-in-out;
-  -moz-transition: color .25s ease-in-out;
-  -webkit-transition: color .25s ease-in-out;
-
   &:hover {
-    color: $green;
-    border-bottom: 1px solid $green;
+    color: $light_orange;
+    border-bottom: 1px solid $light_orange;
 
     .nav-circle {
-      border: 1px solid $green;
+      border: 1px solid $light_orange;
     }
   }
 }
@@ -107,13 +102,13 @@ a {
 a.c2a {
   color: darken(#FFF, 30%);
   padding: 5px 10px 5px 10px;
-  border: 1px solid darken(#FFF, 30%);
-  border-radius: 25px;
+  border-bottom: 1px solid darken(#FFF, 30%);
+  border-left: 1px solid darken(#FFF, 30%);
   text-decoration: none;
 
   &:hover {
-    color: $green;
-    border-color: $green;
+    color: $orange;
+    border-color: $orange;
     text-decoration: none;
   }
 }
@@ -440,15 +435,6 @@ body.projects_index {
 
 
 body.project {
-
-  p {
-    line-height: 33px;
-    font-size: 18px;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    max-width: 700px;
-  }
 
   .h2like {
     margin-right: 30px;
