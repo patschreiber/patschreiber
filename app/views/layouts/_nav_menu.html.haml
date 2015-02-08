@@ -36,7 +36,11 @@
 
     .content-row
       .h4like.text-center
-        = link_to "Open Source", projects_path
+        = link_to projects_path do
+          Open Source 
+          %span
+            %small
+              >
       .nav-slug.text-center
         Cool things that I have made for fun, a learning exercise, or otherwise. 
       %ul
