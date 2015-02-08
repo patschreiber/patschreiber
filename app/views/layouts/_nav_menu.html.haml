@@ -31,12 +31,12 @@
         Pat Schreiber
 
       .nav-slug.text-center
-        I like building things and solving problems. I always enjoy discovering new things.
+        Lives in Chicago. Lives for the web. I like building things and solving problems.
     .hr
 
     .content-row
       .h4like.text-center
-        = link_to projects_path do
+        = link_to projects_path, :class => "c2a" do
           Open Source 
           %span
             %small
@@ -53,7 +53,11 @@
 
     .content-row
       .h4like.text-center
-        = link_to "Contact Me", contact_info_path
+        = link_to contact_info_path do
+          Contact Me
+          %span
+            %small
+              >
       .nav-slug.text-center
         Let's create something awesome together.
       %ul

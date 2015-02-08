@@ -32,7 +32,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-
   font-size: 16px;
   font-weight: 300;
 }
@@ -70,9 +69,9 @@ p {
   line-height: 1.8em;
 }
 
-  .h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
-    margin: 15px 30px 15px 30px;
-  }
+.h1like, .h2like, .h3like, .h4like, .h5like, .h6like {
+  margin: 15px 30px 15px 30px;
+}
 
 .button {
   padding: 5px 10px 5px 10px;
@@ -86,19 +85,8 @@ p {
 
 
 a {
-  color: darken(#FFF, 50%);
   text-decoration: none;
-
-  &:hover {
-    color: $light_orange;
-    border-bottom: 1px solid $light_orange;
-
-    .nav-circle {
-      border: 1px solid $light_orange;
-    }
-  }
 }
-
 a.c2a {
   color: darken(#FFF, 30%);
   padding: 5px 10px 5px 10px;
@@ -374,20 +362,16 @@ a.c2a {
   }
 
   .c2a {
-    color: $orange;
-    background-color: #FFF;
-    padding: 3px 0px 3px 0px;
-    border: 1px solid #FFF;
-    border-radius: 25px;
+    color: lighten($orange, 20%);
+    border-bottom: 1px solid lighten($orange, 20%);
+    border-left: 1px solid lighten($orange, 20%);
+    padding: 5px 10px 5px 10px;
     text-decoration: none;
-    transition: color .25s ease-in-out, border .25s ease-in-out;
-    -moz-transition: color .25s ease-in-out, border .25s ease-in-out;
-    -webkit-transition: color .25s ease-in-out, border .25s ease-in-out;
-  }
 
-  .c2a:hover {
-    color: lighten($orange, 15%);
-    border-color: $orange;
+    &:hover {
+      color: lighten($orange, 30%);
+      border-color: lighten($orange, 30%);
+    }
   }
 
   .hr {
@@ -395,7 +379,7 @@ a.c2a {
   }
 
   .justified {
-    width: 100px;
+    width: 125px;
   }
 
   a.resume-version {
@@ -410,37 +394,26 @@ a.c2a {
 }
 
 
-body.projects_index {
-  .content {
-    .hr {
-      border-top: 1px solid #333;
-      opacity: 0.3;
-    }
-  }
 
-
-  .project {
-    margin: 75px 0 75px 0;
-  }
-
-  .project-header {
-    margin: 50px 0 50px 0;
-  }
-
-  .project-desc {
-    width: 60%;
-    margin: 0 0 0 25%;
+.content {
+  .hr {
+    border-top: 1px solid #333;
+    opacity: 0.3;
   }
 }
 
-
-body.project {
-
-  .h2like {
-    margin-right: 30px;
-  }
+.project {
+  margin: 75px 0 75px 0;
 }
 
+.project-header {
+  margin: 50px 0 50px 0;
+}
+
+.project-desc {
+  width: 60%;
+  margin: 0 0 0 25%;
+}
 
 body.contact_me {
   ul li {
