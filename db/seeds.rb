@@ -123,6 +123,7 @@ lambda {
 
 lambda {
   blog = Blog.new
+  blog.id = 1
   blog.title = '...and we\'re live!'
   blog.post = <<-END 
   So the site is now live. Deploying with Rails, coupled with Phusion Passenger couldn't have been easier. In the near future I'd like to implement a deploy script with Capistrano, but as it stands I just "flipped the switch" so to speak in the server's config script. Regardless of future plans, the end result is the site is now up and running in production mode!
@@ -135,6 +136,7 @@ lambda {
   
   -Pat
   END
+  blog.initial_posting = Date.new( 2014, 04, 28 )
   blog.save!
 }.call
 

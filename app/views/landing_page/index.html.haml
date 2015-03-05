@@ -2,12 +2,12 @@
   .content-row
     .content-container
       - @blog.each do |p|
-        %h3
+        %h3{:id => "post-" + p.id.to_s}
           = p.title
         %p
           #{ raw($redcarpet_markdown.render( p.post )) }
         %p
-          = p.created_at.strftime( "%B %d, %Y" )
+          = p.initial_posting.strftime( "%B %d, %Y" )
         #disqus_thread
         :javascript
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
