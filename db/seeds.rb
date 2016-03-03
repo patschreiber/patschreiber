@@ -122,6 +122,39 @@ lambda {
 }.call
 
 lambda {
+  oq = Project.new
+  oq.title = 'Overqualified'
+  oq.slug = 'Overqualified was a pet project that was going to sell t-shirts. It turns out Chicago is a somewhat difficult city to sell physical merchandise out of when you\'re on a budget, so we had to scrap the project.'
+  oq.expanded_info = <<-END
+  Overqualified was a pet project that was going to sell t-shirts. We were going to differentiate ourselves by having "lines from resumes" embossed onto the shirts. For instance,a few ideas we had for shirts were:
+  
+  * Excellent oral and written communication skills
+  * Over 3+ years industry experience
+  * No real world experience
+  * Works well in a team environment
+  * Detail-oriented with strong organizational skills
+  * Objective: to obtain a position in the industry 
+
+ The purpose of this was twofold. First, it was meant to be a wry response to shirts that were and presumably still are popular amonst early 20-somethings. Shirts that say "PARTY" or "SUN\'S OUT GUNS OUT." Secondly, there was a certain subversive sense of humor to it in that we've known people who define themselves firstly by their jobs. These shirts would be the natural conclusion of that thought process. If one\'s identity is dictated by their job, and one's job tasks can be listed on a CV or resume, then isn\'t printing a line from your CV/resume onto a shirt and wearing it around the most literal representation of your skill set possible? In the end, the shirts were supposed to be funny, but unfortunately never came to fruition. 
+
+We formed an LLC in hopes to actually get the company running as a form of passive income and as a fun side-project. We did this in the city of Chicago, and, if you're wanting to sell physical merchandise in the city of Chicago, you're going to need a separate space from your living area. Not a basement, closet, or even a public storage. We were led to believe we would need to rent warehouse space or a storefront, so ultimately the project ballooned over our price point for a side-project and was scrapped.  
+
+The silver-lining is that we learned a metric ton about printing lettering on shirts, and also how difficult it is to run an ostensibly simple business. 
+
+Plastisol will crack, but that is because it is burnt from the drying or flashing process (in order to laydown a color on top of dark shirt and get the true color, you need to laydown what is called the underbase.  After the underbase you flash cure it, which dries the surface, then you put down the color to avoid blending of the 2 inks.  If you flash it too long you will burn the underbase and then eventually crack.)  If your ink ever cracks you send it back or ask for a full refund, even if it is only one in the order, you ask for a full refund for the entire order printed at that time.  the speed a which a shop prints makes it nearly impossible for only one to be burnt in an order.  Plastisol needs to cure at 400-450 degrees for 30-40 seconds.  What shops do is crank the heat up and run the drier belt at a faster speed to compensate for the temperature to print faster, but I can assure that it does not work.  You can do a stretch test when you first get you shirts, you just stretch the printed area, if any cracks, it is burnt and would do so after a few wash cycles.  Good print shops do this test before they send you the shirts.  Also, if you're getting white ink on a red shirt, watch for the ink to start to turn pink.  If it does, it is burnt and the red ink molecules are becoming a plasma and absorbing into the white ink doing what is called "ink migration."  This is true for any colored and black shirts.  this starts in the drier, and can show up immediately or a week later.  this is a big problem and very common.  This happens in your house hold washer/drier, this is one of the reasons why you wash your light colors separately. 
+
+Discharge can be a little bit extra.  If you're interested in it you do not want to do this at a shop that does not specialize in it.  It takes a lot more practice to know how to use it. The reason the discharge is more expensive is because it has to be activated, and only stays active for 12-24 hours at best, then it is garbage.  Also, discharge is water based ink that is just activated to do the bleaching process.
+   
+END
+  oq.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS, jQuery'
+  oq.url = 'http://oq.labs.nori.nu/'
+  oq.repo_url = 'https://github.com/patschreiber/overqualified'
+  oq.start_date = Date.new( 2014, 7, 1 )
+  oq.end_date = Date.new( 2015, 2, 13 )
+  oq.save!
+}.call
+
+lambda {
   blog = Blog.new
   blog.id = 1
   blog.title = '...and we\'re live!'
@@ -139,11 +172,5 @@ lambda {
   blog.initial_posting = Date.new( 2014, 04, 28 )
   blog.save!
 }.call
-
-lambda {
-  blog = Blog.new
-  blog.title = "Adaptive Interfaces, or, the media queries of the future."
-}
-
 
 puts "Finished seeding the database!"
