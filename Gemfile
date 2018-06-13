@@ -26,7 +26,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 gem 'haml'
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.18'
 gem 'jquery-turbolinks'
 gem 'redcarpet'
 
@@ -44,7 +44,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'debugger'
+  gem 'byebug'
   gem 'annotate'
 end
 
