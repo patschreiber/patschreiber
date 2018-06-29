@@ -1,5 +1,5 @@
-.container
-  .row
+.container-content
+  .row 
     - @blog.each do |p|
       %h3{:id => "post-" + p.id.to_s}
         = p.title
@@ -7,3 +7,5 @@
         #{ raw($redcarpet_markdown.render( p.post )) }
       %p
         = p.initial_posting.strftime( "%B %d, %Y" )
+
+

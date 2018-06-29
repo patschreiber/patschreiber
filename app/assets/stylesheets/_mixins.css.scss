@@ -19,7 +19,7 @@
   -webkit-box-shadow: inset 0 0 0 2px $default-grey-light;
 }
 
-@mixin link-flair($color: $default-font-color) {
+@mixin link-flair {
   -moz-transition-duration: .24s;
   -ms-transition-duration: .24s;
   -o-transition-duration: .24s;
