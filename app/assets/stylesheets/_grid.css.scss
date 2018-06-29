@@ -1,0 +1,57 @@
+@media (min-width: $screen-xs) {
+  .container {
+    width: $screen-xs;
+  }
+}
+@media (min-width: $screen-sm) {
+  .container {
+    width: $screen-sm;
+  }
+}
+@media (min-width: $screen-md) {
+  .container {
+    width: $screen-md;
+  }
+}
+@media (min-width: $screen-lg) {
+  .container {
+    width: $screen-lg;
+  }
+}
+
+.row:before,
+.row:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+[class*='grid-'],
+.whole,
+.one-half,
+.one-third,
+.one-fourth  {
+  float: left;
+  min-height: 1px;
+  padding: 12px;
+}
+.one {
+  width: 100%;
+}
+.one-half {
+  width: 50%;
+}
+.one-third {
+  width: 33.333333333%;
+}
+.one-fourth {
+  width: 25%;
+}
+@media (max-width: $screen-xs) {
+  .one,
+  .one-half,
+  .one-third,
+  .one-fourth {
+    width: 100%;
+  }
+}
+

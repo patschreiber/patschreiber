@@ -1,0 +1,50 @@
+.showcase {
+  color: rgb(255,255,255);
+  padding-right: $default-padding / 2;
+  padding-left: $default-padding / 2;
+  text-shadow: 0 0 10px rgba(0,0,0,0.35);
+  margin: $default-margin 0;
+}
+.showcase .item {
+  position: relative;
+  float: left;
+  margin-bottom: $default-margin;
+  min-height: 1px;
+  padding-left: $default-padding / 2;
+  padding-right: $default-padding / 2;
+  width: 100%;
+}
+.showcase .item .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.showcase .item a {
+  background: url('../assets/download.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  color: #ffffff;
+  display: block;
+  font-family: $default-serif;
+  font-style: italic;
+  height: 150px;
+  @include border;
+  padding: $default-padding;
+  text-decoration: none;
+  -moz-transition: box-shadow .175s ease-in-out;
+  -ms-transition: box-shadow .175s ease-in-out;
+  -o-transition: box-shadow .175s ease-in-out;
+  -webkit-transition: box-shadow .175s ease-in-out;
+  transition: box-shadow .175s ease-in-out;
+}
+.showcase .item a:hover {
+  @include box-shadow-inset;
+}
+
+@media (min-width: $screen-sm) {
+  .showcase .item {
+    width: 33.333333%
+  }
+}

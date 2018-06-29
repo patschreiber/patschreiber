@@ -1,0 +1,7 @@
+.box {
+  @include border;
+  padding: $default-padding;
+}
+.box.floating {
+  @include box-shadow; 
+}

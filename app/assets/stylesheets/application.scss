@@ -9,5 +9,28 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
+
+// Import variables
+@import "variables.css.scss";
+@import "mixins.css.scss";
+@import "type.css.scss";
+
+// Import dependencies
+@import "normalize.css";
+
+// Import base rules
+@import "base.css.scss";
+
+// Import layout rules
+@import "grid.css.scss";
+@import "alignment.css.scss";
+@import "navigation.css.scss";
+@import "breakpoints.css.scss";
+
+// Import module rules
+@import "boxes.css.scss";
+@import "showcase.css.scss";
+
+// Import state rules
+// Import theme rules

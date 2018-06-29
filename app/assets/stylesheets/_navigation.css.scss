@@ -1,0 +1,22 @@
+nav {
+  font-weight: 700;
+  a {
+    @include link-flair();
+    font-weight: 700;
+    padding: .5rem 1rem;
+
+    &:hover:after {
+      background-color: lighten($default-grey, 15%);
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+nav.horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

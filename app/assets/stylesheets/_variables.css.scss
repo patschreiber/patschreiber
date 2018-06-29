@@ -1,0 +1,51 @@
+//Containers
+$default-max-body-width: 1680px;
+$default-container-width: 970px;
+
+//Breakpoints
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+$screen-xs-max: ($screen-xs - 1);
+$screen-sm-max: ($screen-sm - 1);
+$screen-md-max: ($screen-md - 1);
+
+// Box model rules
+$default-border-style: solid;
+$default-border-width: 1px;
+$default-border-radius: 2px;
+$default-margin: 12px;
+$default-padding: 12px;
+
+// Color rules
+$default-font-color: rgb(46, 59, 78);
+//$primary-color: ;
+//$primary-color-dark: ;
+//$primary-color-light: ;
+//$secondary-color: ;
+//$secondary-color-dark: ;
+//$secondary-color-light: ;
+$default-grey: rgb(51,51,51);
+$default-grey-light: lighten(rgb(51,51,51), 30%);
+$default-grey-lightest: lighten(rgb(51,51,51), 65%);
+
+$default-shadow-color: lighten(rgb(51,51,51), 65%);
+
+// Fonts
+$base-font-size: 14px;
+$p-font-size: 1rem;
+$p-font-size: 14px;
+$h1-font-size: 38px;
+$h2-font-size: 33px;
+$h3-font-size: 28px;
+$h4-font-size: 23px;
+$h5-font-size: 18px;
+$h6-font-size: 14px;
+
+// Fonts
+$default-sans-serif: 'Lato', 'Helvetica', sans-serif;
+$default-serif: 'Palatino', 'Times New Roman', serif;
+
+

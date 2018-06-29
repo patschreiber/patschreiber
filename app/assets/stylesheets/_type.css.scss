@@ -1,0 +1,50 @@
+h1 {
+  font-size: $h1-font-size;
+}
+h2 {
+  font-size: $h2-font-size;
+}
+h3 {
+  font-size: $h3-font-size;
+}
+h4 {
+  font-size: $h4-font-size;
+}
+h5 {
+  font-size: $h5-font-size;
+}
+h6 {
+  font-size: $h6-font-size;
+}
+p {
+  font-family: $default-serif;
+  font-size: $p-font-size;
+  margin: 0;
+  line-height: 1.8rem;
+  font-weight: 400;
+  color: $default-font-color;
+}
+a {
+  color: lighten($default-font-color, 25%);
+  display: inline-block;
+  text-decoration: none;
+
+  &:after {
+    @include link-flair;
+    content: ' ';
+    color: lighten($default-grey, 15%);
+    height: 1px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    opacity: 0;
+    width: 0;
+  
+    a:hover:after {
+      background-color: lighten($default-grey, 15%);
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
