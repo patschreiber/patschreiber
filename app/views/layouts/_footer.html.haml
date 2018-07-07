@@ -1,4 +1,11 @@
 .footer
   #{copyright}
   %span{:class => "divider"} /
+  = link_to "#{linkedin_url}", :target => "_blank" do
+    Linkedin
+  %span{:class => "divider"} /
+  = link_to "#", :target => "_blank" do
+    API
+  %span{:class => "divider"} /
+  Handcrafted with care, from my computer to yours
   = link_to "@patschreiber", "#{twitter_url}", :target => "_blank"

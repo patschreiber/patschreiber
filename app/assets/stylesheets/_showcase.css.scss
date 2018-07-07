@@ -1,11 +1,9 @@
-.showcase {
-  color: rgb(255,255,255);
-  padding-right: $default-padding / 2;
-  padding-left: $default-padding / 2;
-  text-shadow: 0 0 10px rgba(0,0,0,0.35);
-  margin: $default-margin 0;
-}
 .showcase .item {
+  //text-transform: uppercase;
+  font-family: $default-sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: .1rem;
+
   position: relative;
   float: left;
   margin-bottom: $default-margin;
@@ -21,16 +19,9 @@
   transform: translate(-50%, -50%);
 }
 .showcase .item a {
-  background: url('../assets/download.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  color: #ffffff;
+  @include border($default-grey-light);
   display: block;
-  font-family: $default-serif;
-  font-style: italic;
-  height: 150px;
-  @include border;
+  height: 7rem;
   padding: $default-padding;
   text-decoration: none;
   -moz-transition: box-shadow .175s ease-in-out;

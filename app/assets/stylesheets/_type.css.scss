@@ -1,3 +1,40 @@
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url('ProximaNova/ProximaNova-Regular.otf');
+}
+@font-face {
+  font-family: "ProximaNova-RegularItalic";
+  src: url('ProximaNova/ProximaNova-RegularItalic.otf');
+}
+@font-face {
+  font-family: "ProximaNova-Light";
+  src: url('ProximaNova/ProximaNova-Light.otf');
+}
+@font-face {
+  font-family: "ProximaNova-LightItalic";
+  src: url('ProximaNova/ProximaNova-LightItalic.otf');
+}
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url('ProximaNova/ProximaNova-Semibold.otf');
+}
+@font-face {
+  font-family: "DancingScript";
+  src: url('DancingScript/DancingScript-Regular.otf');
+}
+@font-face {
+  font-family: "Quicksand-Light";
+  src: url('Quicksand/Quicksand-Regular.otf');
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url('Lato/Lato-Reg.ttf');
+}
+body {
+  color: $default-font-color;
+  font-family: $default-sans-serif, 'Arial', sans-serif;
+  font-size: $p-font-size;
+}
 h1 {
   font-size: $h1-font-size;
 }
@@ -33,6 +70,7 @@ a {
     @include link-flair;
     content: ' ';
     color: lighten($default-grey, 15%);
+    background-color: lighten($default-font-color, 25%);
     height: 1px;
     position: relative;
     margin-right: auto;
@@ -42,7 +80,7 @@ a {
     width: 0;
   
     a:hover:after {
-      background-color: lighten($default-grey, 15%);
+      background-color: lighten($default-font-color, 25%);
       width: 100%;
       opacity: 1;
     }

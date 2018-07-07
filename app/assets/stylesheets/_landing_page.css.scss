@@ -1,0 +1,16 @@
+.profile-img {
+  background-image: url(profile.png);
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  border-radius: 75px;
+  background-color: black;
+  height: 150px;
+  width: 150px;
+}
+.personal-blurb {
+  text-align: center;
+
+  p {
+    margin-top: 1.5rem;
+  }
+}

@@ -6,7 +6,6 @@ nav {
     padding: .5rem 1rem;
 
     &:hover:after {
-      background-color: lighten($default-grey, 15%);
       width: 100%;
       opacity: 1;
     }
@@ -19,4 +18,12 @@ nav.horizontal {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media screen and (min-width: $screen-xs) {
+  nav {
+    a {
+      padding: 1.5rem 1rem;
+    }
+  }
 }

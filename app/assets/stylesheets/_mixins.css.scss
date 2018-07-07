@@ -1,8 +1,8 @@
-@mixin border {
+@mixin border($color: $default-grey-light) {
   border-style: $default-border-style;
   border-width: $default-border-width;
   border-radius: $default-border-radius;
-  border-color: $default-grey-light;
+  border-color: $color;
 }
 @mixin box-shadow {
   box-shadow: 0 2px 10px $default-shadow-color,0 2px 4px $default-shadow-color;

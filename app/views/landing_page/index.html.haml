@@ -1,4 +1,49 @@
 .container-content
+  .row
+    .one
+      .personal-blurb
+        .profile-img
+        %p
+          Lives in Chicago. Lives for the web.<br> I enjoy building elegant solutions to complex problems, predominantly using http.
+  .row
+    .one
+      .showcase
+        .item
+          %a{:href => "#"}
+            %span.text
+              Open Source
+        .item
+          %a{:href => "#"}
+            %span.text
+              Professional
+        .item
+          %a{:href => "#"}
+            %span.text
+              Github
+        .item
+          %a{:href => "#"}
+            %span.text
+              Contact
+        .item
+          %a{:href => "#"}
+            %span.text
+              Blog
+        .item
+          %a{:href => "#"}
+            %span.text
+              API
+
+  .row
+    .one
+      %p
+        Show 3 newest blog posts here. Add "Read More" link under that directs to the blog page (or AJAX loads, whatever). If blog post is too long, truncate the post. 
+
+  .row
+    .one-half
+      .box.floating
+        %p
+          Lorem ipsum dolor  <small>This is a small</small> Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor
+
   .row 
     - @blog.each do |p|
       %h3{:id => "post-" + p.id.to_s}
