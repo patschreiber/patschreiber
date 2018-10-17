@@ -1,0 +1,23 @@
+a.project {
+  color: $default-font-color;
+  @include box-shadow-transparent-inset;
+
+  -moz-transition: box-shadow .175s ease-in-out;
+  -ms-transition: box-shadow .175s ease-in-out;
+  -o-transition: box-shadow .175s ease-in-out;
+  -webkit-transition: box-shadow .175s ease-in-out;
+  transition: box-shadow .175s ease-in-out;
+}
+a.project:hover {
+  @include box-shadow-inset-and-outset;
+}
+.project-title {
+  margin: 0;
+}
+.project-dates {
+  padding-top: $default-padding;
+  padding-bottom: $default-padding;
+}
+.project-read-more {
+  padding-top: $default-padding;
+}

@@ -23,4 +23,8 @@ module ApplicationHelper
   def linkedin_url
     "http://www.linkedin.com/pub/patrick-schreiber/2a/85/833/"
   end
+
+  def instagram_url 
+    "https://www.instagram.com/patschreiber"
+  end
 end

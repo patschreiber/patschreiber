@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_10_17_000701) do
   end
 
   create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "type"
+    t.string "source_type"
     t.string "title"
     t.text "slug"
     t.text "expanded_info"

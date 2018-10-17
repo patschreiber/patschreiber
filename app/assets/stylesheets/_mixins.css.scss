@@ -16,7 +16,21 @@
   -moz-box-shadow: inset 0 0 0 2px $default-grey-light;
   -ms-box-shadow: inset 0 0 0 2px $default-grey-light;
   -o-box-shadow: inset 0 0 0 2px $default-grey-light;
-  -webkit-box-shadow: inset 0 0 0 2px $default-grey-light;
+  -webkit-box-shadow: inset 0 0 0 2px $default-grey-light; 
+}
+@mixin box-shadow-transparent-inset {
+  box-shadow: inset 0 0 0 0 transparent, 0 2px 4px $default-shadow-color;
+  -moz-box-shadow: inset 0 0 0 0 transparent, 0 2px 4px $default-shadow-color;
+  -ms-box-shadow: inset 0 0 0 0 transparent, 0 2px 4px $default-shadow-color;
+  -o-box-shadow: inset 0 0 0 0 transparent, 0 2px 4px $default-shadow-color;
+  -webkit-box-shadow: inset 0 0 0 0 transparent, 0 2px 4px $default-shadow-color;
+}
+@mixin box-shadow-inset-and-outset {
+  box-shadow: inset 0 0 0 2px $default-grey-light, 0 2px 4px $default-shadow-color;
+  -moz-box-shadow: inset 0 0 0 2px $default-grey-light, 0 2px 4px $default-shadow-color;
+  -ms-box-shadow: inset 0 0 0 2px $default-grey-light, 0 2px 4px $default-shadow-color;
+  -o-box-shadow: inset 0 0 0 2px $default-grey-light, 0 2px 4px $default-shadow-color;
+  -webkit-box-shadow: inset 0 0 0 2px $default-grey-light, 0 2px 4px $default-shadow-color; 
 }
 
 @mixin link-flair {

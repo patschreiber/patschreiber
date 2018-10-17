@@ -10,7 +10,8 @@
 }
 @media (min-width: $screen-sm) {
   .container,
-  .container-content {
+  .container-content,
+  .container-footer {
     width: $screen-sm;
   }
 }
@@ -18,7 +19,8 @@
   .container {
     width: $screen-md;
   }
-  .container-content {
+  .container-content, 
+  .container-footer {
     width: $content-width;
   }
 }
@@ -26,7 +28,8 @@
   .container {
     width: $screen-lg;
   }
-  .container-content {
+  .container-content,
+  .container-footer {
     width: $content-width;
   }
 }

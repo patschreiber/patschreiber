@@ -12,6 +12,9 @@ nav {
   }
   .logo {
     font-size: 1.5rem;
+    a {
+      color: $default-font-color;
+    }
   }
 }
 nav.horizontal {

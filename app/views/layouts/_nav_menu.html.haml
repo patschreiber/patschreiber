@@ -1,12 +1,12 @@
 .container
   %nav.horizontal
     .column
-      = link_to "Open Source", projects_path
+      = link_to "Open Source", open_source_index_path
       = link_to "#{github_url}", :target => "_blank" do
         Github
     .column
       .logo
-        Pat Schreiber
+        = link_to "Pat Schreiber", root_path
     .column
       = link_to "Contact", "#", :target => "_blank"
       = link_to "CV", "#"

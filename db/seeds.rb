@@ -15,7 +15,7 @@ Blog.delete_all
 
 lambda {
   cta = Project.new
-  cta.type = 'Open Source'
+  cta.source_type = 'open'
   cta.title = 'CTA Tracker'
   cta.slug = 'A little project I whipped up to work with graph APIs as well as searching through lists to access specific information. A user clicks all of the stops on the Chicago train line system they have been to and the program tells them information about their time riding the rails.'
   cta.technologies = 'HTML, CSS, jQuery, Chart.js'
@@ -28,7 +28,7 @@ lambda {
 
 lambda {
   incense = Project.new
-  incense.type = 'Open Source'
+  incense.source_type = 'open'
   incense.title = 'Incense'
   incense.slug = 'Incense keeps track of perishable foods in your fridge (or cabinet, or kitchen) and alerts you when something is about to spoil. Never waste food or money again.'
   incense.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS, jQuery, Bootstrap, redis, Resque, cron'
@@ -41,7 +41,7 @@ lambda {
 
 lambda {
   nori = Project.new
-  nori.type = 'Open Source'
+  nori.source_type = 'open'
   nori.title = 'Nori'
   nori.slug = 'Nori is a game about collecting, trading, and improving. Collect items. Play with your friends. Trade around the world. '
   nori.technologies = 'Ruby on Rails 4, MySQL, Bootstrap, HTML, CSS, jQuery, redis, Resque, cron'
@@ -63,7 +63,7 @@ lambda {
 
 lambda {
   oilman = Project.new
-  oilman.type = 'Open Source'
+  oilman.source_type = 'open'
   oilman.title = 'Oilman'
   oilman.slug = 'Compulsive clicking game. The project stipulations were to make a game over a long holiday weekend. Constraints included feature management due to time as well as quick prototyping and execution'
   oilman.technologies = 'HTML, CSS, jQuery'
@@ -80,7 +80,7 @@ lambda {
 
 lambda {
   pat = Project.new
-  pat.type = 'Open Source'
+  pat.source_type = 'open'
   pat.title = "patschreiber (site)"
   pat.slug = "This website! Hope you enjoy reading."
   pat.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS (Sass), jQuery, Markdown'
@@ -97,7 +97,7 @@ lambda {
 
 lambda {
   timeless = Project.new
-  timeless.type = 'Open Source'
+  timeless.source_type = 'open'
   timeless.title = 'Timeless Online'
   timeless.slug = 'Timeless is an online game that evolved from my "Nori" project. With programmer experience comes more sophistication in said programmers code, and Timeless represents this notion well.'
   timeless.expanded_info = <<-END
@@ -129,7 +129,7 @@ lambda {
 
 lambda {
   oq = Project.new
-  oq.type = 'Open Source'
+  oq.source_type = 'open'
   oq.title = 'Overqualified'
   oq.slug = 'Overqualified was a pet project that was going to sell t-shirts. It turns out Chicago is a somewhat difficult city to sell physical merchandise out of when you\'re on a budget, so we had to scrap the project.'
   oq.expanded_info = <<-END

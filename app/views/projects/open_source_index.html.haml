@@ -1,0 +1,21 @@
+.container-content
+  .row
+    .one
+      %h1.text-center
+        Open Source
+  - @projects.each do |p|
+    .row
+      .one
+        %a.project.box.project-floating{ :href => open_source_project_path(p.title) }
+          %h3.project-title
+            = p.title
+          .project-dates
+            = render partial: "shared/project_dates", locals: { project: p }
+          .project-slug
+            = p.slug
+          .project-read-more.link-like
+            Read more about #{p.title.capitalize} 
+            %span
+              %small
+                >
+

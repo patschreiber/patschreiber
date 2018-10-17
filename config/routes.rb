@@ -13,6 +13,11 @@ PatschreiberCom::Application.routes.draw do
   get '/contact' => 'hire_me#index', :as => :contact_info
   get '/resume' => 'hire_me#resume', :as => :resume_root
 
+  scope '/open-source' do 
+    get '/' => 'projects#open_source_index', :as => :open_source_index
+    get '/:title' => 'projects#open_source_show', :as => :open_source_project
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

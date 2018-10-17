@@ -1,5 +1,5 @@
 class AddTypeToProjects < ActiveRecord::Migration[5.2]
   def change
-    add_column :projects, :type, :string, :after => :id
+    add_column :projects, :source_type, :string, :after => :id
   end
 end
