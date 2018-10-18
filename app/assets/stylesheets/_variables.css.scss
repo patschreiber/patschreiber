@@ -23,6 +23,7 @@ $default-padding: 12px;
 
 // Color rules
 $default-font-color: rgb(46, 59, 78);
+$default-link-color: lighten($default-font-color, 25%);
 //$primary-color: ;
 //$primary-color-dark: ;
 //$primary-color-light: ;

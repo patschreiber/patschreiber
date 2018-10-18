@@ -1,4 +1,11 @@
-a.project {
+.projects {
+  display: flex;
+  flex-wrap:wrap;
+}
+.project {
+  flex: auto;
+  min-width: 40%;
+  margin: 0 ($default-margin / 2) $default-margin ($default-margin / 2);
   color: $default-font-color;
   @include box-shadow-transparent-inset;
 
@@ -7,17 +14,28 @@ a.project {
   -o-transition: box-shadow .175s ease-in-out;
   -webkit-transition: box-shadow .175s ease-in-out;
   transition: box-shadow .175s ease-in-out;
+
+  .dates {
+    padding-top: $default-padding;
+    padding-bottom: $default-padding;
+    font-style: italic;
+  }
+  .read-more {
+    color: $default-link-color;
+    padding-top: $default-padding;
+    font-weight: 600;
+  }
+  .title {
+    margin: 0;
+    color: $default-link-color;
+  }
 }
 a.project:hover {
   @include box-shadow-inset-and-outset;
 }
-.project-title {
-  margin: 0;
-}
-.project-dates {
-  padding-top: $default-padding;
-  padding-bottom: $default-padding;
-}
-.project-read-more {
-  padding-top: $default-padding;
+
+@media (min-width: $screen-sm) {
+  a.project {
+    flex: 1;
+  }
 }
