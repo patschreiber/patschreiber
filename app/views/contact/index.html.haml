@@ -1,0 +1,30 @@
+- content_for :body_class, "contact"
+
+.container-content 
+  .row
+    .one
+      %h1.page-title
+        What's up?
+
+      %section
+        %p
+          Drop a line! You can reach me through a number of different ways, listed below. This list is in order of how often I check thr service (I check email <em>far</em> more often than I check the other avenues).
+        .info
+          %ul
+            %li
+              %h6
+                Email
+              = mail_to "ptos382@gmail.com"
+              = mail_to "patrick@getoverqualified.com"
+            %li
+              %h6
+                Instagram
+              = link_to "#{instagram_url}", instagram_url, :target => "_blank"
+            %li
+              %h6
+                Linked In
+              = link_to "#{linkedin_url}", linkedin_url, :target => "_blank"
+            %li
+              %h6
+                Twitter
+              = link_to "#{twitter_url}", twitter_url, :target => "_blank"

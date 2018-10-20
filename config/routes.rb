@@ -10,8 +10,8 @@ PatschreiberCom::Application.routes.draw do
   get '/projects' => 'projects#index', :as => :projects
   get '/projects/:title' => 'projects#show', :as => :specific_project
 
-  get '/contact' => 'hire_me#index', :as => :contact_info
-  get '/resume' => 'hire_me#resume', :as => :resume_root
+  get '/contact' => 'contact#index', :as => :contact
+  get '/resume' => 'contact#resume', :as => :resume
 
   scope '/open-source' do 
     get '/' => 'projects#open_source_index', :as => :open_source_index
