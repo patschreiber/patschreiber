@@ -2,4 +2,12 @@
   %h1.text-center
     = @project.title
   %h5
+    = render partial: "shared/project_dates", locals: { project: @project }
+  %h6
+    = @project.technologies
+  .project-info
+    - if @project.expanded_info.present?
+
+      #{ raw($redcarpet_markdown.render( @project.expanded_info )) }
+
     

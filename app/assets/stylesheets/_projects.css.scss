@@ -33,6 +33,9 @@
 a.project:hover {
   @include box-shadow-inset-and-outset;
 }
+.project-info {
+  @extend p;
+}
 
 @media (min-width: $screen-sm) {
   a.project {
