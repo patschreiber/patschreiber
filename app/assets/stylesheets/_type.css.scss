@@ -68,7 +68,7 @@ p {
   color: $default-font-color;
 }
 a {
-  color: lighten($default-font-color, 25%);
+  color: $default-link-color;
   display: inline-block;
   text-decoration: none;
 
@@ -76,7 +76,7 @@ a {
     @include link-flair;
     content: ' ';
     color: lighten($default-grey, 15%);
-    background-color: lighten($default-font-color, 25%);
+    background-color: $default-link-color;
     height: 1px;
     position: relative;
     margin-right: auto;
@@ -86,12 +86,12 @@ a {
     width: 0;
   
     a:hover:after {
-      background-color: lighten($default-font-color, 25%);
+      background-color: $default-link-color;
       width: 100%;
       opacity: 1;
     }
   }
 }
 .link-like {
-  color: lighten($default-font-color, 25%);
+  color: $default-link-color;
 }

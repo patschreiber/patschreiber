@@ -9,4 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: $default-grey-light;
+
+  a {
+    color: lighten($default-link-color, 15%);
+  }
 }
