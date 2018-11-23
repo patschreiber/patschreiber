@@ -9,15 +9,15 @@
     .one
       .showcase
         .item
-          %a{:href => open_source_index_path}
+          %a{:href => open_source_index_path, :style => "border: 1px solid #1B7CBE;"}
             %span.text
               Open Source
         .item
-          %a{:href => "#"}
+          %a{:href => "#", :style => "border: 1px solid #2852BD;"}
             %span.text
               Professional
         .item
-          %a{:href => "#{github_url}", :target => "_blank"}
+          %a{:href => "#{github_url}", :target => "_blank", :rel => :noopener}
             %span.text
               Github
         .item
@@ -35,7 +35,7 @@
   .row
     .one
       %p
-        Show 3 newest blog posts here. Add "Read More" link under that directs to the blog page (or AJAX loads, whatever). If blog post is too long, truncate the post. 
+        Show 3 newest blog posts here. Add "Read More" link under that directs to the blog page (or AJAX loads, whatever). If blog post is too long, truncate the post.
 
   .row
     .one-half
@@ -43,7 +43,7 @@
         %p
           Lorem ipsum dolor  <small>This is a small</small> Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor
 
-  .row 
+  .row
     - @blog.each do |p|
       %h3{:id => "post-" + p.id.to_s}
         = p.title

@@ -3,11 +3,11 @@
   .container-footer
     #{copyright}
     %span{:class => "divider"} /
-    = link_to "#{linkedin_url}", :target => "_blank" do
+    = link_to "#{linkedin_url}", :target => "_blank", :rel => :noopener do
       Linkedin
     %span{:class => "divider"} /
-    = link_to "#", :target => "_blank" do
+    = link_to "#", :target => "_blank", :rel => :noopener do
       API
     %span{:class => "divider"} /
     Handcrafted with care, from my computer to yours
-    = link_to "@patschreiber", "#{instagram_url}", :target => "_blank"
+    = link_to "@patschreiber", "#{instagram_url}", :target => "_blank", :rel => :noopener

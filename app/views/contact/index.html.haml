@@ -1,6 +1,6 @@
 - content_for :body_class, "contact"
 
-.container-content 
+.container-content
   .row
     .one
       %h1.page-title
@@ -20,12 +20,12 @@
             %li
               %h6
                 Instagram
-              = link_to "#{instagram_url}", instagram_url, :target => "_blank"
+              = link_to "#{instagram_url}", instagram_url, :target => "_blank", :rel => :noopener
             %li
               %h6
                 Linked In
-              = link_to "#{linkedin_url}", linkedin_url, :target => "_blank"
+              = link_to "#{linkedin_url}", linkedin_url, :target => "_blank", :rel => :noopener
             %li
               %h6
                 Twitter
-              = link_to "#{twitter_url}", twitter_url, :target => "_blank"
+              = link_to "#{twitter_url}", twitter_url, :target => "_blank", :rel => :noopener

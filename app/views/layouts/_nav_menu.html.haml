@@ -2,11 +2,11 @@
   %nav.horizontal
     .column
       = link_to "Open Source", open_source_index_path
-      = link_to "#{github_url}", :target => "_blank" do
+      = link_to "#{github_url}", :target => "_blank", :rel => :noopener do
         Github
     .column
       .logo
         = link_to "Pat Schreiber", root_path
     .column
-      = link_to "Contact", contact_path, :target => "_blank"
+      = link_to "Contact", contact_path, :target => "_blank", :rel => :noopener
       = link_to "CV", resume_path
