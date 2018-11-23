@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-//= require modernizr
-//= require jquery-ui-1.10.4.min
+//= require zoomjs/zoom.min
+//= require zoomjs/transition
