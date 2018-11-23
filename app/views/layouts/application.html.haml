@@ -6,10 +6,13 @@
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-    %meta{'http-equiv' => 'Content-Language', :content => 'en'}
+    %meta{charset: "utf-8"}
+    %meta{"http-equiv" => 'Content-Language', content: "en"}
     %meta{:content => "width=device-width", :name => "viewport", "initial-scale" => 1.0, "maximum-scale" => 1.0, "user-scalable" => "no"}
     - if content_for(:meta_description).present?
       %meta{:content => yield(:meta_description), :name => "description" }
+    - else
+      %meta{name: :description, content: "The portfolio and website of Patrick Schreiber, software developer. Currently living in Chicago, IL."}
 
   %body{ :class => "#{yield :body_class}" }
     = render "layouts/nav_menu"
