@@ -25,23 +25,13 @@
             %span.text
               Contact
         .item.item-colorized-1
-          %a{:href => "#"}
+          %a{:href => resume_path}
             %span.text
-              Blog
+              CV
         .item.item-colorized-2
           %a{:href => api_documentation_path}
             %span.text
               API
-  .row
-    .one
-      %p
-        Show 3 newest blog posts here. Add "Read More" link under that directs to the blog page (or AJAX loads, whatever). If blog post is too long, truncate the post.
-
-  .row
-    .one-half
-      .box.floating
-        %p
-          Lorem ipsum dolor  <small>This is a small</small> Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor  Lorem ipsum dolor
 
   .row
     - @blog.each do |p|
