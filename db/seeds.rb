@@ -85,7 +85,7 @@ lambda {
   pat.slug = "This website! Hope you enjoy reading."
   pat.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS (Sass), jQuery, Markdown'
   pat.expanded_info = <<-END
-  This website was lovingly coded by hand to showcase all of my works that, in my opinion, is worth showing off. You're now reading about the website on the website you're reading. We're getting a little meta, but enjoy.
+  This website was lovingly coded by hand to showcase all of my works that, in my opinion, are worth showing off. You're now reading about the website on the website you're reading. We're getting a little meta, but enjoy.
 
   This site has gone through a redesign over the years, with the first design completing circa 2014. The original design was cool but had a few oddities, such as a button on the homepage to toggle between desktop and mobile view, and a content scroll controlled by javascript to scroll a content div on hover.
 
