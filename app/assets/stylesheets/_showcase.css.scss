@@ -37,21 +37,30 @@
   }
 }
 .showcase .item-colorized-0 a {
-  border: 1px solid #1B7CBE;
+  border: 1px solid $showcase-color-0;
   &:hover {
-    @include box-shadow-inset(#1B7CBE);
+    @include box-shadow-inset($showcase-color-0);
+  }
+  .text {
+    color: $showcase-color-0;
   }
 }
 .showcase .item-colorized-1 a {
-  border: 1px solid #2852BD;
+  border: 1px solid $showcase-color-1;
   &:hover {
-    @include box-shadow-inset(#2852BD);
+    @include box-shadow-inset($showcase-color-1);
+  }
+  .text {
+    color: $showcase-color-1;
   }
 }
 .showcase .item-colorized-2 a {
-  border: 1px solid #4828BD;
+  border: 1px solid $showcase-color-2;
   &:hover {
-    @include box-shadow-inset(#4828BD);
+    @include box-shadow-inset($showcase-color-2);
+  }
+  .text {
+    color: $showcase-color-2;
   }
 }
 
