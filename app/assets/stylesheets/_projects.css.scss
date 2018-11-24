@@ -37,6 +37,34 @@ a.project:hover {
   @extend p;
 }
 
+a.project-colorized-0 {
+  @include project-colorizer($project-color-0);
+}
+a.project-colorized-1 {
+  @include project-colorizer($project-color-1);
+}
+a.project-colorized-2 {
+  @include project-colorizer($project-color-2);
+}
+a.project-colorized-3 {
+  @include project-colorizer($project-color-3);
+}
+a.project-colorized-4 {
+  @include project-colorizer($project-color-4);
+}
+a.project-colorized-5 {
+  @include project-colorizer($project-color-5);
+}
+a.project-colorized-6 {
+  @include project-colorizer($project-color-6);
+}
+a.project-colorized-7 {
+  @include project-colorizer($project-color-7);
+}
+a.project-colorized-8 {
+  @include project-colorizer($project-color-8);
+}
+
 @media (min-width: $screen-sm) {
   a.project {
     flex: 1;

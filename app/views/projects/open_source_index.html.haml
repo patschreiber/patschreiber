@@ -6,8 +6,8 @@
     .row
       .column
         .projects
-          - @projects.each do |p|
-            %a.project.box.project-floating{ :href => open_source_project_path(p.title) }
+          - @projects.each_with_index do |p, index|
+            %a.project.box.project-floating{ class: "project-colorized-#{index}", :href => open_source_project_path(p.title) }
               %h3.title
                 = p.title
               .dates
@@ -17,7 +17,7 @@
                 %p
                   = p.slug
               .read-more
-                Read more about #{p.title.capitalize} 
+                Read more about #{p.title.capitalize}
                 %span
                   %small
                     >
