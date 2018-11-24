@@ -4,5 +4,24 @@
       %h1
         Music
       %p
-        In my spare time I'm making music. I've previously never learned music theory, so the quality can vary widely. Check me out on soundcloud for my hobbyist music production:
+        In my spare time, one of my hobbies is making music. I enjoy that the technical challenge attached to the craft, which is similar to programming, but the problems encountered are different. It's also super rewarding to be able to listen to something <em>you</em> created at the end of the day.
+      %p
+        I've previously never learned music theory, so the quality can vary widely. Check me out on soundcloud for my hobbyist music production:
         = link_to "#{soundcloud_url}", soundcloud_url, :target => "_blank", :rel => :noopener
+      %p
+        Hopefully the newer productions sound better than the older ones.
+
+      .content-splitter
+
+      %p
+        I'm also an avid Spotify user since ~2012. I have a lot of public playlists, and while I like all music, I would recommend checking out my "Starred" playlist to get a taste of my strongest musical preferences.
+        %br
+        %br
+        Oh yeah, the URL to my Spotify profile is:
+        %br
+        = link_to "#{spotify_url}", spotify_url, :target => "_blank", :rel => :noopener
+        %br
+        %br
+        And my "Starred" playlist can be found here:
+        %br
+        = link_to "https://open.spotify.com/playlist/1IgAKjzLMn4rM5MLqFoHDV", "https://open.spotify.com/playlist/1IgAKjzLMn4rM5MLqFoHDV", :target => "_blank", :rel => :noopener

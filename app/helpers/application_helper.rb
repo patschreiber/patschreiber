@@ -31,4 +31,8 @@ module ApplicationHelper
   def soundcloud_url
     "https://soundcloud.com/shakewel"
   end
+
+  def spotify_url
+    "https://open.spotify.com/user/patschreiber"
+  end
 end
