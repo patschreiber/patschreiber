@@ -30,8 +30,29 @@
   -webkit-transition: box-shadow .175s ease-in-out;
   transition: box-shadow .175s ease-in-out;
 }
-.showcase .item a:hover {
-  @include box-shadow-inset;
+.showcase .item a {
+  border: 1px solid;
+  &:hover {
+    @include box-shadow-inset;
+  }
+}
+.showcase .item-colorized-0 a {
+  border: 1px solid #1B7CBE;
+  &:hover {
+    @include box-shadow-inset(#1B7CBE);
+  }
+}
+.showcase .item-colorized-1 a {
+  border: 1px solid #2852BD;
+  &:hover {
+    @include box-shadow-inset(#2852BD);
+  }
+}
+.showcase .item-colorized-2 a {
+  border: 1px solid #4828BD;
+  &:hover {
+    @include box-shadow-inset(#4828BD);
+  }
 }
 
 @media (min-width: $screen-sm) {
