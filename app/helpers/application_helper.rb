@@ -24,7 +24,11 @@ module ApplicationHelper
     "http://www.linkedin.com/pub/patrick-schreiber/2a/85/833/"
   end
 
-  def instagram_url 
+  def instagram_url
     "https://www.instagram.com/patschreiber"
+  end
+
+  def soundcloud_url
+    "https://soundcloud.com/shakewel"
   end
 end

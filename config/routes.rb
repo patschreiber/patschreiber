@@ -7,15 +7,26 @@ PatschreiberCom::Application.routes.draw do
 
   root 'landing_page#index'
 
-  get '/projects' => 'projects#index', :as => :projects
-  get '/projects/:title' => 'projects#show', :as => :specific_project
-
   get '/contact' => 'contact#index', :as => :contact
   get '/resume' => 'contact#resume', :as => :resume
 
-  scope '/open-source' do 
+  scope '/hobbies' do
+    get '/music' => 'hobby#music', :as => :music_hobby
+  end
+
+  scope '/docs' do
+    get '/api' => 'documentation#api_index', :as => :api_documentation
+  end
+
+  scope '/open-source' do
     get '/' => 'projects#open_source_index', :as => :open_source_index
     get '/:title' => 'projects#open_source_show', :as => :open_source_project
+  end
+
+  # Require json for the API
+  namespace :api, constraints: lambda { |req| req.format == :json } do
+    get '/cv' => 'cv#index', as: :cv_api
+    get '/projects' => 'projects#index', as: :projects_api
   end
 
   # Example of regular route:
@@ -52,7 +63,7 @@ PatschreiberCom::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
