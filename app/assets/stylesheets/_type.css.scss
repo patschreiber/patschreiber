@@ -84,7 +84,7 @@ a {
     display: block;
     opacity: 0;
     width: 0;
-  
+
     a:hover:after {
       background-color: $default-link-color;
       width: 100%;
@@ -92,6 +92,18 @@ a {
     }
   }
 }
+.subtext {
+  color: $default-grey-light;
+}
 .link-like {
   color: $default-link-color;
+}
+
+.resume {
+  .skills {
+    @extend p;
+  }
+  h5 {
+    margin-bottom: 0;
+  }
 }

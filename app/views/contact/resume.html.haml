@@ -1,78 +1,30 @@
-- content_for :body_class, "resume_root"
+- content_for :body_class, "resume"
 
-.content  
-  .content-row
-    .content-container
-      %h3
-        TECHNOLOGIES:
-
-      %section
-        %p
-          %strong
-            Front-end
-        %p
-          I really enjoy front-end development. To me, it really brings an idea or product together, and shares the vision of the product to the users. Want a super-sleek site to exemplify your new super-sleek disruptive technology? Do you want an intuitive user experience where the user "just knows where to go?" The front-end development process does just that, and the end design glues all of the modules of the application together into a **<i>hopefully</i>** pleasing experience for the end-users.
-        %p
-          %ul{ :class => "skills" }
-            %li HTML 4.01 and 5
-            %li CSS
-            %li javascript/jQuery
-            %li CSS Preprocessors such as SASS
-            %li HTML Preprocessors such as HAML
-            %li Frameworks such as Bootstrap
-            %li Modernizr
-            %li Photoshop
-            %li Illustrator
+.container-content
+  .row
+    .one
+      %h1.page-title
+        Résumé/CV
 
       %section
+        %p
+          Front and back-end web application development experience, and ability to thrive in an environment where I can enhance products I believe in while also growing as a web application developer.
+
+      %section
+        %h3
+          SKILLS:
         %h5
-          Back-end
+          Core Knowledge:
         %p
-          For almost all of my open source projects, I have developed the back-end system for data and application management. I have recently preferred Ruby on Rails to construct the backbone of the application because it allows the application to get off the ground quickly. The following Rails has generated is also helpful when troubleshooting as there is a wealth of information available.
-        %p
-          In addition to the application framework and language itself, I am also familiar with database and server administration. I am able to set up and use Apache or Nginx and am familiar with MySQL and relational database systems.
-
-        %p
-          %ul{ :class => "skills" }
-            %li Ruby on Rails 3.x and 4
-            %li MySQL
-            %li Apache
-            %li Nginx
-            %li Ubuntu/Linux distros
-            %li Passenger
-            %li familiarity with PHP and MVC PHP frameworks such as Symfony2
-
-      %section
+          HTML, CSS, SCSS, Bower, Ruby on Rails 3.x to 5.x, jQuery, HAML, HTML Frameworks such as Bootstrap,  PHP and MVC PHP frameworks such as Symfony, CMS frameworks such as Drupal and Joomla, MySQL, PostgreSQL, Apache, Nginx, Ubuntu/Linux distros, git, familiarity with agile development, project management tools such as Pivotal Tracker or Asana, Proficiency in learning new software and frameworks quickly
         %h5
-          Project Management tools
+          Relevant Knowledge:
         %p
-          %ul{ :class => "skills" }
-            %li Pivotal Tracker 
-            %li Asana
-            %li git
-            %li github
-            %li Vagrant
-            %li Web app analytics using Google Analytics
-
-      %section
+          server setup, browser nuances, user account management and security, some web server security, web app analytics using Google Analytics, web app monitoring (New Relic), Modernizr
         %h5
-          RELEVANT TECHNICAL KNOWLEDGE:
+          Team-based skills:
         %p
           %ul{ :class => "skills" }
-            %li Encryption
-            %li Server setup
-            %li Browser nuances
-            %li User account management and security
-            %li Familiar with web server security and concepts web app analytics using Google Analytics, 
-            %li web app monitoring (New Relic)
-
-
-      %section
-        %h5
-          TEAM-BASED SKILLS:
-        %p
-          %ul{ :class => "skills" }
-            %li Familiarity with agile development and scrum software development
             %li Completing projects with hard deadlines
             %li Hardware troubleshooting
             %li Software troubleshooting
@@ -82,34 +34,64 @@
             %li Written Communication skills
             %li Ability to relay concepts into layman's terms
 
+      .content-splitter
+
       %section
         %h3
           RELEVANT EXPERIENCE:
-        %p
-          %b
-            Themis Bar Review - March 2012 - Current
+        %h4
+          Sandstorm Design, Inc.
           %br
-          Themis Bar Review is a post-market startup specializing in online bar review for recent law school grads. 
+          %h6.subtext
+            Sandstorm Design, Inc. is a digital agency specializing in UX, technology, analytics, strategy, and marketing.
+        %h5
+          Full-stack engineer
+          %br
+          November 2016 - Present
         %p
-          Responsibilities include creating and updating functionality in a web-based application using Ruby on Rails 3.1, PHP, HTML, CSS, SCSS, and jQuery. This is a unique implementation of server-side backend technologies because the site is a PHP/RoR hybrid. The Rails side must communicate the authentication to the PHP side, and vice versa. I created front-end functionality, as well as back end functionality including authentication logic, recording data and user input to a MySQL database, front-end templating, and Rails logic to create dynamic pages.
-        %p
-          Other responsibilities at Themis included both internal and customer tech support, ordering new equipment, hiring, SQL query generation for executive reports, and SEO optimization.
+          Proven track record of creating web sites based on client specifications under strict deadlines, integrating third-party APIs into existing applications, and implementing single sign-on integrations. Some challenges completed during this time include: accurately translating client’s business needs into working software, completing a multi-month Ruby on Rails project for a client as a solo dev, implementing queue workers to successfully process API data daily. During my time at Sandstorm I’ve become one of the “go-to” developers for specialty projects (Ruby on Rails, Joomla).
 
-        %p
-          %b
-            Acapella Media LLC/Discount Now LLC Front End Engineer and Rails Developer - July 2014 - September 2014
-          %br
-          Acapella Media’s digital studio is driven by strategy, obsessed by exploration, and passionate about building in the digital space. We create websites and apps that aren’t just well designed, but add value to start-ups and brands.
-        %p
-          I was the US liaison between the India team and management located in the US. Responsibilities included creating features on a limited deadline, refactoring subpar code in Ruby and Javascript, creating new functionality based on the business needs of DiscountNow. Additionally, I worked with the team and management to discuss best practices for UX and user-engagement on the site. 
+        .content-splitter
 
-        %p
-          %b
-            Capstone game design project - School year 2010 - 2011
+        %h4
+          Themis Bar Review
           %br
-          The senior capstone project was "Warden of Raal," a puzzle game where the player had to strategically place traps to thwart intruders entering his domain. Technologies used included Unity framework, javascript/C# (Unity allows either), Maya, Photoshop, Illustrator
+          %h6.subtext
+            Themis Bar Review is a post-market startup specializing in online bar review for recent law school grads.
+        %h5
+          Full-Stack Engineer
+          %br
+          January 2014 - November 2016
+        %p
+          Responsibilities include increasing functionality in a web-based application using Ruby on Rails 3.2, PHP as a backend and HTML, CSS, SCSS, and jQuery to construct the front-end. Some challenges included the use of an unsupported, legacy PHP framework which needed to communicate with Rails, writing reusable javascript to pull data from the back end and add client-side  functionality, writing new features that play nice with legacy browser versions such as IE8, and finally migrating the legacy web application over to an established framework, such as Symfony2.
+        %h5
+          QA Analyst, Front-end developer, tech support
+          %br
+          March 2012 - December 2013
+        %p
+          Responsible for site content updates using HTML/CSS/javascript, fielding questions and managing customer expectations through various avenues such as Phone, Email, and through the in-app messaging system. Worked on small, front-end site enhancements during this time.
+
+        .content-splitter
+
+        %h5
+          Acapella Media LLC/Discount Now LLC Front End Engineer and Rails Developer - July 2014 - September 2014
+          %br
+          %h6.subtext
+            Acapella Media’s digital studio is driven by strategy, obsessed by exploration, and passionate about building in the digital space. We create websites and apps that aren’t just well designed, but add value to start-ups and brands.
+        %p
+          I was the US liaison between the India team and management located in the US. Responsibilities included creating features on a limited deadline, refactoring subpar code in Ruby and Javascript, creating new functionality based on the business needs of DiscountNow. Additionally, I worked with the team and management to discuss best practices for UX and user-engagement on the site.
+
+        .content-splitter
+
+        %h5
+          Capstone game design project - School year 2010 - 2011
+          %br
+          %h6.subtext
+            The senior capstone project was "Warden of Raal," a puzzle game where the player had to strategically place traps to thwart intruders entering his domain. Technologies used included Unity framework, javascript/C# (Unity allows either), Maya, Photoshop, Illustrator
         %p
           25 person team-based project in which the task was to complete a game in two semesters. Skills demonstrated included creating functionality in extensible modules, project management, time management, maintaining clarity in design documents as well as documenting actions taken during the project, using SVN as version control, creating a reasonable pipeline to submit and push code,  managing the different divisions of the project (art, design, programming, etc.) to come together in a cohesive way, asset creation, debugging code as necessary.
+
+      .content-splitter
 
       %section
         %h3
