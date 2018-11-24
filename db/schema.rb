@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,26 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305204941) do
+ActiveRecord::Schema.define(version: 2018_10_17_000701) do
 
-  create_table "blogs", force: true do |t|
-    t.string   "title"
-    t.text     "post"
+  create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.text "post"
     t.datetime "initial_posting"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "projects", force: true do |t|
-    t.string   "title"
-    t.text     "slug"
-    t.text     "expanded_info"
-    t.string   "url"
-    t.string   "repo_url"
-    t.string   "img_url"
+  create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "source_type"
+    t.string "title"
+    t.text "slug"
+    t.text "expanded_info"
+    t.string "url"
+    t.string "repo_url"
+    t.string "img_url"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.string   "technologies"
+    t.string "technologies"
   end
 
 end

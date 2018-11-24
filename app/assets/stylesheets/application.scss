@@ -1,0 +1,42 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+// Import variables
+@import "variables.css.scss";
+@import "mixins.css.scss";
+@import "type.css.scss";
+@import "flair.css.scss";
+
+// Import dependencies
+@import "normalize.css";
+@import "zoomjs/zoom";
+
+// Import base rules
+@import "base.css.scss";
+
+// Import layout rules
+@import "grid.css.scss";
+@import "alignment.css.scss";
+@import "navigation.css.scss";
+@import "footer.css.scss";
+
+// Import module rules
+@import "boxes.css.scss";
+@import "showcase.css.scss";
+
+@import "landing_page.css.scss";
+@import "projects.css.scss";
+@import "contact.css.scss";
+
+// Import state rules
+// Import theme rules

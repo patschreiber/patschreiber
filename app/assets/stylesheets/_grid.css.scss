@@ -1,0 +1,72 @@
+.container,
+.container-content {
+  margin: 0 auto;
+}
+@media (min-width: $screen-xs) {
+  .container,
+  .container-content {
+    width: $screen-xs;
+  }
+}
+@media (min-width: $screen-sm) {
+  .container,
+  .container-content,
+  .container-footer {
+    width: $screen-sm;
+  }
+}
+@media (min-width: $screen-md) {
+  .container {
+    width: $screen-md;
+  }
+  .container-content, 
+  .container-footer {
+    width: $content-width;
+  }
+}
+@media (min-width: $screen-lg) {
+  .container {
+    width: $screen-lg;
+  }
+  .container-content,
+  .container-footer {
+    width: $content-width;
+  }
+}
+
+.row:before,
+.row:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+[class*='grid-'],
+.one,
+.one-half,
+.one-third,
+.one-fourth  {
+  float: left;
+  min-height: 1px;
+  padding: 12px;
+}
+.one {
+  width: 100%;
+}
+.one-half {
+  width: 50%;
+}
+.one-third {
+  width: 33.333333333%;
+}
+.one-fourth {
+  width: 25%;
+}
+@media (max-width: $screen-xs) {
+  .one,
+  .one-half,
+  .one-third,
+  .one-fourth {
+    width: 100%;
+  }
+}
+

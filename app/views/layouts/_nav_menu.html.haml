@@ -1,81 +1,12 @@
-.nav-expand.text-center
-  = image_tag "navigation/iphone.svg", :id => "navigation-icon"
-  = image_tag "navigation/computer.svg", :id => "navigation-icon-collapsed"
-  %ul.collapsed-nav
-    %li
-      Pat Schreiber
-    %li
-      = link_to "Open Source", projects_path
-    %li
-      = link_to "#{github_url}", :target => "_blank" do
+.container
+  %nav.horizontal
+    .column
+      = link_to "Open Source", open_source_index_path
+      = link_to "#{github_url}", :target => "_blank", :rel => :noopener do
         Github
-    %li
-      = link_to "#{linkedin_url}", :target => "_blank" do
-        Linkedin
-    %li
-      = link_to "Twitter", "#{twitter_url}", :target => "_blank"
-.nav-menu
-  .nav-menu-arrow-blur
-  .nav-menu-arrow#nav-menu-arrow-top
-    #arrow-up
-  .nav-menu-arrow#nav-menu-arrow-bottom.text-center
-    #arrow-down
-  .nav-menu-content
-    .profile-margin
-    = link_to root_path do
-      .profile-img
-    .text-center
-      .h3like
-        Pat Schreiber
-
-      .nav-slug.text-center
-        Lives in Chicago. Lives for the web. I like building things and solving problems.
-    .hr
-
-    .content-row
-      .h4like.text-center
-        = link_to projects_path, :class => "c2a" do
-          Open Source 
-          %span
-            %small
-              >
-      .nav-slug.text-center
-        Cool things that I have made for fun, a learning exercise, or otherwise. 
-      %ul
-        - current_projects.each do |p|
-          %li
-            = link_to specific_project_path(p.title.downcase) do
-              .justified.c2a.text-center
-                #{p.title.capitalize}
-    .hr
-
-    .content-row
-      .h4like.text-center
-        = link_to contact_info_path do
-          Contact Me
-          %span
-            %small
-              >
-      .nav-slug.text-center
-        Let's create something awesome together.
-      %ul
-        %li
-          .header-like-link.justified.text-center
-            Resume
-          %span
-            = link_to ".pdf", "Patrick.Schreiber.Software.Developer.Resume.2016.03.06.pdf", :class => "resume-version", :target => "_blank"
-          %span
-            = link_to ".docx", "Patrick.Schreiber.Software.Developer.Resume.2016.03.06.docx", :class => "resume-version", :target => "_blank"
-        %li
-          = link_to "#{github_url}", :target => "_blank" do
-            .justified.c2a.text-center
-              Github    
-        %li
-          = link_to "#{linkedin_url}", :target => "_blank" do
-            .justified.c2a.text-center
-              Linkedin  
-
-    .hr
-    .content-row
-      .text-center
-        = render "layouts/footer"
+    .column
+      .logo
+        = link_to "Pat Schreiber", root_path
+    .column
+      = link_to "Contact", contact_path, :target => "_blank", :rel => :noopener
+      = link_to "CV", resume_path

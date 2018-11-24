@@ -1,0 +1,17 @@
+.footer-border {
+  @extend .content-splitter;
+}
+.footer {
+  padding: 1.5rem 1rem;
+}
+.container-footer {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $default-grey-light;
+
+  a {
+    color: lighten($default-link-color, 15%);
+  }
+}

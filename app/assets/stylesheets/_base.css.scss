@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: $base-font-size;
+}
+body {
+  max-width: $default-max-body-width;
+}

@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url('ProximaNova/ProximaNova-Regular.otf');
+}
+@font-face {
+  font-family: "ProximaNova-RegularItalic";
+  src: url('ProximaNova/ProximaNova-RegularItalic.otf');
+}
+@font-face {
+  font-family: "ProximaNova-Light";
+  src: url('ProximaNova/ProximaNova-Light.otf');
+}
+@font-face {
+  font-family: "ProximaNova-LightItalic";
+  src: url('ProximaNova/ProximaNova-LightItalic.otf');
+}
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url('ProximaNova/ProximaNova-Semibold.otf');
+}
+@font-face {
+  font-family: "DancingScript";
+  src: url('DancingScript/DancingScript-Regular.otf');
+}
+@font-face {
+  font-family: "Quicksand-Light";
+  src: url('Quicksand/Quicksand-Regular.otf');
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url('Lato/Lato-Reg.ttf');
+}
+body {
+  color: $default-font-color;
+  font-family: $default-sans-serif, 'Arial', sans-serif;
+  font-size: $p-font-size;
+}
+h1 {
+  font-size: $h1-font-size;
+  letter-spacing: .1rem;
+}
+h2 {
+  font-size: $h2-font-size;
+  letter-spacing: .1rem;
+}
+h3 {
+  font-size: $h3-font-size;
+  letter-spacing: .1rem;
+}
+h4 {
+  font-size: $h4-font-size;
+  letter-spacing: .1rem;
+}
+h5 {
+  font-size: $h5-font-size;
+  letter-spacing: .1rem;
+}
+h6 {
+  font-size: $h6-font-size;
+  letter-spacing: .1rem;
+}
+p {
+  font-family: $default-serif;
+  font-size: $p-font-size;
+  margin: 0;
+  line-height: 1.8rem;
+  font-weight: 400;
+  color: $default-font-color;
+}
+a {
+  color: $default-link-color;
+  display: inline-block;
+  text-decoration: none;
+
+  &:after {
+    @include link-flair;
+    content: ' ';
+    color: lighten($default-grey, 15%);
+    background-color: $default-link-color;
+    height: 1px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    opacity: 0;
+    width: 0;
+
+    a:hover:after {
+      background-color: $default-link-color;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+.subtext {
+  color: $default-grey-light;
+}
+.link-like {
+  color: $default-link-color;
+}
+
+.resume {
+  .skills {
+    @extend p;
+  }
+  h5 {
+    margin-bottom: 0;
+  }
+}

@@ -1,43 +1,45 @@
-.content
-  .content-row
-    .content-container
-      - @blog.each do |p|
-        %h3{:id => "post-" + p.id.to_s}
-          = p.title
+.container-content
+  .row
+    .one
+      .personal-blurb
+        .profile-img
         %p
-          #{ raw($redcarpet_markdown.render( p.post )) }
-        %p
-          = p.initial_posting.strftime( "%B %d, %Y" )
-        #disqus_thread
-        :javascript
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'patschreiber'; // required: replace example with your forum shortname
-            var disqus_identifier = 'TheCallOfANewVenture';
+          Lives in Chicago. Lives for the web.<br> I enjoy building elegant solutions to complex problems, predominantly using http.
+  .row
+    .one
+      .showcase
+        .item.item-colorized-0
+          %a{:href => open_source_index_path}
+            %span.text
+              Open Source
+        .item.item-colorized-1
+          %a{:href => music_hobby_path}
+            %span.text
+              Music
+        .item.item-colorized-2
+          %a{:href => "#{github_url}", :target => "_blank", :rel => :noopener}
+            %span.text
+              Github
+        .item.item-colorized-0
+          %a{:href => contact_path}
+            %span.text
+              Contact
+        .item.item-colorized-1
+          %a{:href => resume_path}
+            %span.text
+              CV
+        .item.item-colorized-2
+          %a{:href => api_documentation_path}
+            %span.text
+              API
 
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  .row
+    - @blog.each do |p|
+      %h3{:id => "post-" + p.id.to_s}
+        = p.title
+      %p
+        #{ raw($redcarpet_markdown.render( p.post )) }
+      %p
+        = p.initial_posting.strftime( "%B %d, %Y" )
 
 
-
-        :javascript
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'patschreiber'; // required: replace example with your forum shortname
-            var disqus_identifier = 'BBBBB';
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  
-
-.clear
