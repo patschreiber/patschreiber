@@ -33,7 +33,7 @@
             %span.text
               API
 
-  .row
+  .row.blog-posts
     - @blog.each do |p|
       %h3{:id => "post-" + p.id.to_s}
         = p.title
@@ -41,5 +41,3 @@
         #{ raw($redcarpet_markdown.render( p.post )) }
       %p
         = p.initial_posting.strftime( "%B %d, %Y" )
-
-

@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def open_source_index
-    @projects = Project.where(:source_type => "open").all
+    @projects = Project.where(:source_type => "open").all.order(start_date: :desc)
   end
 
   def open_source_show
