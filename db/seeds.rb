@@ -172,11 +172,11 @@ lambda {
   satchel.expanded_info = <<-END
   Satchel is an interesting project in that it is more similar to a "plugin" than a whole program. The Satchel constructs a grid that can contain different items. If the user clicks an item, it will be added to the "clipboard," where the user can then place it anywhere else on the grid. If an item already occupies the space the user wants to place the item in their clipboard, the two will be swapped out. If the system sees that there are two _different_ items occupying the space the user wants to place their clipboarded item, it will not let them.
 
-  ###### Needle in the haystack
+  <h4>Needle in the haystack</h4>
 
-  The grid itself is constructed as a simple 2D array, creating a, [x,y] coordinate pair for each square. When a user clicks on a square, we initiate a "breadth-first search" to find all of the squares that have the same item stored in it. The initially-clicked square is added to a queue. The system then pops off the queue item, looks for all the neighbors of that square, then adds the neighbors to the queue. We then process items in the queue, looking for if the current square has the "item id" we're looking for stored in it. At the end of the process, we should have all the square's coordinates that contain the same "item id" in a list, such as `[0,1], [0,2], [1,1], [1,2]`.
+  The grid itself is constructed as a simple 2D array, creating an `[x,y]` coordinate pair for each square. When a user clicks on a square, we initiate a "breadth-first search" to find all of the squares that have the same item stored in it. The initially-clicked square is added to a queue. The system then pops off the queue item, looks for all the neighbors of that square, then adds the neighbors to the queue. We then process items in the queue, looking for if the current square has the "item id" we're looking for stored in it. At the end of the process, we should have all the square's coordinates that contain the same "item id" in a list, such as `[0,1], [0,2], [1,1], [1,2]`.
 
-  ###### Mutating the state
+  <h4>Mutating the state</h4>
 
   Now that we have a list of coordinates, we can begin manipulating the board. We'll simply modify the data stored at each coordinate and either add it to a clipboard, add it to the grid, or delete it entirely. This allows us to plug in any sort of front-end to render the grid. Since it's all coordinates, our front-end just needs to read the current state of the 2D array as well as the coordinate list returned from our breadth-first search. I've used plain javascript, but you could just as easily use a React component where the state is the 2D array grid.
   END
