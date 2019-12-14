@@ -16,7 +16,6 @@ Blog.delete_all
 lambda {
   cta = Project.new
   cta.source_type = 'open'
-  cta.slug = 'cta-javascript-test'
   cta.title = 'CTA Tracker'
   cta.synopsis = 'A little project I whipped up to work with graph APIs as well as searching through lists to access specific information. A user clicks all of the stops on the Chicago train line system they have been to and the program tells them information about their time riding the rails.'
   cta.technologies = 'HTML, CSS, jQuery, Chart.js'
@@ -30,7 +29,7 @@ lambda {
 lambda {
   incense = Project.new
   incense.source_type = 'open'
-  incense.slug = 'incense-fridge-tracker'
+
   incense.title = 'Incense'
   incense.synopsis = 'Incense keeps track of perishable foods in your fridge (or cabinet, or kitchen) and alerts you when something is about to spoil. Never waste food or money again.'
   incense.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS, jQuery, Bootstrap, redis, Resque, cron'
@@ -44,7 +43,6 @@ lambda {
 lambda {
   nori = Project.new
   nori.source_type = 'open'
-  nori.slug = 'nori-web-app-role-playing-game'
   nori.title = 'Nori'
   nori.synopsis = 'Nori is a game about collecting, trading, and improving. Collect items. Play with your friends. Trade around the world. '
   nori.technologies = 'Ruby on Rails 4, MySQL, Bootstrap, HTML, CSS, jQuery, redis, Resque, cron'
@@ -67,7 +65,6 @@ lambda {
 lambda {
   oilman = Project.new
   oilman.source_type = 'open'
-  oilman.slug = 'oilman-incremental-game'
   oilman.title = 'Oilman'
   oilman.synopsis = 'Compulsive clicking game. The project stipulations were to make a game over a long holiday weekend. Constraints included feature management due to time as well as quick prototyping and execution'
   oilman.technologies = 'HTML, CSS, jQuery'
@@ -85,7 +82,6 @@ lambda {
 lambda {
   pat = Project.new
   pat.source_type = 'open'
-  pat.slug = 'patschreiber-site'
   pat.title = "patschreiber (site)"
   pat.synopsis = "This website! Hope you enjoy reading."
   pat.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS (Sass), jQuery, Markdown'
@@ -105,7 +101,6 @@ lambda {
 lambda {
   timeless = Project.new
   timeless.source_type = 'open'
-  timeless.slug = 'timeless-online'
   timeless.title = 'Timeless Online'
   timeless.synopsis = 'Timeless is an online game that evolved from my "Nori" project. With programmer experience comes more sophistication in said programmers code, and Timeless represents this notion well.'
   timeless.expanded_info = <<-END
@@ -138,7 +133,6 @@ lambda {
 lambda {
   oq = Project.new
   oq.source_type = 'open'
-  oq.slug = 'overqualified-llc'
   oq.title = 'Overqualified'
   oq.synopsis = 'Overqualified was a pet project that was going to sell t-shirts. It turns out Chicago is a somewhat difficult city to sell physical merchandise out of when you\'re on a budget, so we had to scrap the project.'
   oq.expanded_info = <<-END
@@ -173,7 +167,6 @@ END
 lambda {
   satchel = Project.new
   satchel.source_type = 'open'
-  satchel.slug = 'satchel-rpg-inventory-management'
   satchel.title = 'Satchel'
   satchel.synopsis = 'Satchel is an inventory management system for games akin to old-school RPGs such as Diablo.'
   satchel.technologies = 'javascript, HTML, CSS'

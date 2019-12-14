@@ -9,7 +9,7 @@ Homepage for Pat Schreiber.
 3. Update gems
 4. Update Rails
 5. Regenerate Sitemap
-6.
+6. Regenerate pretty URLs (friendly_ids)
 
 ## Gem Update
 See which gems are outdated
@@ -37,3 +37,20 @@ Cron log is assumed to be `/var/log/cron.log`. See [https://askubuntu.com/questi
 
 Writes the crontab file for your jobs
 `whenever --update-crontab`
+
+## Pretty URLs
+Add Pretty URLs to already-existing entities
+`Project.find_each(&:save)`
+
+"Projects" use the title by default, but you can set your own slug using
+```rb
+lambda {
+  project = Project.new
+  project.source_type = 'open'
+  project.slug = 'my-long-project-pretty-URL'
+  # etc...
+}
+```
+
+Adds the slug column to a database table
+`rails g migration AddSlugToUsers slug:uniq`

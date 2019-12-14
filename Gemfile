@@ -18,7 +18,6 @@ gem 'uglifier'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 
@@ -33,10 +32,12 @@ gem 'redcarpet'
 # managing your sitemaps, as well as many other great features.
 gem 'sitemap_generator', '~>6.0.2'
 
+# Pretty URLs for Rails
+gem 'friendly_id', '~> 5.3.0'
+
 # Whenever is a Ruby gem that provides a clear syntax for writing and deploying
 # cron jobs.
 gem 'whenever', require: false
-
 
 group :flay do
   # Flay analyzes code for structural similarities. Differences in literal values, variable, class, method names, whitespace, programming style, braces vs do/end, etc are all ignored.

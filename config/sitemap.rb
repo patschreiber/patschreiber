@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "https://www.patschreiber.com"
+SitemapGenerator::Sitemap.default_host = 'https://www.patschreiber.com'
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
@@ -24,4 +24,17 @@ SitemapGenerator::Sitemap.create do
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at
   #   end
+
+  # group(:sitemaps_path => 'en/', :)
+  add '/contact', changefreq: :daily, priority: 0.9
+  add '/open-source', changefreq: :weekly, priority: 0.8
+
+  # Load all Project routes into the sitemap
+  Project.find_each do |project|
+    add open_source_project_path(project),
+      lastmod: project.updated_at,
+      priority: 0.8
+  end
+
+  add '/resume', changefreq: :daily, priority: 0.7
 end
