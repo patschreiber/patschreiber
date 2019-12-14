@@ -35,6 +35,8 @@ gem 'sitemap_generator', '~>6.0.2'
 # Pretty URLs for Rails
 gem 'friendly_id', '~> 5.3.0'
 
+gem 'secure_headers', '~>6.1.1'
+
 # Whenever is a Ruby gem that provides a clear syntax for writing and deploying
 # cron jobs.
 gem 'whenever', require: false
