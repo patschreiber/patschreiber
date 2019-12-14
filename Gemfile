@@ -27,6 +27,16 @@ gem 'mysql2'
 gem 'jquery-turbolinks'
 gem 'redcarpet'
 
+# SitemapGenerator is a framework-agnostic XML Sitemap generator written in Ruby
+# with automatic Rails integration. It supports Video, News, Image, Mobile,
+# PageMap and Alternate Links sitemap extensions and includes Rake tasks for
+# managing your sitemaps, as well as many other great features.
+gem 'sitemap_generator', '~>6.0.2'
+
+# Whenever is a Ruby gem that provides a clear syntax for writing and deploying
+# cron jobs.
+gem 'whenever', require: false
+
 
 group :flay do
   # Flay analyzes code for structural similarities. Differences in literal values, variable, class, method names, whitespace, programming style, braces vs do/end, etc are all ignored.
