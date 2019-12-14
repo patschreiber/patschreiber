@@ -152,7 +152,7 @@ SecureHeaders::Configuration.default do |config|
     # allow-scripts - Allows the embedded browsing context to run scripts (but
     # not create pop-up windows). If this keyword is not used, this operation is
     # not allowed.
-    sandbox: ['allow-forms', 'allow-scripts', 'allow-same-origin'], # true and [] will set a maximally restrictive setting
+    sandbox: ['allow-forms', 'allow-scripts', 'allow-same-origin', 'allow-popups'], # true and [] will set a maximally restrictive setting
 
     # plugin-types directive restricts the set of plugins that can be embedded
     # into a document by limiting the types of resources which can be loaded.
