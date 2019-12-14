@@ -4,6 +4,8 @@ class ProjectsController < ApplicationController
   end
 
   def open_source_show
-    @project = Project.find_by(source_type: "open", title: params[:title])
+    # The friendly_id gem will look for the slug column and match on the
+    # entry for the normal entity id, so we can still use `params[:id]`.
+    @project = Project.friendly.find(params[:id])
   end
 end
