@@ -1,5 +1,6 @@
 ---
 scripts:
+  # HAML gets compiled down to erb, evidently
   app/views/snippets/_google_analytics.html.erb:
-    - "'sha256-ypFgR9e4H4OwQ0ofVxmrkHQf1kJxQYmqodHv6WAFulc='"
+    - "'sha256-fT1yXL24dxfBu4wURzO2WDvyN3qgNaelhUrjA0TxxPA='"
 styles: {}
