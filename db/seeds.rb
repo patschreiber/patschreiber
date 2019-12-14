@@ -16,8 +16,9 @@ Blog.delete_all
 lambda {
   cta = Project.new
   cta.source_type = 'open'
+  cta.slug = 'cta-javascript-test'
   cta.title = 'CTA Tracker'
-  cta.slug = 'A little project I whipped up to work with graph APIs as well as searching through lists to access specific information. A user clicks all of the stops on the Chicago train line system they have been to and the program tells them information about their time riding the rails.'
+  cta.synopsis = 'A little project I whipped up to work with graph APIs as well as searching through lists to access specific information. A user clicks all of the stops on the Chicago train line system they have been to and the program tells them information about their time riding the rails.'
   cta.technologies = 'HTML, CSS, jQuery, Chart.js'
   cta.url = 'http://cta.labs.nori.nu/'
   cta.repo_url = 'https://github.com/patschreiber/cta'
@@ -29,8 +30,9 @@ lambda {
 lambda {
   incense = Project.new
   incense.source_type = 'open'
+  incense.slug = 'incense-fridge-tracker'
   incense.title = 'Incense'
-  incense.slug = 'Incense keeps track of perishable foods in your fridge (or cabinet, or kitchen) and alerts you when something is about to spoil. Never waste food or money again.'
+  incense.synopsis = 'Incense keeps track of perishable foods in your fridge (or cabinet, or kitchen) and alerts you when something is about to spoil. Never waste food or money again.'
   incense.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS, jQuery, Bootstrap, redis, Resque, cron'
   incense.url = 'http://labs.nori.nu/'
   incense.repo_url = 'https://github.com/patschreiber/incense'
@@ -42,8 +44,9 @@ lambda {
 lambda {
   nori = Project.new
   nori.source_type = 'open'
+  nori.slug = 'nori-web-app-role-playing-game'
   nori.title = 'Nori'
-  nori.slug = 'Nori is a game about collecting, trading, and improving. Collect items. Play with your friends. Trade around the world. '
+  nori.synopsis = 'Nori is a game about collecting, trading, and improving. Collect items. Play with your friends. Trade around the world. '
   nori.technologies = 'Ruby on Rails 4, MySQL, Bootstrap, HTML, CSS, jQuery, redis, Resque, cron'
   nori.expanded_info = <<-END
   The project was interesting as it was my first forray into the world of Rails development. I wanted to create a 'compulsive clicking game' that was infectious to play. It borrowed heavily from Diablo 2 (PC) and Cookie Clicker (Flash, PC, Mac). The objective was to collect the best items in the game, either through hard work or smart trading.
@@ -64,8 +67,9 @@ lambda {
 lambda {
   oilman = Project.new
   oilman.source_type = 'open'
+  oilman.slug = 'oilman-incremental-game'
   oilman.title = 'Oilman'
-  oilman.slug = 'Compulsive clicking game. The project stipulations were to make a game over a long holiday weekend. Constraints included feature management due to time as well as quick prototyping and execution'
+  oilman.synopsis = 'Compulsive clicking game. The project stipulations were to make a game over a long holiday weekend. Constraints included feature management due to time as well as quick prototyping and execution'
   oilman.technologies = 'HTML, CSS, jQuery'
   oilman.expanded_info = <<-END
   I had a lot of fun with Oilman. I was with relatives for a weekend, so I decided to see if I couldn't complete a project within a strict deadline. This deadline was 2 days with limited internet and limited time during the day to code. The product of this 'challenge' is a little game where the player tries to build up their oil empire and ultimately pay back the loan shark, who the player owes money.
@@ -81,8 +85,9 @@ lambda {
 lambda {
   pat = Project.new
   pat.source_type = 'open'
+  pat.slug = 'patschreiber-site'
   pat.title = "patschreiber (site)"
-  pat.slug = "This website! Hope you enjoy reading."
+  pat.synopsis = "This website! Hope you enjoy reading."
   pat.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS (Sass), jQuery, Markdown'
   pat.expanded_info = <<-END
   This website was lovingly coded by hand to showcase all of my works that, in my opinion, are worth showing off. You're now reading about the website on the website you're reading. We're getting a little meta, but enjoy.
@@ -100,8 +105,9 @@ lambda {
 lambda {
   timeless = Project.new
   timeless.source_type = 'open'
+  timeless.slug = 'timeless-online'
   timeless.title = 'Timeless Online'
-  timeless.slug = 'Timeless is an online game that evolved from my "Nori" project. With programmer experience comes more sophistication in said programmers code, and Timeless represents this notion well.'
+  timeless.synopsis = 'Timeless is an online game that evolved from my "Nori" project. With programmer experience comes more sophistication in said programmers code, and Timeless represents this notion well.'
   timeless.expanded_info = <<-END
   Timeless is the project that evolved from "Nori." With programmer experience comes more sophistication in said programmers code, and Timeless represents this well. Timeless is another online game, but is currently a lot farther than Nori ever was in a fraction of the time.
 
@@ -132,8 +138,9 @@ lambda {
 lambda {
   oq = Project.new
   oq.source_type = 'open'
+  oq.slug = 'overqualified-llc'
   oq.title = 'Overqualified'
-  oq.slug = 'Overqualified was a pet project that was going to sell t-shirts. It turns out Chicago is a somewhat difficult city to sell physical merchandise out of when you\'re on a budget, so we had to scrap the project.'
+  oq.synopsis = 'Overqualified was a pet project that was going to sell t-shirts. It turns out Chicago is a somewhat difficult city to sell physical merchandise out of when you\'re on a budget, so we had to scrap the project.'
   oq.expanded_info = <<-END
   Overqualified was a pet project that was going to sell t-shirts. We were going to differentiate ourselves by having "lines from resumes" embossed onto the shirts. For instance,a few ideas we had for shirts were:
 
@@ -166,8 +173,9 @@ END
 lambda {
   satchel = Project.new
   satchel.source_type = 'open'
+  satchel.slug = 'satchel-rpg-inventory-management'
   satchel.title = 'Satchel'
-  satchel.slug = 'Satchel is an inventory management system for games akin to old-school RPGs such as Diablo.'
+  satchel.synopsis = 'Satchel is an inventory management system for games akin to old-school RPGs such as Diablo.'
   satchel.technologies = 'javascript, HTML, CSS'
   satchel.expanded_info = <<-END
   Satchel is an interesting project in that it is more similar to a "plugin" than a whole program. The Satchel constructs a grid that can contain different items. If the user clicks an item, it will be added to the "clipboard," where the user can then place it anywhere else on the grid. If an item already occupies the space the user wants to place the item in their clipboard, the two will be swapped out. If the system sees that there are two _different_ items occupying the space the user wants to place their clipboarded item, it will not let them.
