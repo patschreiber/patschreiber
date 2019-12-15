@@ -1,58 +1,212 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>404 Page Not Found | Pat Schreiber</title>
   <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-  }
+    a {
+      color: #5d789e;
+      display: inline-block;
+      text-decoration: none;
+    }
+    a:after {
+      -moz-transition-duration: .24s;
+      -ms-transition-duration: .24s;
+      -webkit-transition-duration: .24s;
+      transition-duration: .24s;
+      -moz-transition-property: transform opacity;
+      -ms-transition-property: transform opacity;
+      -webkit-transition-property: transform opacity;
+      transition-property: transform opacity;
+      content: ' ';
+      color: #595959;
+      background-color: #5d789e;
+      height: 1px;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      opacity: 0;
+      width: 0;
+    }
+    a:after a:hover:after {
+      background-color: #5d789e;
+      width: 100%;
+      opacity: 1;
+    }
+    .container,
+    .container-content {
+      margin: 0 auto;
+    }
 
-  div.dialog {
-    width: 25em;
-    margin: 4em auto 0 auto;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 4em 0 4em;
-  }
+    @media (min-width: 480px) {
+      /* line 6, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+      .container,
+      .container-content {
+        width: 480px;
+      }
+    }
+    @media (min-width: 768px) {
+      /* line 12, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+      .container,
+      .container-content,
+      .container-footer {
+        width: 768px;
+      }
+    }
+    @media (min-width: 992px) {
+      /* line 19, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+      .container {
+        width: 992px;
+      }
 
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+      /* line 22, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+      .container-content,
+      .container-footer {
+        width: 900px;
+      }
+    }
+    @media (min-width: 1200px) {
+      /* line 28, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+      .container {
+        width: 1200px;
+      }
 
-  body > p {
-    width: 33em;
-    margin: 0 auto 1em;
-    padding: 1em 0;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow:0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+      /* line 31, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+      .container-content,
+      .container-footer {
+        width: 900px;
+      }
+    }
+    /* line 37, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+    .row:before,
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* line 43, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+    [class*='grid-'],
+    .one,
+    .one-half,
+    .one-third,
+    .one-fourth {
+      float: left;
+      min-height: 1px;
+      padding: 12px;
+    }
+
+    /* line 52, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+    .one {
+      width: 100%;
+    }
+
+    /* line 55, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+    .one-half {
+      width: 50%;
+    }
+
+    /* line 58, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+    .one-third {
+      width: 33.333333333%;
+    }
+
+    /* line 61, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+    .one-fourth {
+      width: 25%;
+    }
+
+    @media (max-width: 480px) {
+      /* line 65, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_grid.css.scss */
+      .one,
+      .one-half,
+      .one-third,
+      .one-fourth {
+        width: 100%;
+      }
+    }
+    /* line 1, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_alignment.css.scss */
+    .align-left {
+      float: left;
+    }
+
+    /* line 4, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_alignment.css.scss */
+    .align-right {
+      float: right;
+    }
+
+    /* line 7, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_alignment.css.scss */
+    .align-center {
+      text-align: center;
+    }
+
+    /* line 1, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_navigation.css.scss */
+    nav {
+      font-weight: 700;
+    }
+    /* line 3, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_navigation.css.scss */
+    nav a {
+      -moz-transition-duration: .24s;
+      -ms-transition-duration: .24s;
+      -o-transition-duration: .24s;
+      -webkit-transition-duration: .24s;
+      transition-duration: .24s;
+      -moz-transition-property: transform opacity;
+      -ms-transition-property: transform opacity;
+      -o-transition-property: transform opacity;
+      -webkit-transition-property: transform opacity;
+      transition-property: transform opacity;
+      font-weight: 700;
+      padding: .5rem 1rem;
+    }
+    /* line 8, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_navigation.css.scss */
+    nav a:hover:after {
+      width: 100%;
+      opacity: 1;
+    }
+    /* line 13, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_navigation.css.scss */
+    nav .logo {
+      font-size: 1.5rem;
+    }
+    /* line 15, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_navigation.css.scss */
+    nav .logo a {
+      color: #2e3b4e;
+    }
+
+    /* line 20, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_navigation.css.scss */
+    nav.horizontal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: 480px) {
+      /* line 28, /Users/patrickschreiber/Documents/repos/patschreiber/app/assets/stylesheets/_navigation.css.scss */
+      nav a {
+        padding: 1.5rem 1rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
-  </div>
-  <p>If you are the application owner check the logs for more information.</p>
+  <div class='container'>
+    <nav class='horizontal'>
+    <div class='column'>
+    <a href="/open-source">Open Source</a>
+    <a target="_blank" rel="noopener" href="https://github.com/patschreiber">Github
+    </a></div>
+    <div class='column'>
+    <div class='logo'>
+    <a href="/">Pat Schreiber</a>
+    </div>
+    </div>
+    <div class='column'>
+    <a target="_blank" rel="noopener" href="/contact">Contact</a>
+    <a href="/resume">CV</a>
+    </div>
+    </nav>
+    </div>
 </body>
 </html>

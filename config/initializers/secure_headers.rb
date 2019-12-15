@@ -72,8 +72,14 @@ SecureHeaders::Configuration.default do |config|
   config.csp = {
     # "meta" values. these will shape the header, but the values are not
     # included in the header.
-    preserve_schemes: true, # default: false. Schemes are removed from host sources to save bytes and discourage mixed content.
-    disable_nonce_backwards_compatibility: true, # default: false. If false, `unsafe-inline` will be added automatically when using nonces. If true, it won't. See #403 for why you'd want this.
+
+    # default: false. Schemes are removed from host sources to save bytes and
+    # discourage mixed content.
+    preserve_schemes: true,
+
+    # default: false. If false, `unsafe-inline` will be added automatically when
+    # using nonces. If true, it won't. See #403 for why you'd want this.
+    disable_nonce_backwards_compatibility: true,
 
     # default-src directive serves as a fallback for the other CSP fetch
     # directives. For each of the following directives that are absent, the user
@@ -161,8 +167,8 @@ SecureHeaders::Configuration.default do |config|
     # script-src directive specifies valid sources for JavaScript. This includes not only URLs loaded directly into <script> elements, but also things like inline script event handlers (onclick) and XSLT stylesheets which can trigger script execution.
     script_src: %w('self' https://www.googletagmanager.com https://tagmanager.google.com https://www.google-analytics.com https://ssl.google-analytics.com),
 
-    # style-src directive specifies valid sources for stylesheets.
-    style_src: %w('self' https://tagmanager.google.com https://fonts.googleapis.com),
+    # style-src directive specifies valid sources for stylesheets.                        #404
+    style_src: %w('self' https://tagmanager.google.com https://fonts.googleapis.com 'sha256-q1icEMQsuyXJEkViimPBHE4Ygjz1l0TO8g6eUYNW7fc='),
 
     # worker-src directive specifies valid sources for Worker, SharedWorker, or ServiceWorker scripts.
     worker_src: %w('self'),
@@ -177,9 +183,13 @@ SecureHeaders::Configuration.default do |config|
   }
 end
 
-# Which headers you decide to use for API responses is entirely a personal choice. Things like X-Frame-Options seem to have no place in an API response and would be wasting bytes. While this is true, browsers can do funky things with non-html responses. At the minimum, we suggest CSP:
+# Which headers you decide to use for API responses is entirely a personal
+# choice. Things like X-Frame-Options seem to have no place in an API response
+# and would be wasting bytes. While this is true, browsers can do funky things
+# with non-html responses. At the minimum, we suggest CSP:
 #
-# However, I would consider these headers anyways depending on your load and bandwidth requirements.
+# However, I would consider these headers anyways depending on your load and
+# bandwidth requirements.
 # See https://github.com/twitter/secure_headers
 SecureHeaders::Configuration.override(:api) do |config|
   config.csp = { default_src: 'none' }
