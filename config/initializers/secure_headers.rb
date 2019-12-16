@@ -20,7 +20,7 @@ SecureHeaders::Configuration.default do |config|
   # Strict-Transport-Security response header (often abbreviated as HSTS) lets a
   # web site tell browsers that it should only be accessed using HTTPS, instead
   # of using HTTP.
-  config.hsts = "max-age=#{1.week.to_i}"
+  config.hsts = "max-age=#{1.year.to_i}"
 
   # X-Frame-Options HTTP response header can be used to indicate whether or not
   # a browser should be allowed to render a page in a <frame>, <iframe>, <embed>
