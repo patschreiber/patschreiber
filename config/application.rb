@@ -42,6 +42,6 @@ module PatschreiberCom
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
-    config.secret_key_base = 'bssecretkeybase'
+    config.secret_key_base = Rails.application.credentials.fetch(:secret_key_base)
   end
 end
