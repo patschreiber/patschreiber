@@ -32,6 +32,7 @@ PatschreiberCom::Application.routes.draw do
   end
 
   get '/privacy-policy', to: "legal#privacy_policy", as: :privacy_policy
+  get '/license', to: "legal#terms", as: :tos
 
   # Require json for the API
   namespace :api, constraints: lambda { |req| req.format == :json } do
