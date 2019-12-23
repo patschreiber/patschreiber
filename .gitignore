@@ -13,6 +13,7 @@ capybara-*.html
 public/assets/application-*
 public/assets/json_test-*
 public/assets/_alignment-*
+public/assets/.sprockets-manifest-
 /coverage/
 /spec/tmp/*
 **.orig
