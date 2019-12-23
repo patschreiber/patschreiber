@@ -1,0 +1,53 @@
+development:
+  csp:
+    base_uri:
+      - "'self'"
+    block_all_mixed_content: true
+    child_src:
+      - "'self'"
+    connect_src:
+      - 'wss:'
+      - https://www.google-analytics.com
+    default_src:
+      - "'none'"
+    disable_nonce_backwards_compatibility: true
+    font_src:
+      - "'self'"
+      - https://fonts.gstatic.com
+    form_action:
+      - "'self'"
+    frame_ancestors:
+      - "'none'"
+    # TODO: This is only used for a Google Doc embed. Remove if decide to use API.
+    frame_src:
+      - https://docs.google.com
+    img_src:
+      - "'self'"
+      - https://www.googletagmanager.com
+      - https://ssl.gstatic.com
+      - https://www.gstatic.com
+      - https://www.google-analytics.com
+    manifest_src:
+      - "'self'"
+    media_src:
+      - "'self'"
+    object_src:
+      - "'self'"
+    preserve_schemes: true
+    sandbox:
+      - 'allow-forms'
+      - 'allow-scripts'
+      - 'allow-same-origin'
+      - 'allow-popups'
+    script_src:
+      - "'self'"
+      - https://www.googletagmanager.com
+      - https://tagmanager.google.com https://www.google-analytics.com
+      - https://ssl.google-analytics.com
+    style_src:
+      - "'self'"
+      - https://tagmanager.google.com
+      - https://fonts.googleapis.com
+    worker_src:
+      - "'self'"
+    upgrade_insecure_requests: true

@@ -38,6 +38,13 @@ Cron log is assumed to be `/var/log/cron.log`. See [https://askubuntu.com/questi
 Writes the crontab file for your jobs
 `whenever --update-crontab`
 
+## Keys and Secre
+
+Edit Keys
+`EDITOR=vim rails credentials:edit`
+Use a key
+`Rails.application.credentials.secret_key_base`
+
 ## Pretty URLs
 Add Pretty URLs to already-existing entities
 `Project.find_each(&:save)`

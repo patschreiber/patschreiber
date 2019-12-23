@@ -1,6 +1,10 @@
 PatschreiberCom::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Tell Rails to ensure that a master key has been made available from either
+  # ENV['RAILS_MASTER_KEY'] or in config/master.key.
+  config.require_master_key = true
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

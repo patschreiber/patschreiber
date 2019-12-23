@@ -20,3 +20,6 @@ rerun.txt
 pickle-email-*.html
 .project
 config/initializers/secret_token.rb
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
