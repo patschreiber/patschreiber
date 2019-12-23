@@ -36,5 +36,7 @@ SitemapGenerator::Sitemap.create do
       priority: 0.8
   end
 
+  add '/privacy-policy', changefreq: :weekly, priority: 0.8
+
   add '/resume', changefreq: :daily, priority: 0.7
 end

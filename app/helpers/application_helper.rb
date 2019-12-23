@@ -35,4 +35,8 @@ module ApplicationHelper
   def spotify_url
     "https://open.spotify.com/user/patschreiber"
   end
+
+  def mail_address
+    "ptos382@gmail.com"
+  end
 end
