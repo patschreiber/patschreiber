@@ -8,6 +8,10 @@ development:
     connect_src:
       - 'wss:'
       - https://www.google-analytics.com
+      # Allow webpack-dev-server to load packs
+      - 'https:'
+      - http://localhost:3035
+      - ws://localhost:3035
     default_src:
       - "'none'"
     disable_nonce_backwards_compatibility: true

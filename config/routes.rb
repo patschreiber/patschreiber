@@ -1,4 +1,4 @@
-PatschreiberCom::Application.routes.draw do
+Rails.application.routes.draw do
   get 'legal/terms'
   get 'legal/privacy_policy'
   get 'career/mission_statement'

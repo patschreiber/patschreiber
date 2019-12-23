@@ -38,7 +38,7 @@ Cron log is assumed to be `/var/log/cron.log`. See [https://askubuntu.com/questi
 Writes the crontab file for your jobs
 `whenever --update-crontab`
 
-## Keys and Secre
+## Keys and Secrets
 
 Edit Keys
 `EDITOR=vim rails credentials:edit`
@@ -61,3 +61,6 @@ lambda {
 
 Adds the slug column to a database table
 `rails g migration AddSlugToUsers slug:uniq`
+
+Run Webpack
+`./bin/webpack-dev-server`
