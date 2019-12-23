@@ -41,6 +41,10 @@ gem 'secure_headers', '~>6.1.1'
 # cron jobs.
 gem 'whenever', require: false
 
+group :third_party_services do
+  gem 'google-api-client', '~> 0.36'
+end
+
 group :flay do
   # Flay analyzes code for structural similarities. Differences in literal values, variable, class, method names, whitespace, programming style, braces vs do/end, etc are all ignored.
   gem 'flay'
