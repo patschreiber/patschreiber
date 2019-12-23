@@ -128,6 +128,11 @@ SecureHeaders::Configuration.default do |config|
     # using <frame>, <iframe>, <object>, <embed>, or <applet>.
     frame_ancestors: RULES['csp']['frame_ancestors'],
 
+    # frame-src directive specifies valid sources for nested browsing contexts
+    # loading using elements such as <frame> and <iframe>.
+    # TODO: This is only used for a Google Doc embed. Remove if decide to use API.
+    frame_src: RULES['csp']['frame_src'],
+
     # img-src directive specifies valid sources of images and favicons.
     img_src: RULES['csp']['img_src'],
 

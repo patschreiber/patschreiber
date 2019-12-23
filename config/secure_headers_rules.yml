@@ -18,6 +18,9 @@ development:
       - "'self'"
     frame_ancestors:
       - "'none'"
+    # TODO: This is only used for a Google Doc embed. Remove if decide to use API.
+    frame_src:
+      - https://docs.google.com
     img_src:
       - "'self'"
       - https://www.googletagmanager.com
