@@ -45,15 +45,18 @@ module PatschreiberCom
     config.time_zone = 'UTC'
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.0
+    config.load_defaults 6.0
 
     # Make Active Record use stable #cache_key alongside new #cache_version
     # method. This is needed for recyclable cache keys.
     config.active_record.cache_versioning = true
 
-    # Disable generation of controller specific asset/helper files.
-    config.generators.assets = false
-    config.generators.helper = false
+    config.generators do |g|
+      g.template_engine = :haml
+      # Disable generation of controller specific asset/helper files.
+      g.assets = false
+      g.helper = false
+    end
 
     # Use AES-256-GCM authenticated encryption as default cipher for encrypting
     # messages instead of AES-256-CBC, when use_authenticated_message_encryption
@@ -77,7 +80,7 @@ module PatschreiberCom
     #
     # Existing cookies will be converted on read then written with the new
     # scheme.
-    #config.action_dispatch.use_authenticated_cookie_encryption = true
+    config.action_dispatch.use_authenticated_cookie_encryption = true
 
     # Make `form_with` generate id attributes for any generated HTML tags.
     config.action_view.form_with_generates_ids = true

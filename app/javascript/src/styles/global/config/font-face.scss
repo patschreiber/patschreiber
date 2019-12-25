@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  // Serve from Google, or locally as a fallback
+  src:
+    url('https://fonts.googleapis.com/css?family=Lato&display=swap'),
+    url('fonts/Lato/Lato-Reg.ttf');
+}

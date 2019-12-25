@@ -9,27 +9,19 @@ gem 'rails', '~> 6.0.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
-group :frontend do
-  # Haml (HTML Abstraction Markup Language) is a layer on top of HTML or XML
-  # that's designed to express the structure of documents in a non-repetitive,
-  # elegant, and easy way by using indentation rather than closing tags and
-  # allowing Ruby to be embedded with ease.
-  gem 'haml'
-  # Use SCSS for stylesheets
-  gem 'sass-rails', '>= 6'
-  # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-  gem 'webpacker', '~> 4.0'
-  # Turbolinks makes navigating your web application faster.
-  # Read more: https://github.com/turbolinks/turbolinks
-  gem 'turbolinks', '~> 5'
-end
-
+# Haml (HTML Abstraction Markup Language) is a layer on top of HTML or XML
+# that's designed to express the structure of documents in a non-repetitive,
+# elegant, and easy way by using indentation rather than closing tags and
+# allowing Ruby to be embedded with ease.
 gem 'haml'
-
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 4.0'
+# Turbolinks makes navigating your web application faster.
+# Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
 
 gem 'mysql2'
 gem 'redcarpet'
@@ -49,20 +41,8 @@ gem 'secure_headers', '~>6.1.1'
 # cron jobs.
 gem 'whenever', require: false
 
-group :third_party_services do
-  gem 'google-api-client', '~> 0.36'
-end
-
-group :flay do
-  # Flay analyzes code for structural similarities. Differences in literal values, variable, class, method names, whitespace, programming style, braces vs do/end, etc are all ignored.
-  gem 'flay'
-  gem 'flay-haml'
-end
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
+# Third party Services
+gem 'google-api-client', '~> 0.36'
 
 group :development, :test do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -74,6 +54,13 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Flay analyzes code for structural similarities. Differences in literal values, variable, class, method names, whitespace, programming style, braces vs do/end, etc are all ignored.
+  gem 'flay'
+  gem 'flay-haml'
+
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
 end
 
 group :test do

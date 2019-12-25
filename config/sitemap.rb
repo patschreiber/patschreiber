@@ -25,10 +25,11 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
-  # group(:sitemaps_path => 'en/', :)
+  add '/landing_page', changefreq: :daily, priority: 1.0
   add '/contact', changefreq: :daily, priority: 0.9
   add '/open-source', changefreq: :weekly, priority: 0.8
 
+  add '/open-source/projects', changefreq: :weekly, priority: 0.8
   # Load all Project routes into the sitemap
   Project.find_each do |project|
     add open_source_project_path(project),
@@ -36,9 +37,10 @@ SitemapGenerator::Sitemap.create do
       priority: 0.8
   end
 
-  add '/privacy-policy', changefreq: :weekly, priority: 0.8
+  add '/hobbies/music', changefreq: :monthly, priority: 0.7
 
-  add '/resume', changefreq: :daily, priority: 0.7
+  add '/career/cv', changefreq: :weekly, priority: 0.7
 
-  add '/license', changefreq: :weekly, priority: 0.6
+  add '/privacy-policy', changefreq: :yearly, priority: 0.7
+  add '/licenses', changefreq: :monthly, priority: 0.6
 end

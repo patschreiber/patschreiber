@@ -7,7 +7,7 @@
       .column
         .projects
           - @projects.each_with_index do |p, index|
-            %a.project.box.project-floating{ class: "project-colorized-#{index}", :href => open_source_project_path(p) }
+            %a.project.box.project-floating{ class: "project-colorized-#{index}", :href => project_path(p) }
               %h3.title
                 = p.title
               .dates

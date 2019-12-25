@@ -1,0 +1,25 @@
+a {
+  color: $default-link-color;
+  display: inline-block;
+  text-decoration: none;
+
+  &:after {
+    @include link-flair;
+    content: ' ';
+    color: lighten($default-grey, 15%);
+    background-color: $default-link-color;
+    height: 1px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    opacity: 0;
+    width: 0;
+
+    a:hover:after {
+      background-color: $default-link-color;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}

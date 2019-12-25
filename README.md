@@ -59,6 +59,10 @@ lambda {
 }
 ```
 
+## Secure Headers
+Regenerate hashes
+`rake secure_headers:generate_hashes`
+
 Adds the slug column to a database table
 `rails g migration AddSlugToUsers slug:uniq`
 
