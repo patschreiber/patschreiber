@@ -68,3 +68,5 @@ Adds the slug column to a database table
 
 Run Webpack
 `./bin/webpack-dev-server`
+Run Webpack on prod
+`bundle exec rails webpacker:install`
