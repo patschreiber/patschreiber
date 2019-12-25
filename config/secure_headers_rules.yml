@@ -8,12 +8,17 @@ development:
     connect_src:
       - 'wss:'
       - https://www.google-analytics.com
+      # Allow webpack-dev-server to load packs
+      - 'https:'
+      - http://localhost:3035
+      - ws://localhost:3035
     default_src:
       - "'none'"
     disable_nonce_backwards_compatibility: true
     font_src:
       - "'self'"
       - https://fonts.gstatic.com
+      - https://fonts.googleapis.com
     form_action:
       - "'self'"
     frame_ancestors:
@@ -67,6 +72,7 @@ production:
     font_src:
       - "'self'"
       - https://fonts.gstatic.com
+      - https://fonts.googleapis.com
     form_action:
       - "'self'"
     frame_ancestors:

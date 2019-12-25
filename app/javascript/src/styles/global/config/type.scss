@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "Lato-Regular";
-  src: url('Lato/Lato-Reg.ttf');
-}
 body {
   color: $default-font-color;
   font-family: $default-sans-serif, 'Arial', sans-serif;
@@ -38,31 +34,6 @@ p {
   line-height: 1.8rem;
   font-weight: 400;
   color: $default-font-color;
-}
-a {
-  color: $default-link-color;
-  display: inline-block;
-  text-decoration: none;
-
-  &:after {
-    @include link-flair;
-    content: ' ';
-    color: lighten($default-grey, 15%);
-    background-color: $default-link-color;
-    height: 1px;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    opacity: 0;
-    width: 0;
-
-    a:hover:after {
-      background-color: $default-link-color;
-      width: 100%;
-      opacity: 1;
-    }
-  }
 }
 .subtext {
   color: $default-grey-light;
