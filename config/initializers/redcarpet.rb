@@ -1,1 +1,5 @@
-$redcarpet_markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
+$redcarpet_markdown = Redcarpet::Markdown.new(
+  Redcarpet::Render::HTML,
+  :autolink => true,
+  :space_after_headers => true
+)
