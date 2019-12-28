@@ -23,7 +23,14 @@ gem 'webpacker', '~> 4.0'
 # Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
+# A modern web server and application server for Ruby, Python and Node.js,
+# optimized for performance, low memory usage and ease of use.
+gem 'passenger', '~> 6.0.4'
+
+# A simple, fast Mysql library for Ruby, binding to libmysql.
 gem 'mysql2'
+
+# A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
 
 # SitemapGenerator is a framework-agnostic XML Sitemap generator written in Ruby
@@ -42,7 +49,7 @@ gem 'secure_headers', '~>6.1.1'
 gem 'whenever', require: false
 
 # Third party Services
-gem 'google-api-client', '~> 0.36'
+# gem 'google-api-client', '~> 0.36'
 
 group :development, :test do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
