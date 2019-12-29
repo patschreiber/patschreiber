@@ -30,7 +30,7 @@ gem 'redcarpet'
 # with automatic Rails integration. It supports Video, News, Image, Mobile,
 # PageMap and Alternate Links sitemap extensions and includes Rake tasks for
 # managing your sitemaps, as well as many other great features.
-gem 'sitemap_generator', '~>6.0.2'
+gem 'sitemap_generator', '~>6.1.0'
 
 # Pretty URLs for Rails.
 gem 'friendly_id', '~> 5.3.0'
