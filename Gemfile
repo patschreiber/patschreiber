@@ -10,11 +10,8 @@ gem 'rails', '~> 6.0.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# Haml (HTML Abstraction Markup Language) is a layer on top of HTML or XML
-# that's designed to express the structure of documents in a non-repetitive,
-# elegant, and easy way by using indentation rather than closing tags and
-# allowing Ruby to be embedded with ease.
-gem 'haml'
+# Use Puma as the app server
+gem 'puma', '~> 4.1'
 
 # Turbolinks makes navigating your web application faster.
 # Read more: https://github.com/turbolinks/turbolinks
@@ -22,6 +19,12 @@ gem 'turbolinks', '~> 5'
 
 # A simple, fast Mysql library for Ruby, binding to libmysql.
 gem 'mysql2'
+
+# Haml (HTML Abstraction Markup Language) is a layer on top of HTML or XML
+# that's designed to express the structure of documents in a non-repetitive,
+# elegant, and easy way by using indentation rather than closing tags and
+# allowing Ruby to be embedded with ease.
+gem 'haml'
 
 # A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
@@ -66,6 +69,12 @@ end
 #
 # Gems that should only be run in the development/test environments.
 group :development, :test do
+
+  # Provides a better error page for Rails and other Rack apps. Includes source
+  # code inspection, a live REPL and local/instance variable inspection for all
+  # stack frames.
+  gem 'better_errors', '~> 2.5.1'
+
   # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
   gem 'jbuilder', '~> 2.7'
 
@@ -77,13 +86,17 @@ group :development, :test do
   # anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 
-  # brings the RSpec testing framework to Ruby on Rails as a drop-in alternative
-  # to its default testing framework, Minitest.
-  gem 'rspec-rails'
+  # RuboCop is a Ruby static code analyzer and code formatter. Out of the box it
+  # will enforce many of the guidelines outlined in the community Ruby Style
+  # Guide.
+  gem 'rubocop', '~> 0.78.0', require: false
 
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger
-  # console.
-  gem 'byebug'
+  # Byebug is a Ruby debugger. It's implemented using the TracePoint C API for
+  # execution control and the Debug Inspector C API for call stack navigation.
+  # The core component provides support that front-ends can build on. It
+  # provides breakpoint handling and bindings for stack frames among other
+  # things and it comes with an easy to use command line interface.
+  gem 'byebug', '~> 11.0.1'
 
   # Add a comment summarizing the current schema to the top or bottom of each of
   #   - ActiveRecord models
@@ -102,20 +115,13 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  # Flay analyzes code for structural similarities. Differences in literal
-  # values, variable, class, method names, whitespace, programming style, braces
-  # vs do/end, etc are all ignored.
-  gem 'flay'
-
-  # Plugin for flay enabling processing of .haml files
-  gem 'flay-haml'
-
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc', '~> 1.0.0', require: false
 
   # Solargraph provides a comprehensive suite of tools for Ruby programming:
   # intellisense, diagnostics, inline documentation, and type checking.
-  gem 'solargraph'
+  # IDE tools for code completion, inline documentation, and static analysis
+  gem 'solargraph', '~> 0.38.0'
 end
 
 #  _            _
