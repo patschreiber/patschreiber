@@ -17,6 +17,10 @@ gem 'puma', '~> 4.1'
 # Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+# Precompile using rake `webpacker:compile` before releases
+gem 'webpacker', '~> 4.0'
+
 # A simple, fast Mysql library for Ruby, binding to libmysql.
 gem 'mysql2'
 
@@ -77,10 +81,6 @@ group :development, :test do
 
   # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
   gem 'jbuilder', '~> 2.7'
-
-  # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-  # Precompile using rake `webpacker:compile` before releases
-  gem 'webpacker', '~> 4.0'
 
   # Access an interactive console on exception pages or by calling 'console'
   # anywhere in the code.

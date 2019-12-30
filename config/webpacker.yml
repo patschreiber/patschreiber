@@ -101,11 +101,11 @@ production:
   # performance.
   compile: true
 
-  # Enable gzip compression for everything served.
-  compress: true
-
   # Extract and emit a css file
   extract_css: true
 
   # Cache manifest.json for performance
   cache_manifest: true
+
+  webpack_compile_output: false
+  check_yarn_integrity: false
