@@ -91,6 +91,14 @@ group :development, :test do
   # Guide.
   gem 'rubocop', '~> 0.78.0', require: false
 
+  # Automatic Rails code style checking tool. A RuboCop extension focused on
+  # enforcing Rails best practices and coding conventions.
+  gem 'rubocop-rails', '~> 2.4', '>= 2.4.1', require: false
+
+  # A collection of RuboCop cops to check for performance optimizations in Ruby
+  # code.
+  gem 'rubocop-performance', '~> 1.5', '>= 1.5.2', require: false
+
   # Byebug is a Ruby debugger. It's implemented using the TracePoint C API for
   # execution control and the Debug Inspector C API for call stack navigation.
   # The core component provides support that front-ends can build on. It
