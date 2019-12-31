@@ -1,8 +1,10 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  # Settings specified here will take precedence over those in
+  # config/application.rb.
 
-  # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
-  # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
+  # Ensures that a master key has been made available in either
+  # ENV["RAILS_MASTER_KEY"] or in config/master.key. This key is used to decrypt
+  # credentials (and other encrypted files).
   config.require_master_key = true
 
   # In the development environment your application's code is reloaded on
@@ -20,6 +22,7 @@ Rails.application.configure do
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
+    config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
@@ -31,8 +34,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # Store uploaded files on the local file system (see config/storage.yml for options)
-  # config.active_storage.service = :local
+  # Store uploaded files on the local file system (see config/storage.yml for
+  # options).
+  config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -56,5 +60,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  config.active_record.dump_schema_after_migration = true
 end

@@ -5,7 +5,7 @@
     %title
       = (yield :title).present? ? "#{yield :title} | Pat Schreiber" : "Pat Schreiber"
     = favicon_link_tag "favicon.ico"
-    = stylesheet_pack_tag "app"
+    = stylesheet_pack_tag "app", media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag "app", 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
     %meta{charset: "utf-8"}
