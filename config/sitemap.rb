@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = 'https://www.patschreiber.com'
 
@@ -32,9 +34,9 @@ SitemapGenerator::Sitemap.create do
   add '/open-source/projects', changefreq: :weekly, priority: 0.8
   # Load all Project routes into the sitemap
   Project.find_each do |project|
-    add open_source_project_path(project),
-      lastmod: project.updated_at,
-      priority: 0.8
+    add project_path(project),
+        lastmod: project.updated_at,
+        priority: 0.8
   end
 
   add '/hobbies/music', changefreq: :monthly, priority: 0.7
