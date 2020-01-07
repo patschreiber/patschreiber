@@ -31,12 +31,18 @@ Rails.application.routes.draw do
   end
 
   # Require json for the API
-  namespace :api, defaults: { format: :json }, constraints: lambda { |req| req.format == :json } do
-
-    scope '/docs' do
-      get "/", to: 'documentation#index', via: [:get]
+  constraints subdomain: 'api' do
+    namespace :api, path: nil, defaults: { format: :json } do
+      resources :info, via: [:get]
     end
-    get '/cv' => 'career#resume', only: [:resume], via: [:get], as: :cv
-    get '/projects' => 'projects#index', only: [:index, :show], via: [:get], as: :projects
   end
+
+  # namespace :api, path: nil, defaults: { format: :json }, constraints: lambda { |req| req.format == :json } do
+
+  #   scope '/docs' do
+  #     get "/", to: 'documentation#index', via: [:get]
+  #   end
+  #   get '/cv' => 'career#resume', only: [:resume], via: [:get], as: :cv
+  #   get '/projects' => 'projects#index', only: [:index, :show], via: [:get], as: :projects
+  # end
 end
