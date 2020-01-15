@@ -30,6 +30,10 @@ gem 'mysql2'
 # allowing Ruby to be embedded with ease.
 gem 'haml'
 
+# Configurable tool for writing clean and consistent HAML. Used in conjunction
+# with rubocop.
+gem 'haml_lint', '~> 0.34.1'
+
 # A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
 
@@ -129,7 +133,7 @@ group :development, :test do
   # Solargraph provides a comprehensive suite of tools for Ruby programming:
   # intellisense, diagnostics, inline documentation, and type checking.
   # IDE tools for code completion, inline documentation, and static analysis
-  gem 'solargraph', '~> 0.38.0'
+  gem 'solargraph', '~> 0.38.2'
 end
 
 #  _            _
