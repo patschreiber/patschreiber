@@ -1,3 +1,6 @@
+#
+# The CareerHelper.
+#
 module CareerHelper
 
   def resume_google_doc_embed_url
