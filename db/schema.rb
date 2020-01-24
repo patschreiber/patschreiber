@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_29_105840) do
+ActiveRecord::Schema.define(version: 2020_01_15_091500) do
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,19 @@ ActiveRecord::Schema.define(version: 2019_12_29_105840) do
     t.datetime "initial_posting"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "prefix"
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "last_name"
+    t.string "suffix"
+    t.string "colloquial_name"
+    t.date "date_of_birth"
+    t.boolean "active"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "friendly_id_slugs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -46,6 +59,20 @@ ActiveRecord::Schema.define(version: 2019_12_29_105840) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.index ["slug"], name: "index_projects_on_slug", unique: true
+  end
+
+  create_table "social_accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "contact_id"
+    t.string "service_name"
+    t.string "handle"
+    t.string "service_tld"
+    t.string "profile_url"
+    t.date "date_joined"
+    t.boolean "account_active"
+    t.boolean "display_account"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["contact_id"], name: "index_social_accounts_on_contact_id"
   end
 
 end
