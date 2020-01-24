@@ -12,7 +12,15 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-  # Do not eager load code on boot.
+  # Eager load code on boot. This eager loads most of Rails and
+  # your application in memory, allowing both threaded web servers
+  # and those relying on copy on write to perform better.
+  # Rake tasks automatically ignore this option for performance.
+  #
+  # In production-like environments it is generally better to load all the
+  # application code when the application boots. Eager loading puts everything
+  # in memory ready to serve requests right away, and it is also CoW-friendly.
+  # https://guides.rubyonrails.org/autoloading_and_reloading_constants.html
   config.eager_load = false
 
   # Show full error reports.

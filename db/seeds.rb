@@ -294,4 +294,32 @@ lambda {
   blog.save!
 }.call
 
-Rails.logger.info 'Finished seeding the database!'
+lambda {
+  blog = Blog.new
+  blog.id = 3
+  blog.title = 'formatted'
+  blog.post = <<-END
+  # Markdown Test
+  ## Markdown Test
+  Hello there
+
+  This should be converted.
+  =========================
+
+  ```
+  Is this code()?
+  ```
+  And this:
+    - One
+    - Two
+    - Three
+
+  Should be list
+
+  -Pat
+  END
+  blog.initial_posting = Date.new(2020, 04, 28)
+  blog.save!
+}.call
+
+puts 'Finished seeding the database!'

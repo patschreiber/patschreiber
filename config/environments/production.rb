@@ -13,7 +13,16 @@ Rails.application.configure do
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
+  #
+  # In production-like environments it is generally better to load all the
+  # application code when the application boots. Eager loading puts everything
+  # in memory ready to serve requests right away, and it is also CoW-friendly.
+  # https://guides.rubyonrails.org/autoloading_and_reloading_constants.html
   config.eager_load = true
+  # eager_load_paths will get eagerly loaded in production and on-demand in
+  # development. Doing it this way, you # don't need to require every file
+  # explicitly.
+  config.eager_load_paths << Rails.root.join('lib')
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local = false
