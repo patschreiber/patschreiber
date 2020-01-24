@@ -2,7 +2,8 @@
 
 module Api
   class InfoController < BaseController
-    def contact
-    end
+    def index; end
+
+    def contact; end
   end
 end

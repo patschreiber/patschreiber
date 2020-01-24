@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
+  # The priority is based upon order of creation: first created -> highest
+  # priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
@@ -34,17 +35,20 @@ Rails.application.routes.draw do
 
   # Require json for the API
   constraints subdomain: 'api' do
+    get '/info/contact', to: 'info#contact', as: :contact_info
     namespace :api, path: nil, defaults: { format: :json } do
       resources :info, only: [:contact], via: [:get]
     end
   end
 
-  # namespace :api, path: nil, defaults: { format: :json }, constraints: lambda { |req| req.format == :json } do
+  # namespace :api, path: nil, defaults: { format: :json }, constraints: lambda
+  # { |req| req.format == :json } do
 
   #   scope '/docs' do
   #     get "/", to: 'documentation#index', via: [:get]
   #   end
   #   get '/cv' => 'career#resume', only: [:resume], via: [:get], as: :cv
-  #   get '/projects' => 'projects#index', only: [:index, :show], via: [:get], as: :projects
+  #   get '/projects' => 'projects#index', only: [:index, :show], via: [:get],
+  #     as: :projects
   # end
 end
