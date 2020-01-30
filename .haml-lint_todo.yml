@@ -7,12 +7,12 @@
 # versions of Haml-Lint, may require this file to be generated again.
 
 linters:
-
-  # Offense count: 23
+  # Offense count: 36
   LineLength:
     exclude:
       - "app/views/career/resume.html.haml"
-      - "app/views/contact/index.haml"
+      - "app/views/contact/index.html.haml"
+      - "app/views/contact/resume.html.haml"
       - "app/views/hobbies/music.html.haml"
       - "app/views/landing_page/index.html.haml"
       - "app/views/layouts/_footer.html.haml"
@@ -23,11 +23,12 @@ linters:
       - "app/views/projects/index.html.haml"
       - "app/views/snippets/_google_analytics.html.haml"
 
-  # Offense count: 114
+  # Offense count: 128
   RuboCop:
     exclude:
       - "app/views/career/resume.html.haml"
-      - "app/views/contact/index.haml"
+      - "app/views/contact/index.html.haml"
+      - "app/views/contact/resume.html.haml"
       - "app/views/hobbies/music.html.haml"
       - "app/views/landing_page/index.html.haml"
       - "app/views/layouts/_footer.html.haml"
@@ -43,6 +44,10 @@ linters:
   MultilineScript:
     exclude:
       - "app/views/contact/index.haml"
+
+  ViewLength:
+    exclude:
+      - "app/views/contact/resume.html.haml"
 
   # Offense count: 29
   SpaceInsideHashAttributes:
