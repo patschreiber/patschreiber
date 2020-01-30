@@ -14,4 +14,4 @@ class ContactController < ApplicationController
 
     flash.now.notice = 'No contact info found.'
   end
-
+end

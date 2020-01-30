@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_01_15_091500) do
     t.datetime "updated_at", null: false
   end
 
+ActiveRecord::Base.transaction do
   create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "prefix"
     t.string "first_name"
