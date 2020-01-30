@@ -1,9 +1,11 @@
-require "yaml"
+# frozen_string_literal: true
+
+require 'yaml'
 
 # secure_headers gem config
 # See https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 
-RULES = YAML.load_file("#{Rails.root.to_s}/config/secure_headers_rules.yml")[Rails.env]
+RULES = YAML.load_file("#{Rails.root}/config/secure_headers_rules.yml")[Rails.env]
 
 SecureHeaders::Configuration.default do |config|
   config.cookies = {
@@ -30,7 +32,7 @@ SecureHeaders::Configuration.default do |config|
   # a browser should be allowed to render a page in a <frame>, <iframe>, <embed>
   # or <object>. Sites can use this to avoid clickjacking attacks, by ensuring
   # that their content is not embedded into other sites.
-  config.x_frame_options = "DENY"
+  config.x_frame_options = 'DENY'
 
   # X-Content-Type-Options response HTTP header is a marker used by the server
   # to indicate that the MIME types advertised in the Content-Type headers
@@ -39,14 +41,14 @@ SecureHeaders::Configuration.default do |config|
   # what they were doing.
   #
   # Site security testers usually expect this header to be set.
-  config.x_content_type_options = "nosniff"
+  config.x_content_type_options = 'nosniff'
 
   # The X-Download-Options is specific to IE 8, and is related to how IE 8
   # handles downloaded HTML files. Turns out if you download an HTML file from a
   # web page and chooses to "Open" it in IE, it will execute in the context of
   # the web site. That means that any scripts in that file will also execute
   # with the origin of the web site.
-  config.x_download_options = "noopen"
+  config.x_download_options = 'noopen'
 
   # Cross-Origin Resource Policy is an opt-in mechanism that allows web
   # applications to protect against certain cross-origin requests, such as those
@@ -58,9 +60,9 @@ SecureHeaders::Configuration.default do |config|
   # mechanism to prevent some cross-origin reads by default.
   #
   # As this policy is expressed via a response header, the actual request is not
-  # prevented—rather, the browser prevents the result from being leaked by
+  # prevented, rather, the browser prevents the result from being leaked by
   # stripping the response body.
-  config.x_permitted_cross_domain_policies = "none"
+  config.x_permitted_cross_domain_policies = 'none'
 
   # Referrer-Policy HTTP header controls how much referrer information (sent via
   # the Referer header) should be included with requests.
@@ -70,14 +72,18 @@ SecureHeaders::Configuration.default do |config|
   # for other cases.
   # strict-origin-when-cross-origin - Send the origin, path, and querystring
   # when performing a same-origin request, only send the origin when the
-  # protocol security level stays the same (HTTPS→HTTPS), and send no header to
-  # a less secure destination (HTTPS→HTTP).
-  config.referrer_policy = %w(origin-when-cross-origin strict-origin-when-cross-origin)
+  # protocol security level stays the same (HTTPS->HTTPS), and send no header to
+  # a less secure destination (HTTPS->HTTP).
+  config.referrer_policy = %w[origin-when-cross-origin strict-origin-when-cross-origin]
   config.csp = {
     # "meta" values. these will shape the header, but the values are not
     # included in the header.
-    preserve_schemes: RULES['csp']['preserve_schemes'], # default: false. Schemes are removed from host sources to save bytes and discourage mixed content.
-    disable_nonce_backwards_compatibility: RULES['csp']['disable_nonce_backwards_compatibility'], # default: false. If false, `unsafe-inline` will be added automatically when using nonces. If true, it won't. See #403 for why you'd want this.
+    preserve_schemes: RULES['csp']['preserve_schemes'], # default: false.
+    # Schemes are removed from host sources to save bytes and discourage mixed
+    # content.
+    disable_nonce_backwards_compatibility: RULES['csp']['disable_nonce_backwards_compatibility'],
+    # default: false. If false, `unsafe-inline` will be added automatically when
+    # using nonces. If true, it won't. See #403 for why you'd want this.
 
     # default-src directive serves as a fallback for the other CSP fetch
     # directives. For each of the following directives that are absent, the user
@@ -114,11 +120,11 @@ SecureHeaders::Configuration.default do |config|
     # - WebSocket
     # - EventSource
     # - Navigator.sendBeacon()
-    connect_src:  RULES['csp']['connect_src'],
+    connect_src: RULES['csp']['connect_src'],
 
     # font-src directive specifies valid sources for fonts loaded using
     # @font-face.
-    font_src:  RULES['csp']['font_src'],
+    font_src: RULES['csp']['font_src'],
 
     # `form-action` directive restricts the URLs which can be used as the target
     # of a form submissions from a given context.
@@ -130,13 +136,15 @@ SecureHeaders::Configuration.default do |config|
 
     # frame-src directive specifies valid sources for nested browsing contexts
     # loading using elements such as <frame> and <iframe>.
-    # TODO: This is only used for a Google Doc embed. Remove if decide to use API.
+    # TODO: This is only used for a Google Doc embed. Remove if decide to use\n
+    # API.
     frame_src: RULES['csp']['frame_src'],
 
     # img-src directive specifies valid sources of images and favicons.
     img_src: RULES['csp']['img_src'],
 
-    # manifest-src directive specifies which manifest can be applied to the resource.
+    # manifest-src directive specifies which manifest can be applied to the
+    # resource.
     # See https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest_src: RULES['csp']['manifest_src'],
 
@@ -148,7 +156,10 @@ SecureHeaders::Configuration.default do |config|
     # and <applet> elements.
     object_src: RULES['csp']['object_src'],
 
-    # sandbox directive enables a sandbox for the requested resource similar to the <iframe> sandbox attribute. It applies restrictions to a page's actions including preventing popups, preventing the execution of plugins and scripts, and enforcing a same-origin policy.
+    # sandbox directive enables a sandbox for the requested resource similar to
+    # the <iframe> sandbox attribute. It applies restrictions to a page's
+    # actions including preventing popups, preventing the execution of plugins
+    # and scripts, and enforcing a same-origin policy.
     #
     # allow-forms - Allows the embedded browsing context to submit forms. If
     # this keyword is not used, this operation is not allowed.
@@ -166,29 +177,44 @@ SecureHeaders::Configuration.default do |config|
     # into a document by limiting the types of resources which can be loaded.
     # plugin_types: %w(application/x-shockwave-flash),
 
-    # script-src directive specifies valid sources for JavaScript. This includes not only URLs loaded directly into <script> elements, but also things like inline script event handlers (onclick) and XSLT stylesheets which can trigger script execution.
+    # script-src directive specifies valid sources for JavaScript. This includes
+    # not only URLs loaded directly into <script> elements, but also things like
+    # inline script event handlers (onclick) and XSLT stylesheets which can
+    # trigger script execution.
     script_src: RULES['csp']['script_src'],
 
     # style-src directive specifies valid sources for stylesheets.
     style_src: RULES['csp']['style_src'],
 
-    # worker-src directive specifies valid sources for Worker, SharedWorker, or ServiceWorker scripts.
+    # worker-src directive specifies valid sources for Worker, SharedWorker, or
+    # ServiceWorker scripts.
     worker_src: RULES['csp']['worker_src'],
 
-    # upgrade-insecure-requests directive instructs user agents to treat all of a site's insecure URLs (those served over HTTP) as though they have been replaced with secure URLs (those served over HTTPS). This directive is intended for web sites with large numbers of insecure legacy URLs that need to be rewritten.
+    # upgrade-insecure-requests directive instructs user agents to treat all of
+    # a site's insecure URLs (those served over HTTP) as though they have been
+    # replaced with secure URLs (those served over HTTPS). This directive is
+    # intended for web sites with large numbers of insecure legacy URLs that
+    # need to be rewritten.
     # see https://www.w3.org/TR/upgrade-insecure-requests/
-    upgrade_insecure_requests: RULES['csp']['upgrade_insecure_requests'], # see https://www.w3.org/TR/upgrade-insecure-requests/
+    upgrade_insecure_requests: RULES['csp']['upgrade_insecure_requests']
 
-    # Deprecated
-    # This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the compatibility table at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+    # Deprecated This feature is no longer recommended. Though some browsers
+    # might still support it, it may have already been removed from the relevant
+    # web standards, may be in the process of being dropped, or may only be kept
+    # for compatibility purposes. Avoid using it, and update existing code if
+    # possible; see the compatibility table at the bottom of this page to guide
+    # your decision. Be aware that this feature may cease to work at any time.
     # report_uri: %w(https://report-uri.io/example-csp)
   }
 end
 
-# Which headers you decide to use for API responses is entirely a personal choice. Things like X-Frame-Options seem to have no place in an API response and would be wasting bytes. While this is true, browsers can do funky things with non-html responses. At the minimum, we suggest CSP:
+# Which headers you decide to use for API responses is entirely a personal
+# choice. Things like X-Frame-Options seem to have no place in an API response
+# and would be wasting bytes. While this is true, browsers can do funky things
+# with non-html responses. At the minimum, we suggest CSP:
 #
-# However, I would consider these headers anyways depending on your load and bandwidth requirements.
-# See https://github.com/twitter/secure_headers
+# However, I would consider these headers anyways depending on your load and
+# bandwidth requirements. See https://github.com/twitter/secure_headers
 SecureHeaders::Configuration.override(:api) do |config|
   config.csp = { default_src: 'none' }
   config.hsts = SecureHeaders::OPT_OUT

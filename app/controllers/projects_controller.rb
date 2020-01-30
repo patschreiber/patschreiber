@@ -1,6 +1,12 @@
+# frozen_string_literal: true
+
+#
+# The ProjectsController.
+# Showcases the projects Patrick has worked on.
+#
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.where(:source_type => "open").all.order(start_date: :desc)
+    @projects = Project.where(source_type: 'open').all.order(start_date: :desc)
   end
 
   def show

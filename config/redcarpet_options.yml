@@ -1,0 +1,21 @@
+html_render_options:
+  # only generate links for protocols which are considered safe.
+  safe_links_only: true
+
+  # add prettyprint classes to <code> tags for google-code-prettify.
+  prettify: true
+
+  # insert HTML <br> tags inside paragraphs where the original Markdown
+  # document had newlines (by default, Markdown ignores these newlines).
+  hard_wrap: true
+
+  # do not allow any user-inputted HTML in the output.
+  filter_html: true
+markdown_render_options:
+  autolink: true
+  tables: true
+  space_after_headers: true
+  no_intra_emphasis: true
+  superscript: true
+  footnotes: true
+  strikethrough: true
