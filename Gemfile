@@ -53,7 +53,7 @@ gem 'friendly_id', '~> 5.3.0'
 
 # Adds a content security policy (CSP). This was the de-facto before Rails 6.
 # TODO: Consider switching to native?
-gem 'secure_headers', '~>6.1.1'
+gem 'secure_headers', '~>6.3.0'
 
 # Whenever is a Ruby gem that provides a clear syntax for writing and deploying
 # cron jobs.
