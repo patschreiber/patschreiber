@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -6,12 +8,80 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-puts "Seeding the database..."
+puts 'Seeding the database...'
 
 # Resets the seeds for static tables
 
 Project.delete_all
 Blog.delete_all
+Contact.delete_all
+SocialAccount.delete_all
+
+lambda {
+  contact = Contact.new
+  contact.first_name = 'Patrick'
+  contact.middle_name = 'William'
+  contact.last_name = 'Schreiber'
+  contact.colloquial_name = 'Pat'
+  contact.date_of_birth = Date.new(1989, 1, 10)
+  contact.active = true
+  contact.save!
+
+  contact.social_accounts.create(
+    service_name: 'Facebook',
+    handle: 'patschreiber',
+    service_tld: 'https://facebook.com',
+    profile_url: 'https://www.facebook.com/patschreiber',
+    date_joined: Date.new(2006, 8, 23),
+    account_active: true,
+    display_account: true
+  )
+  contact.social_accounts.create(
+    service_name: 'LinkedIn',
+    handle: 'most-likely-patrick-schreiber',
+    service_tld: 'https://linkedin.com',
+    profile_url: 'https://www.linkedin.com/in/most-likely-patrick-schreiber',
+    date_joined: Date.new(2011, 1, 21),
+    account_active: true,
+    display_account: true
+  )
+  contact.social_accounts.create(
+    service_name: 'Twitter',
+    handle: '@patschreiber',
+    service_tld: 'https://twitter.com',
+    profile_url: 'https://twitter.com/patschreiber',
+    date_joined: Date.new(2008, 2, 1),
+    account_active: true,
+    display_account: true
+  )
+  contact.social_accounts.create(
+    service_name: 'Instagram',
+    handle: '@patschreiber',
+    service_tld: 'https://www.instagram.com',
+    profile_url: 'https://www.instagram.com/patschreiber',
+    date_joined: Date.new(2012, 4, 8),
+    account_active: true,
+    display_account: true
+  )
+  contact.social_accounts.create(
+    service_name: 'Steam',
+    handle: 'FlankSteak',
+    service_tld: 'https://store.steampowered.com/',
+    profile_url: 'https://steamcommunity.com/profiles/76561197973210351',
+    date_joined: Date.new(2005, 1, 5),
+    account_active: true,
+    display_account: false
+  )
+  contact.social_accounts.create(
+    service_name: 'Spotify',
+    handle: 'patschreiber',
+    service_tld: 'https://https://www.spotify.com/us/',
+    profile_url: 'https://open.spotify.com/user/patschreiber?si=XDd5yFogT3KJ2RDfMksoGw',
+    date_joined: Date.new(2011, 7, 1),
+    account_active: true,
+    display_account: true
+  )
+}.call
 
 lambda {
   cta = Project.new
@@ -21,8 +91,8 @@ lambda {
   cta.technologies = 'HTML, CSS, jQuery, Chart.js'
   cta.url = 'http://cta.labs.nori.nu/'
   cta.repo_url = 'https://github.com/patschreiber/cta'
-  cta.start_date = Date.new( 2014, 3, 4 )
-  cta.end_date = Date.new( 2014, 4, 16 )
+  cta.start_date = Date.new(2014, 3, 4)
+  cta.end_date = Date.new(2014, 4, 16)
   cta.save!
 }.call
 
@@ -35,8 +105,8 @@ lambda {
   incense.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS, jQuery, Bootstrap, redis, Resque, cron'
   incense.url = 'http://labs.nori.nu/'
   incense.repo_url = 'https://github.com/patschreiber/incense'
-  incense.start_date = Date.new( 2014, 01, 20 )
-  incense.end_date = Date.new( 2014, 07, 24 )
+  incense.start_date = Date.new(2014, 0o1, 20)
+  incense.end_date = Date.new(2014, 0o7, 24)
   incense.save!
 }.call
 
@@ -57,8 +127,8 @@ lambda {
   END
   nori.url = 'http://nori.nu/'
   nori.repo_url = 'https://github.com/patschreiber/nori.nu'
-  nori.start_date = Date.new( 2013, 07, 30 )
-  nori.end_date = Date.new( 2014, 05, 23 )
+  nori.start_date = Date.new(2013, 0o7, 30)
+  nori.end_date = Date.new(2014, 0o5, 23)
   nori.save!
 }.call
 
@@ -74,16 +144,16 @@ lambda {
   END
   oilman.url = 'http://oilman.labs.nori.nu/'
   oilman.repo_url = 'https://github.com/patschreiber/oilman/'
-  oilman.start_date = Date.new( 2013, 12, 01 )
-  oilman.end_date = Date.new( 2013, 12, 2 )
+  oilman.start_date = Date.new(2013, 12, 0o1)
+  oilman.end_date = Date.new(2013, 12, 2)
   oilman.save!
 }.call
 
 lambda {
   pat = Project.new
   pat.source_type = 'open'
-  pat.title = "patschreiber (site)"
-  pat.synopsis = "This website! Hope you enjoy reading."
+  pat.title = 'patschreiber (site)'
+  pat.synopsis = 'This website! Hope you enjoy reading.'
   pat.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS (Sass), jQuery, Markdown'
   pat.expanded_info = <<-END
   This website was lovingly coded by hand to showcase all of my works that, in my opinion, are worth showing off. You're now reading about the website on the website you're reading. We're getting a little meta, but enjoy.
@@ -94,7 +164,7 @@ lambda {
   END
   pat.url = 'http://patschreiber.com'
   pat.repo_url = 'https://github.com/patschreiber/patschreiber'
-  pat.start_date = Date.new( 2014, 2, 21 )
+  pat.start_date = Date.new(2014, 2, 21)
   pat.save!
 }.call
 
@@ -125,7 +195,7 @@ lambda {
   timeless.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS, jQuery'
   timeless.url = 'http://timeless.labs.nori.nu/'
   timeless.repo_url = 'https://github.com/patschreiber/timeless_online'
-  timeless.start_date = Date.new( 2014, 10, 3 )
+  timeless.start_date = Date.new(2014, 10, 3)
   timeless.end_date = nil
   timeless.save!
 }.call
@@ -135,32 +205,32 @@ lambda {
   oq.source_type = 'open'
   oq.title = 'Overqualified'
   oq.synopsis = 'Overqualified was a pet project that was going to sell t-shirts. It turns out Chicago is a somewhat difficult city to sell physical merchandise out of when you\'re on a budget, so we had to scrap the project.'
-  oq.expanded_info = <<-END
-  Overqualified was a pet project that was going to sell t-shirts. We were going to differentiate ourselves by having "lines from resumes" embossed onto the shirts. For instance,a few ideas we had for shirts were:
+  oq.expanded_info = <<~END
+      Overqualified was a pet project that was going to sell t-shirts. We were going to differentiate ourselves by having "lines from resumes" embossed onto the shirts. For instance,a few ideas we had for shirts were:
 
-  * Excellent oral and written communication skills
-  * Over 3+ years industry experience
-  * No real world experience
-  * Works well in a team environment
-  * Detail-oriented with strong organizational skills
-  * Objective: to obtain a position in the industry
+      * Excellent oral and written communication skills
+      * Over 3+ years industry experience
+      * No real world experience
+      * Works well in a team environment
+      * Detail-oriented with strong organizational skills
+      * Objective: to obtain a position in the industry
 
- The purpose of this was twofold. First, it was meant to be a wry response to shirts that were and presumably still are popular amonst early 20-somethings. Shirts that say "PARTY" or "SUN\'S OUT GUNS OUT." Secondly, there was a certain subversive sense of humor to it in that we've known people who define themselves firstly by their jobs. These shirts would be the natural conclusion of that thought process. If one\'s identity is dictated by their job, and one's job tasks can be listed on a CV or resume, then isn\'t printing a line from your CV/resume onto a shirt and wearing it around the most literal representation of your skill set possible? In the end, the shirts were supposed to be funny, but unfortunately never came to fruition.
+     The purpose of this was twofold. First, it was meant to be a wry response to shirts that were and presumably still are popular amonst early 20-somethings. Shirts that say "PARTY" or "SUN\'S OUT GUNS OUT." Secondly, there was a certain subversive sense of humor to it in that we've known people who define themselves firstly by their jobs. These shirts would be the natural conclusion of that thought process. If one\'s identity is dictated by their job, and one's job tasks can be listed on a CV or resume, then isn\'t printing a line from your CV/resume onto a shirt and wearing it around the most literal representation of your skill set possible? In the end, the shirts were supposed to be funny, but unfortunately never came to fruition.
 
-We formed an LLC in hopes to actually get the company running as a form of passive income and as a fun side-project. We did this in the city of Chicago, and, if you're wanting to sell physical merchandise in the city of Chicago, you're going to need a separate space from your living area. Not a basement, closet, or even a public storage. We were led to believe we would need to rent warehouse space or a storefront, so ultimately the project ballooned over our price point for a side-project and was scrapped.
+    We formed an LLC in hopes to actually get the company running as a form of passive income and as a fun side-project. We did this in the city of Chicago, and, if you're wanting to sell physical merchandise in the city of Chicago, you're going to need a separate space from your living area. Not a basement, closet, or even a public storage. We were led to believe we would need to rent warehouse space or a storefront, so ultimately the project ballooned over our price point for a side-project and was scrapped.
 
-The silver-lining is that we learned a metric ton about printing lettering on shirts, and also how difficult it is to run an ostensibly simple business.
+    The silver-lining is that we learned a metric ton about printing lettering on shirts, and also how difficult it is to run an ostensibly simple business.
 
-Plastisol will crack, but that is because it is burnt from the drying or flashing process (in order to laydown a color on top of dark shirt and get the true color, you need to laydown what is called the underbase.  After the underbase you flash cure it, which dries the surface, then you put down the color to avoid blending of the 2 inks.  If you flash it too long you will burn the underbase and then eventually crack.)  If your ink ever cracks you send it back or ask for a full refund, even if it is only one in the order, you ask for a full refund for the entire order printed at that time.  the speed a which a shop prints makes it nearly impossible for only one to be burnt in an order.  Plastisol needs to cure at 400-450 degrees for 30-40 seconds.  What shops do is crank the heat up and run the drier belt at a faster speed to compensate for the temperature to print faster, but I can assure that it does not work.  You can do a stretch test when you first get you shirts, you just stretch the printed area, if any cracks, it is burnt and would do so after a few wash cycles.  Good print shops do this test before they send you the shirts.  Also, if you're getting white ink on a red shirt, watch for the ink to start to turn pink.  If it does, it is burnt and the red ink molecules are becoming a plasma and absorbing into the white ink doing what is called "ink migration."  This is true for any colored and black shirts.  this starts in the drier, and can show up immediately or a week later.  this is a big problem and very common.  This happens in your house hold washer/drier, this is one of the reasons why you wash your light colors separately.
+    Plastisol will crack, but that is because it is burnt from the drying or flashing process (in order to laydown a color on top of dark shirt and get the true color, you need to laydown what is called the underbase.  After the underbase you flash cure it, which dries the surface, then you put down the color to avoid blending of the 2 inks.  If you flash it too long you will burn the underbase and then eventually crack.)  If your ink ever cracks you send it back or ask for a full refund, even if it is only one in the order, you ask for a full refund for the entire order printed at that time.  the speed a which a shop prints makes it nearly impossible for only one to be burnt in an order.  Plastisol needs to cure at 400-450 degrees for 30-40 seconds.  What shops do is crank the heat up and run the drier belt at a faster speed to compensate for the temperature to print faster, but I can assure that it does not work.  You can do a stretch test when you first get you shirts, you just stretch the printed area, if any cracks, it is burnt and would do so after a few wash cycles.  Good print shops do this test before they send you the shirts.  Also, if you're getting white ink on a red shirt, watch for the ink to start to turn pink.  If it does, it is burnt and the red ink molecules are becoming a plasma and absorbing into the white ink doing what is called "ink migration."  This is true for any colored and black shirts.  this starts in the drier, and can show up immediately or a week later.  this is a big problem and very common.  This happens in your house hold washer/drier, this is one of the reasons why you wash your light colors separately.
 
-Discharge can be a little bit extra.  If you're interested in it you do not want to do this at a shop that does not specialize in it.  It takes a lot more practice to know how to use it. The reason the discharge is more expensive is because it has to be activated, and only stays active for 12-24 hours at best, then it is garbage.  Also, discharge is water based ink that is just activated to do the bleaching process.
+    Discharge can be a little bit extra.  If you're interested in it you do not want to do this at a shop that does not specialize in it.  It takes a lot more practice to know how to use it. The reason the discharge is more expensive is because it has to be activated, and only stays active for 12-24 hours at best, then it is garbage.  Also, discharge is water based ink that is just activated to do the bleaching process.
 
-END
+  END
   oq.technologies = 'Ruby on Rails 4, MySQL, HTML, CSS, jQuery'
   oq.url = 'http://oq.labs.nori.nu/'
   oq.repo_url = 'https://github.com/patschreiber/overqualified'
-  oq.start_date = Date.new( 2014, 7, 1 )
-  oq.end_date = Date.new( 2015, 2, 13 )
+  oq.start_date = Date.new(2014, 7, 1)
+  oq.end_date = Date.new(2015, 2, 13)
   oq.save!
 }.call
 
@@ -183,8 +253,8 @@ lambda {
   END
   satchel.url = ''
   satchel.repo_url = 'https://github.com/patschreiber/satchel'
-  satchel.start_date = Date.new( 2018, 12, 11 )
-  satchel.end_date = Date.new( 2019, 01, 07 )
+  satchel.start_date = Date.new(2018, 12, 11)
+  satchel.end_date = Date.new(2019, 0o1, 0o7)
   satchel.save!
 }.call
 
@@ -203,7 +273,7 @@ lambda {
 
   -Pat
   END
-  blog.initial_posting = Date.new( 2014, 04, 28 )
+  blog.initial_posting = Date.new(2014, 0o4, 28)
   blog.save!
 
   blog = Blog.new
@@ -220,8 +290,36 @@ lambda {
 
   -Pat
   END
-  blog.initial_posting = Date.new( 2018, 11, 24 )
+  blog.initial_posting = Date.new(2018, 11, 24)
   blog.save!
 }.call
 
-puts "Finished seeding the database!"
+lambda {
+  blog = Blog.new
+  blog.id = 3
+  blog.title = 'formatted'
+  blog.post = <<-END
+  # Markdown Test
+  ## Markdown Test
+  Hello there
+
+  This should be converted.
+  =========================
+
+  ```
+  Is this code()?
+  ```
+  And this:
+    - One
+    - Two
+    - Three
+
+  Should be list
+
+  -Pat
+  END
+  blog.initial_posting = Date.new(2020, 04, 28)
+  blog.save!
+}.call
+
+puts 'Finished seeding the database!'

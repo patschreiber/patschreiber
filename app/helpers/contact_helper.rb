@@ -1,3 +1,7 @@
+#
+# The ContactHelper.
+# TODO: This information is going to be moved into a table.
+#
 module ContactHelper
 
   def email_info

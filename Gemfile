@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -30,8 +32,15 @@ gem 'mysql2'
 # allowing Ruby to be embedded with ease.
 gem 'haml'
 
+# Configurable tool for writing clean and consistent HAML. Used in conjunction
+# with rubocop.
+gem 'haml_lint', '~> 0.34.1'
+
 # A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
+
+# Syntax highlighting for code snippets displayed on the front-end
+gem 'rouge', '~> 1.10', '>= 1.10.1'
 
 # SitemapGenerator is a framework-agnostic XML Sitemap generator written in Ruby
 # with automatic Rails integration. It supports Video, News, Image, Mobile,
@@ -73,7 +82,6 @@ end
 #
 # Gems that should only be run in the development/test environments.
 group :development, :test do
-
   # Provides a better error page for Rails and other Rack apps. Includes source
   # code inspection, a live REPL and local/instance variable inspection for all
   # stack frames.
@@ -129,7 +137,7 @@ group :development, :test do
   # Solargraph provides a comprehensive suite of tools for Ruby programming:
   # intellisense, diagnostics, inline documentation, and type checking.
   # IDE tools for code completion, inline documentation, and static analysis
-  gem 'solargraph', '~> 0.38.0'
+  gem 'solargraph', '~> 0.38.2'
 end
 
 #  _            _
