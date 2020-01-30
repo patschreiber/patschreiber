@@ -39,9 +39,6 @@ gem 'haml_lint', '~> 0.34.1'
 # A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
 
-# Syntax highlighting for code snippets displayed on the front-end
-gem 'rouge', '~> 1.10', '>= 1.10.1'
-
 # SitemapGenerator is a framework-agnostic XML Sitemap generator written in Ruby
 # with automatic Rails integration. It supports Video, News, Image, Mobile,
 # PageMap and Alternate Links sitemap extensions and includes Rake tasks for
