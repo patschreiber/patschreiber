@@ -126,6 +126,11 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring.
   gem 'spring'
+
+  # This gem makes Spring watch the filesystem for changes using Listen rather
+  # than by polling the filesystem. # On larger projects this means spring will
+  # be more responsive, more accurate and use less cpu on local filesystems.
+  # (NFS, # shared VM folders and user file systems will still need polling)
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -147,6 +152,10 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+
+  # WebDriver is a tool for writing automated tests of websites. It aims to
+  # mimic the behaviour of a real user, and as such interacts with the HTML of
+  # the application.
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
