@@ -59,6 +59,9 @@ gem 'secure_headers', '~>6.3.0'
 # cron jobs.
 gem 'whenever', require: false
 
+# Ruby toolkit for the GitHub API.
+gem 'octokit', '~> 4.0'
+
 #                      _            _   _
 #  _ __  _ __ ___   __| |_   _  ___| |_(_) ___  _ __
 # | '_ \| '__/ _ \ / _` | | | |/ __| __| |/ _ \| '_ \
