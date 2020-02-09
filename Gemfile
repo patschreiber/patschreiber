@@ -32,10 +32,6 @@ gem 'mysql2'
 # allowing Ruby to be embedded with ease.
 gem 'haml'
 
-# Configurable tool for writing clean and consistent HAML. Used in conjunction
-# with rubocop.
-gem 'haml_lint', '~> 0.34.1'
-
 # A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
 
@@ -103,6 +99,10 @@ group :development, :test do
   # A collection of RuboCop cops to check for performance optimizations in Ruby
   # code.
   gem 'rubocop-performance', '~> 1.5', '>= 1.5.2', require: false
+
+  # Configurable tool for writing clean and consistent HAML. Used in conjunction
+  # with rubocop.
+  gem 'haml_lint', '~> 0.34.1'
 
   # Byebug is a Ruby debugger. It's implemented using the TracePoint C API for
   # execution control and the Debug Inspector C API for call stack navigation.

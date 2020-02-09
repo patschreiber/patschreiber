@@ -1,0 +1,24 @@
+- content_for :body_class, 'contact'
+
+.container-content
+  .row
+    .one
+      %h1.page-title
+        What's Up
+
+      %section.info
+      - if @socials.empty?
+        %p
+          Is there an echo in here?
+      - else
+        %p
+          You can reach me through a number of different ways, listed below.
+          (I check email
+          <em>far</em> more often than I check the other avenues).
+        .info
+          %ul
+            - @socials.each do |account|
+              %li
+                %h6
+                  = account.service_name
+                = link_to account.profile_url, account.profile_url, target: '_blank', rel: :noopener

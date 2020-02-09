@@ -6,7 +6,7 @@
 #
 module ApplicationHelper
   def copyright
-    "© #{DateTime.now.strftime('%Y')} Patrick Schreiber"
+    "&copy; #{DateTime.now.strftime('%Y')} Patrick Schreiber"
   end
 
   def current_year

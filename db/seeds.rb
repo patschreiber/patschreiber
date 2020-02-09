@@ -17,8 +17,9 @@ Blog.delete_all
 Contact.delete_all
 SocialAccount.delete_all
 
-lambda {
+ActiveRecord::Base.transaction do
   contact = Contact.new
+  contact.id = 1
   contact.first_name = 'Patrick'
   contact.middle_name = 'William'
   contact.last_name = 'Schreiber'
@@ -76,12 +77,39 @@ lambda {
     service_name: 'Spotify',
     handle: 'patschreiber',
     service_tld: 'https://https://www.spotify.com/us/',
-    profile_url: 'https://open.spotify.com/user/patschreiber?si=XDd5yFogT3KJ2RDfMksoGw',
+    profile_url: 'https://open.spotify.com/user/patschreiber',
     date_joined: Date.new(2011, 7, 1),
     account_active: true,
     display_account: true
   )
-}.call
+  contact.social_accounts.create(
+    service_name: 'Email',
+    handle: 'im',
+    service_tld: 'pats.fyi',
+    profile_url: 'im@pats.fyi',
+    date_joined: Date.new(2008, 1, 1),
+    account_active: true,
+    display_account: true
+  )
+  contact.social_accounts.create(
+    service_name: 'Email',
+    handle: 'patrick',
+    service_tld: 'goes.click',
+    profile_url: 'patrick@goes.click',
+    date_joined: Date.new(2008, 1, 1),
+    account_active: true,
+    display_account: true
+  )
+  contact.social_accounts.create(
+    service_name: 'Email',
+    handle: 'ptos382',
+    service_tld: 'gmail.com',
+    profile_url: 'ptos382@gmail.com',
+    date_joined: Date.new(2008, 1, 1),
+    account_active: true,
+    display_account: true
+  )
+end
 
 lambda {
   cta = Project.new

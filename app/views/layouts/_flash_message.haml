@@ -1,0 +1,6 @@
+%section.notice
+  - flash.each do |type, msg|
+    %div{ class: type }
+      = msg
+      %span.close
+        &times;
