@@ -1,0 +1,35 @@
+!!!
+%html{ lang: "en" }
+  %head
+    %title
+      - if yield :title.present?
+        = "#{yield :title} | "
+      'Patrick Schreiber'
+
+    -# Meta
+    = csrf_meta_tags
+    %meta{ charset: 'utf-8' }
+    %meta{ 'http-equiv': 'Content-Language', content: 'en' }
+
+    -# Suppress the small zoom applied by many smartphones by setting the
+    -# initial scale and minimum-scale values to 0.86. The result is horizontal
+    -# scroll is suppressed in any orientation and the user can zoom in if they
+    -# want to.
+    %meta{content: 'width=device-width', name: 'viewport', 'initial-scale': 0.86, 'maximum-scale': 3.0, 'minimum-scale': 0.86}
+
+    -# Description
+    - if content_for(:meta_description).present?
+      %meta{ content: yield(:meta_description), name: 'description' }
+    - else
+      %meta{name: :description, content: "The portfolio and website of Patrick Schreiber, software developer. Currently living in Chicago, IL."}
+
+    = render 'snippets/google_analytics'
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_pack_tag 'app', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'app', 'data-turbolinks-track': 'reload'
+
+  %body{ class: "#{yield :body_class}" }
+    = render 'layouts/nav_menu'
+    = render 'layouts/flash_message'
+    = yield
+    = render 'layouts/footer'

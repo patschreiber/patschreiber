@@ -4,6 +4,7 @@ require:
 
 AllCops:
   TargetRubyVersion: 2.6.5
+  TargetRailsVersion: ~
   DisabledByDefault: false
   Exclude:
     - "**/tmp/**/*"
@@ -253,4 +254,10 @@ Performance/ReverseEach:
   Enabled: true
 
 Performance/UnfreezeString:
+  Enabled: true
+
+Bundler/GemComment:
+  Enabled: true
+
+Bundler/OrderedGems:
   Enabled: true

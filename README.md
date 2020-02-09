@@ -87,6 +87,16 @@ All commands should be run on the prod server(s).
 
 ## Feature Docs
 
+### Linters
+
+Auto generates HAML rubocop suggestions
+
+`haml-lint --auto-gen-config`
+
+Generate warnings for Ruby code
+
+`bundle exec rubocop`
+
 ### Gem Updates
 
 **Note** Be aware of gems that are installed outside of bundler. e.g. `gem install bundler -v 1.17.2`
@@ -149,6 +159,7 @@ lambda {
 ## Secure Headers
 
 Regenerate hashes
+
 `rake secure_headers:generate_hashes`
 
 ## Frontend
@@ -156,6 +167,9 @@ Regenerate hashes
 ### Webpack
 
 Run Webpack
+
 `./bin/webpack-dev-server`
+
 Init Webpack
+
 `bundle exec rails webpacker:install`
