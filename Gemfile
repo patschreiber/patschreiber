@@ -32,10 +32,6 @@ gem 'mysql2'
 # allowing Ruby to be embedded with ease.
 gem 'haml'
 
-# Configurable tool for writing clean and consistent HAML. Used in conjunction
-# with rubocop.
-gem 'haml_lint', '~> 0.34.1'
-
 # A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
 
@@ -104,6 +100,10 @@ group :development, :test do
   # code.
   gem 'rubocop-performance', '~> 1.5', '>= 1.5.2', require: false
 
+  # Configurable tool for writing clean and consistent HAML. Used in conjunction
+  # with rubocop.
+  gem 'haml_lint', '~> 0.34.1'
+
   # Byebug is a Ruby debugger. It's implemented using the TracePoint C API for
   # execution control and the Debug Inspector C API for call stack navigation.
   # The core component provides support that front-ends can build on. It
@@ -126,6 +126,11 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring.
   gem 'spring'
+
+  # This gem makes Spring watch the filesystem for changes using Listen rather
+  # than by polling the filesystem. # On larger projects this means spring will
+  # be more responsive, more accurate and use less cpu on local filesystems.
+  # (NFS, # shared VM folders and user file systems will still need polling)
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -147,6 +152,10 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+
+  # WebDriver is a tool for writing automated tests of websites. It aims to
+  # mimic the behaviour of a real user, and as such interacts with the HTML of
+  # the application.
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
