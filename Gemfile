@@ -11,7 +11,7 @@ gem 'rails', '~> 6.0.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 
 # Turbolinks makes navigating your web application faster.
 # Read more: https://github.com/turbolinks/turbolinks
