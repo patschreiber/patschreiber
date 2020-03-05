@@ -59,6 +59,16 @@ gem 'secure_headers', '~>6.3.0'
 # cron jobs.
 gem 'whenever', require: false
 
+#     _    ____ ___ 
+#    / \  |  _ \_ _|
+#   / _ \ | |_) | | 
+#  / ___ \|  __/| | 
+# /_/   \_\_|  |___|
+#
+# Gems used with APIs.
+
+gem 'graphql'
+
 # Ruby toolkit for the GitHub API.
 gem 'octokit', '~> 4.0'
 
@@ -109,10 +119,6 @@ group :development, :test do
   # A collection of RuboCop cops to check for performance optimizations in Ruby
   # code.
   gem 'rubocop-performance', '~> 1.5', '>= 1.5.2', require: false
-
-  # Configurable tool for writing clean and consistent HAML. Used in conjunction
-  # with rubocop.
-  gem 'haml_lint', '~> 0.34.1'
 
   # Byebug is a Ruby debugger. It's implemented using the TracePoint C API for
   # execution control and the Debug Inspector C API for call stack navigation.
