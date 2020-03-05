@@ -32,8 +32,15 @@ gem 'mysql2'
 # allowing Ruby to be embedded with ease.
 gem 'haml'
 
+# Configurable tool for writing clean and consistent HAML. Used in conjunction
+# with rubocop.
+gem 'haml_lint', '~> 0.34.1'
+
 # A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
+
+# Syntax highlighting for code snippets displayed on the front-end
+gem 'rouge', '~> 1.10', '>= 1.10.1'
 
 # SitemapGenerator is a framework-agnostic XML Sitemap generator written in Ruby
 # with automatic Rails integration. It supports Video, News, Image, Mobile,
@@ -51,6 +58,19 @@ gem 'secure_headers', '~>6.3.0'
 # Whenever is a Ruby gem that provides a clear syntax for writing and deploying
 # cron jobs.
 gem 'whenever', require: false
+
+#     _    ____ ___ 
+#    / \  |  _ \_ _|
+#   / _ \ | |_) | | 
+#  / ___ \|  __/| | 
+# /_/   \_\_|  |___|
+#
+# Gems used with APIs.
+
+gem 'graphql'
+
+# Ruby toolkit for the GitHub API.
+gem 'octokit', '~> 4.0'
 
 #                      _            _   _
 #  _ __  _ __ ___   __| |_   _  ___| |_(_) ___  _ __
@@ -99,10 +119,6 @@ group :development, :test do
   # A collection of RuboCop cops to check for performance optimizations in Ruby
   # code.
   gem 'rubocop-performance', '~> 1.5', '>= 1.5.2', require: false
-
-  # Configurable tool for writing clean and consistent HAML. Used in conjunction
-  # with rubocop.
-  gem 'haml_lint', '~> 0.34.1'
 
   # Byebug is a Ruby debugger. It's implemented using the TracePoint C API for
   # execution control and the Debug Inspector C API for call stack navigation.
