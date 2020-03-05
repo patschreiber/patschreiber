@@ -32,4 +32,7 @@
     = render 'layouts/nav_menu'
     = render 'layouts/flash_message'
     = yield
-    = render 'layouts/footer'
+
+    -# Intentionally leave this page blank as the "air drummer" page.
+    - unless request.path == '/noscope'
+      = render 'layouts/footer'
