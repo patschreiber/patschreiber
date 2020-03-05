@@ -34,13 +34,13 @@ gem 'haml'
 
 # Configurable tool for writing clean and consistent HAML. Used in conjunction
 # with rubocop.
-gem 'haml_lint', '~> 0.34.1'
+gem 'haml_lint'
 
 # A fast, safe and extensible Markdown to (X)HTML parser.
 gem 'redcarpet'
 
 # Syntax highlighting for code snippets displayed on the front-end
-gem 'rouge', '~> 1.10', '>= 1.10.1'
+gem 'rouge', '~> 3.16.0', '>= 1.10.1'
 
 # SitemapGenerator is a framework-agnostic XML Sitemap generator written in Ruby
 # with automatic Rails integration. It supports Video, News, Image, Mobile,
@@ -59,14 +59,16 @@ gem 'secure_headers', '~>6.3.0'
 # cron jobs.
 gem 'whenever', require: false
 
-#     _    ____ ___ 
+#     _    ____ ___
 #    / \  |  _ \_ _|
-#   / _ \ | |_) | | 
-#  / ___ \|  __/| | 
+#   / _ \ | |_) | |
+#  / ___ \|  __/| |
 # /_/   \_\_|  |___|
 #
 # Gems used with APIs.
 
+# Full-fledged implementation of the GraphQL spec. Includes query parsing,
+# static validation, type definition, and query execution.
 gem 'graphql'
 
 # Ruby toolkit for the GitHub API.
@@ -98,7 +100,7 @@ group :development, :test do
   # Provides a better error page for Rails and other Rack apps. Includes source
   # code inspection, a live REPL and local/instance variable inspection for all
   # stack frames.
-  gem 'better_errors', '~> 2.5.1'
+  gem 'better_errors', '~> 2.6.0'
 
   # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
   gem 'jbuilder', '~> 2.7'
@@ -110,7 +112,7 @@ group :development, :test do
   # RuboCop is a Ruby static code analyzer and code formatter. Out of the box it
   # will enforce many of the guidelines outlined in the community Ruby Style
   # Guide.
-  gem 'rubocop', '~> 0.78.0', require: false
+  gem 'rubocop', '~> 0.80.1', require: false
 
   # Automatic Rails code style checking tool. A RuboCop extension focused on
   # enforcing Rails best practices and coding conventions.
@@ -125,7 +127,7 @@ group :development, :test do
   # The core component provides support that front-ends can build on. It
   # provides breakpoint handling and bindings for stack frames among other
   # things and it comes with an easy to use command line interface.
-  gem 'byebug', '~> 11.0.1'
+  gem 'byebug', '~> 11.1.1'
 
   # Add a comment summarizing the current schema to the top or bottom of each of
   #   - ActiveRecord models

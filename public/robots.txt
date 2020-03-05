@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /third-party-licenses
 Sitemap: https://patschreiber.com/sitemap.xml.gz

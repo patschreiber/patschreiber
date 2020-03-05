@@ -29,7 +29,10 @@ Rails.application.routes.draw do
       get '/music', to: 'hobbies#music', as: :hobbies_music
     end
 
+    get '/noscope', to: 'hobbies#intentional_blank_page'
+
     get '/licenses', to: 'legal#terms', as: :licenses
+    get '/third-party-licenses', to: 'legal#third_party_licenses'
     get '/privacy-policy', to: 'legal#privacy_policy', as: :privacy_policy
   end
 

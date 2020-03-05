@@ -6,4 +6,6 @@
 #
 class HobbiesController < ApplicationController
   def music; end
+
+  def intentional_blank_page; end
 end
