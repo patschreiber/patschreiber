@@ -1,17 +1,3 @@
-//Containers
-$default-max-body-width: 1680px;
-$default-container-width: 970px;
-
-//Breakpoints
-$screen-xs: 480px;
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1200px;
-
-$screen-xs-max: ($screen-xs - 1);
-$screen-sm-max: ($screen-sm - 1);
-$screen-md-max: ($screen-md - 1);
-
 $content-width: 900px;
 
 // Box model rules
@@ -30,26 +16,26 @@ $default-link-color: lighten($default-font-color, 25%);
 //$secondary-color: ;
 //$secondary-color-dark: ;
 //$secondary-color-light: ;
-$default-grey: rgb(51,51,51);
+$default-grey: rgb(51, 51, 51);
 $default-grey-light: lighten($default-grey, 50%);
 $default-grey-lightest: lighten($default-grey, 65%);
 
-$showcase-color-0: #1B7CBE;
-$showcase-color-1: #2852BD;
-$showcase-color-2: #4828BD;
+$showcase-color-0: #1b7cbe;
+$showcase-color-1: #2852bd;
+$showcase-color-2: #4828bd;
 
-$project-color-0: #1B7CBE;
-$project-color-1: #2852BD;
-$project-color-2: #4828BD;
-$project-color-3: #6921BA;
-$project-color-4: #7A1EB9;
-$project-color-5: #AB15B5;
+$project-color-0: #1b7cbe;
+$project-color-1: #2852bd;
+$project-color-2: #4828bd;
+$project-color-3: #6921ba;
+$project-color-4: #7a1eb9;
+$project-color-5: #ab15b5;
 // $project-color-6: #CD1691;
 // $project-color-7: #E0186C;
 // $project-color-8: #FA1A2A;
-$project-color-6: #E0186C;
-$project-color-7: #FA1A2A;
-$project-color-8: #FF681B;
+$project-color-6: #e0186c;
+$project-color-7: #fa1a2a;
+$project-color-8: #ff681b;
 
 $default-shadow-color: lighten($default-grey, 65%);
 
@@ -65,7 +51,5 @@ $h5-font-size: 18px;
 $h6-font-size: 14px;
 
 // Fonts
-$default-sans-serif: 'Lato', 'Helvetica', sans-serif;
-$default-serif: 'Palatino', 'Times New Roman', serif;
-
-
+$default-sans-serif: "Lato", "Helvetica", sans-serif;
+$default-serif: "Palatino", "Times New Roman", serif;

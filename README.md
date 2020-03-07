@@ -10,6 +10,7 @@ Homepage for Pat Schreiber.
 2. bundle install
    1. `cd /path/to/patschreiber_root/ && bundle install`
 3. rvm
+   1. `rvm use 2.6.5@<your gemset>`
 
 # Maintenance
 
