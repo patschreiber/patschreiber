@@ -88,6 +88,7 @@ GEM
     crass (1.0.6)
     e2mmap (0.1.0)
     erubi (1.9.0)
+    excon (0.72.0)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
@@ -226,6 +227,8 @@ GEM
       thor (~> 1.0)
       tilt (~> 2.0)
       yard (~> 0.9)
+    spotify-client (0.0.10)
+      excon (~> 0.37)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -300,6 +303,7 @@ DEPENDENCIES
   selenium-webdriver
   sitemap_generator (~> 6.1.0)
   solargraph (~> 0.38.2)
+  spotify-client
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
