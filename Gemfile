@@ -4,10 +4,13 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Ruby version required.
-ruby '2.6.5'
+ruby '2.7.1'
 
 # Rails version required.
 gem 'rails', '~> 6.0.1'
+
+# Interface to the GraphViz graphing tool.
+gem 'ruby-graphviz'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -73,6 +76,9 @@ gem 'graphql'
 
 # Ruby toolkit for the GitHub API.
 gem 'octokit', '~> 4.0'
+
+# Ruby Client for the Spotify Web API.
+gem 'spotify-client'
 
 #                      _            _   _
 #  _ __  _ __ ___   __| |_   _  ___| |_(_) ___  _ __
@@ -177,4 +183,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  # This gem can compare doms and assert certain elements exists in doms using 
+  # Nokogiri.
+  gem 'rails-dom-testing', '~> 2.0', '>= 2.0.3'
 end

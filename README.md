@@ -5,16 +5,53 @@ Homepage for Pat Schreiber.
 ## Local Env Bootstrap
 
 1. RVM install
-   1. `rvm install ruby 2.6.5`
+   1. `rvm install <ruby version>`
    2. `rvm gemset create patschreiber`
+   
+### Enable auto-libs
+Enabling 
+
+Most of the systems ships with a package manager so the `enable` mode is the same as `packages`.
+Unfortunately on OSX there is not package manger provided so RVM has to detect one of existing user efforts,
+The detection is in order: `homebrew`, `macports`, `smf`, `fink` if none of them is available then RVM will install `macports`.
+
+`rvm autolibs enable`
+
+You can also optionally enforce a package manager by using one of the following instead of `enable`:
+
+`macports`, `homebrew`, `fink`, `smf` (SM Framework) or `rvm_pkg` (the old `rvm pkg`), like:
+   3. `rvm autolibs homebrew`
+      
 2. bundle install
    1. `cd /path/to/patschreiber_root/ && bundle install`
 3. rvm
+   1. `rvm use <ruby version>@<your gemset>`
+
+## MacOS-only
+
+Automatically update rvm's MacOS ssl certs.
+
+1. `rvm osx-ssl-certs cron install`
 
 # Maintenance
 
 1. Check outdated packages
 2. Check SSL Cert
+
+## RVM
+
+### Set default gemset
+
+`rvm default <ruby version>@<gemset>`
+
+e.g. `rvm default 2.7.0@patschreiber`
+
+rvm osx-ssl-certs
+
+`rvm -h`
+`rvm migrate <ruby version>`
+
+## Bundler
 
 - Update gems
   `bundle outdated`

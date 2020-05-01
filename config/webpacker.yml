@@ -1,12 +1,13 @@
 # Note: You must restart bin/webpack-dev-server for changes to take effect.
 
 default: &default
+  https: true
   source_path: app/javascript
   source_entry_path: packs
   public_root_path: public
   public_output_path: assets
   cache_path: tmp/cache/webpacker
-  check_yarn_integrity: false
+  check_yarn_integrity: true
   webpack_compile_output: true
 
   # Additional paths webpack should lookup modules.
@@ -66,6 +67,7 @@ development:
     host: localhost
     port: 3035
     public: localhost:3035
+    # Hot reload
     hmr: false
     # Inline should be set to true if using HMR.
     inline: true
