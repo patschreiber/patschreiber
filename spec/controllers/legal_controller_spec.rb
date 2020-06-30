@@ -2,7 +2,6 @@
 require 'rails_helper'
 
 RSpec.describe LegalController, type: :controller do
-
   describe "GET #terms" do
     it "returns http success" do
       get :terms
