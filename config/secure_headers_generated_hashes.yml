@@ -2,5 +2,4 @@
 scripts:
   app/views/snippets/_google_analytics.html.erb:
     - "'sha256-fT1yXL24dxfBu4wURzO2WDvyN3qgNaelhUrjA0TxxPA='"
-  #   - "'sha256-FH9QEvRgXT+nV8hETM21TuM+z8vdt7LDai8otPlL0CU='"
 styles: {}

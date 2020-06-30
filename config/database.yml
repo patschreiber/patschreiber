@@ -6,10 +6,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: patschreiber
-  username: patschreiber
-  password: spike111
-  host: 127.0.0.1
+  database: patschreiber_dev
+  username: patschreiber_dev_dbu
+  password: devdbupass
+  host: localhost
   port: 3306
   pool: 5
   timeout: 5000

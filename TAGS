@@ -1,0 +1,195 @@
+
+app/models/markdown_formatter.rb,109
+class MarkdownFormatterMarkdownFormatter4,0
+  def initializeinitialize6,0
+  def render(text)render16,0
+
+app/models/project.rb,47
+class Project < ActiveRecord::BaseProject1,0
+
+app/models/contact.rb,246
+class Contact < ApplicationRecordContact3,0
+  has_many :social_accountssocial_accounts4,0
+  has_many :social_accountssocial_accounts=4,0
+  has_many :social_accountssocial_account_ids4,0
+  has_many :social_accountssocial_account_ids=4,0
+
+app/models/blog.rb,108
+class Blog < ApplicationRecordBlog3,0
+    def fmtfmt12,0
+    def get_formatter(type)get_formatter17,0
+
+app/models/social_account.rb,645
+class SocialAccount < ApplicationRecordSocialAccount3,0
+  belongs_to :contact, optional: truecontact4,0
+  belongs_to :contact, optional: truecontact=4,0
+  belongs_to :contact, optional: truebuild_contact4,0
+  belongs_to :contact, optional: truecreate_contact4,0
+  belongs_to :contact, optional: truecreate_contact!4,0
+  scope :contacts_list, -> { select(:id, :service_name, :profile_url) }contacts_list6,0
+  scope :viewable, -> { where(account_active: true, display_account: true) }viewable7,0
+  scope :grouped, -> { group(:service_name, :service_tld) }grouped8,0
+  scope :ordered, -> { order(service_name: :asc) }ordered9,0
+
+app/models/application_record.rb,67
+class ApplicationRecord < ActiveRecord::BaseApplicationRecord6,0
+
+app/controllers/legal_controller.rb,192
+class LegalController < ApplicationControllerLegalController7,0
+  def terms; endterms8,0
+  def privacy_policy; endprivacy_policy10,0
+  def third_party_licensesthird_party_licenses15,0
+
+app/controllers/application_controller.rb,79
+class ApplicationController < ActionController::BaseApplicationController6,0
+
+app/controllers/landing_page_controller.rb,100
+class LandingPageController < ApplicationControllerLandingPageController7,0
+  def indexindex8,0
+
+app/controllers/career_controller.rb,97
+class CareerController < ApplicationControllerCareerController7,0
+  def resume; endresume8,0
+
+app/controllers/api/base_controller.rb,156
+module ApiApi3,0
+  class BaseController < ActionController::APIBaseController5,0
+  class BaseController < ActionController::APIApi::BaseController5,0
+
+app/controllers/api/info_controller.rb,204
+module ApiApi3,0
+  class InfoController < BaseControllerInfoController4,0
+  class InfoController < BaseControllerApi::InfoController4,0
+    def index; endindex5,0
+    def contact; endcontact7,0
+
+app/controllers/projects_controller.rb,115
+class ProjectsController < ApplicationControllerProjectsController7,0
+  def indexindex8,0
+  def showshow12,0
+
+app/controllers/contact_controller.rb,92
+class ContactController < ApplicationControllerContactController7,0
+  def indexindex8,0
+
+app/controllers/hobbies_controller.rb,159
+class HobbiesController < ApplicationControllerHobbiesController7,0
+  def music; endmusic8,0
+  def intentional_blank_page; endintentional_blank_page10,0
+
+app/helpers/career_helper.rb,103
+module CareerHelperCareerHelper4,0
+  def resume_google_doc_embed_urlresume_google_doc_embed_url6,0
+
+app/helpers/contact_helper.rb,106
+module ContactHelperContactHelper5,0
+  def email_infoemail_info7,0
+  def social_infosocial_info17,0
+
+app/helpers/application_helper.rb,371
+module ApplicationHelperApplicationHelper7,0
+  def copyrightcopyright8,0
+  def current_yearcurrent_year12,0
+  def twitter_urltwitter_url16,0
+  def github_urlgithub_url20,0
+  def linkedin_urllinkedin_url24,0
+  def instagram_urlinstagram_url28,0
+  def soundcloud_urlsoundcloud_url32,0
+  def spotify_urlspotify_url36,0
+  def mail_addressmail_address40,0
+
+test/test_helper.rb,101
+class ActiveSupport::TestCaseTestCase5,0
+class ActiveSupport::TestCaseActiveSupport::TestCase5,0
+
+test/controllers/api/info_controller_test.rb,179
+class Api::InfoControllerTest < ActionDispatch::IntegrationTestInfoControllerTest3,0
+class Api::InfoControllerTest < ActionDispatch::IntegrationTestApi::InfoControllerTest3,0
+
+test/controllers/api/base_controller_test.rb,179
+class Api::BaseControllerTest < ActionDispatch::IntegrationTestBaseControllerTest3,0
+class Api::BaseControllerTest < ActionDispatch::IntegrationTestApi::BaseControllerTest3,0
+
+config/application.rb,177
+module PatschreiberComPatschreiberCom34,0
+  class Application < Rails::ApplicationApplication35,0
+  class Application < Rails::ApplicationPatschreiberCom::Application35,0
+
+config/initializers/secure_headers.rb,93
+RULES = YAML.load_file("#{Rails.root}/config/secure_headers_rules.yml")[Rails.env]RULES8,0
+
+.history/config/application_20200612081311.rb,177
+module PatschreiberComPatschreiberCom35,0
+  class Application < Rails::ApplicationApplication36,0
+  class Application < Rails::ApplicationPatschreiberCom::Application36,0
+
+.history/config/application_20200612081422.rb,177
+module PatschreiberComPatschreiberCom39,0
+  class Application < Rails::ApplicationApplication40,0
+  class Application < Rails::ApplicationPatschreiberCom::Application40,0
+
+.history/config/application_20200612081526.rb,177
+module PatschreiberComPatschreiberCom34,0
+  class Application < Rails::ApplicationApplication35,0
+  class Application < Rails::ApplicationPatschreiberCom::Application35,0
+
+db/migrate/20140416232154_change_slug_from_string_to_text.rb,119
+class ChangeSlugFromStringToText < ActiveRecord::Migration[5.2]ChangeSlugFromStringToText1,0
+  def changechange2,0
+
+db/migrate/20140303225519_add_image_url_to_project.rb,107
+class AddImageUrlToProject < ActiveRecord::Migration[5.2]AddImageUrlToProject1,0
+  def changechange2,0
+
+db/migrate/20140416230622_add_technology_to_projects.rb,113
+class AddTechnologyToProjects < ActiveRecord::Migration[5.2]AddTechnologyToProjects1,0
+  def changechange2,0
+
+db/migrate/20191214005513_add_timestamps_to_project.rb,111
+class AddTimestampsToProject < ActiveRecord::Migration[5.2]AddTimestampsToProject1,0
+  def changechange2,0
+
+db/migrate/20140313022922_add_expanded_info_to_projects.rb,117
+class AddExpandedInfoToProjects < ActiveRecord::Migration[5.2]AddExpandedInfoToProjects1,0
+  def changechange2,0
+
+db/migrate/20191214012311_create_friendly_id_slugs.rb,134
+MIGRATION_CLASS =MIGRATION_CLASS1,0
+class CreateFriendlyIdSlugs < MIGRATION_CLASSCreateFriendlyIdSlugs8,0
+  def changechange9,0
+
+db/migrate/20191214012015_change_slug_to_synopsis.rb,107
+class ChangeSlugToSynopsis < ActiveRecord::Migration[5.2]ChangeSlugToSynopsis1,0
+  def changechange2,0
+
+db/migrate/20150305204941_add_blog_date_to_blogs.rb,103
+class AddBlogDateToBlogs < ActiveRecord::Migration[5.2]AddBlogDateToBlogs1,0
+  def changechange2,0
+
+db/migrate/20140416233336_create_blog_table.rb,97
+class CreateBlogTable < ActiveRecord::Migration[5.2]CreateBlogTable1,0
+  def changechange2,0
+
+db/migrate/20191229105840_add_foreign_key_constraint_to_active_storage_attachments_for_blob_id.active_storage.rb,175
+class AddForeignKeyConstraintToActiveStorageAttachmentsForBlobId < ActiveRecord::Migration[6.0]AddForeignKeyConstraintToActiveStorageAttachmentsForBlobId2,0
+  def upup3,0
+
+db/migrate/20200115091500_create_social_accounts.rb,107
+class CreateSocialAccounts < ActiveRecord::Migration[6.0]CreateSocialAccounts3,0
+  def changechange4,0
+
+db/migrate/20200115090114_create_contacts.rb,95
+class CreateContacts < ActiveRecord::Migration[6.0]CreateContacts3,0
+  def changechange4,0
+
+db/migrate/20181017000701_add_type_to_projects.rb,101
+class AddTypeToProjects < ActiveRecord::Migration[5.2]AddTypeToProjects1,0
+  def changechange2,0
+
+db/migrate/20191214012251_add_slug_to_projects.rb,101
+class AddSlugToProjects < ActiveRecord::Migration[5.2]AddSlugToProjects1,0
+  def changechange2,0
+
+db/migrate/20140302204711_create_projects.rb,95
+class CreateProjects < ActiveRecord::Migration[5.2]CreateProjects1,0
+  def changechange2,0
