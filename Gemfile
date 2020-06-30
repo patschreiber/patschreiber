@@ -112,8 +112,6 @@ end
 # Gems that should only be run in the development/test environments.
 group :development, :test do
 
-  gem 'bundle-viz'
-
   # Provides a better error page for Rails and other Rack apps. Includes source
   # code inspection, a live REPL and local/instance variable inspection for all
   # stack frames.
