@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_01_15_091500) do
 
-  create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
     t.text "post"
     t.datetime "initial_posting"
@@ -20,8 +20,7 @@ ActiveRecord::Schema.define(version: 2020_01_15_091500) do
     t.datetime "updated_at", null: false
   end
 
-ActiveRecord::Base.transaction do
-  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "prefix"
     t.string "first_name"
     t.string "middle_name"
@@ -34,7 +33,7 @@ ActiveRecord::Base.transaction do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "friendly_id_slugs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "friendly_id_slugs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
     t.string "sluggable_type", limit: 50
@@ -45,7 +44,7 @@ ActiveRecord::Base.transaction do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
-  create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "source_type"
     t.string "title"
     t.text "synopsis"
@@ -62,7 +61,7 @@ ActiveRecord::Base.transaction do
     t.index ["slug"], name: "index_projects_on_slug", unique: true
   end
 
-  create_table "social_accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "social_accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "contact_id"
     t.string "service_name"
     t.string "handle"

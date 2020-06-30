@@ -3,8 +3,8 @@ require:
   - rubocop-rails
 
 AllCops:
-  TargetRubyVersion: 2.6.5
-  TargetRailsVersion: ~
+  TargetRubyVersion: 2.7
+  TargetRailsVersion: 6.0.3.2
   DisabledByDefault: false
   Exclude:
     - "**/tmp/**/*"
@@ -16,6 +16,7 @@ AllCops:
     - "actiontext/test/dummy/**/*"
     - "**/node_modules/**/*"
     - "**/config/webpack/**/*"
+    - "**/db/**/*"
 
 Performance:
   Exclude:
@@ -130,6 +131,7 @@ Style/MethodDefParentheses:
   Enabled: true
 
 Style/FrozenStringLiteralComment:
+  AutoCorrect: true
   Enabled: true
   EnforcedStyle: always
   Exclude:
@@ -163,11 +165,11 @@ Layout/SpaceInsideParens:
 
 # Check quotes usage according to lint rule below.
 Style/StringLiterals:
-  Enabled: true
+  Enabled: false
   EnforcedStyle: single_quotes
 
 # Detect hard tabs, no hard tabs.
-Layout/Tab:
+Layout/IndentationStyle:
   Enabled: true
 
 # Empty lines should not have any spaces.
@@ -260,4 +262,31 @@ Bundler/GemComment:
   Enabled: true
 
 Bundler/OrderedGems:
+  Enabled: true
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+Style/RedundantRegexpEscape:
+  Enabled: true
+Style/SlicingWithRange:
   Enabled: true

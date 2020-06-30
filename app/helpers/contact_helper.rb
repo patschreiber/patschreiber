@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 #
 # The ContactHelper.
 # TODO: This information is going to be moved into a table.
