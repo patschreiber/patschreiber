@@ -29,7 +29,8 @@ config/initializers/secret_token.rb
 yarn-debug.log*
 .yarn-integrity
 
+.nova/*
 .vscode/*
-.idea
+.idea/*
 .history
 .DS_Store

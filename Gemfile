@@ -9,7 +9,8 @@ ruby '2.7.1'
 # Rails version required.
 gem 'rails', '~> 6.0.3.2'
 
-# Interface to the GraphViz graphing tool.
+# Ruby/Graphviz provides an interface to layout and generate images of directed
+# graphs in a variety of formats (PostScript, PNG, etc.) using GraphViz.
 gem 'ruby-graphviz'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -49,14 +50,14 @@ gem 'rouge'
 # with automatic Rails integration. It supports Video, News, Image, Mobile,
 # PageMap and Alternate Links sitemap extensions and includes Rake tasks for
 # managing your sitemaps, as well as many other great features.
-gem 'sitemap_generator', '~>6.1.2'
+gem 'sitemap_generator'
 
 # Pretty URLs for Rails.
-gem 'friendly_id', '~> 5.3.0'
+gem 'friendly_id'
 
 # Adds a content security policy (CSP). This was the de-facto before Rails 6.
 # TODO: Consider switching to native?
-gem 'secure_headers', '~>6.3.1'
+gem 'secure_headers'
 
 # Whenever is a Ruby gem that provides a clear syntax for writing and deploying
 # cron jobs.
