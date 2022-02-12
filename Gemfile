@@ -16,7 +16,7 @@ gem 'ruby-graphviz'
 gem 'bootsnap', '>= 1.4.6', require: false
 
 # Use Puma as the app server
-gem 'puma', '~> 4.3.5'
+gem 'puma', '~> 4.3.11'
 
 # Turbolinks makes navigating your web application faster.
 # Read more: https://github.com/turbolinks/turbolinks
